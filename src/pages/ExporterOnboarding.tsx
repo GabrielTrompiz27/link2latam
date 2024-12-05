@@ -3,47 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Checkbox } from '@/components/ui/checkbox';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Label } from '@/components/ui/label';
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { Form } from '@/components/ui/form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
-
-const industryOptions = [
-  'Agriculture',
-  'Manufacturing',
-  'Technology',
-  'Consumer Goods',
-  'Services',
-  'Other'
-];
-
-const employeeRanges = [
-  '1-10',
-  '11-50',
-  '51-200',
-  '201-500',
-  '500+'
-];
-
-const financingTypes = [
-  { id: 'bank-loans', label: 'Bank Loans' },
-  { id: 'trade-credit', label: 'Trade Credit' },
-  { id: 'invoice-factoring', label: 'Invoice Factoring' },
-  { id: 'export-credit', label: 'Export Credit' },
-  { id: 'other', label: 'Other' }
-];
-
-const collateralTypes = [
-  { id: 'accounts-receivable', label: 'Accounts Receivable' },
-  { id: 'inventory', label: 'Inventory' },
-  { id: 'cash', label: 'Cash' },
-  { id: 'other', label: 'Other' }
-];
+import { CompanyInfoStep } from '@/components/exporter/CompanyInfoStep';
+import { FinancingDetailsStep } from '@/components/exporter/FinancingDetailsStep';
 
 const ExporterOnboarding = () => {
   const navigate = useNavigate();
@@ -52,27 +17,15 @@ const ExporterOnboarding = () => {
 
   const formSchema = z.object({
     // Step 1
-    companyName: z.string().min(2, 'Company name must be at least 2 characters'),
-    industry: z.string().min(1, 'Please select an industry'),
-    exportProducts: z.string().min(1, 'Please enter your export products'),
-    exportDestinations: z.string().min(1, 'Please enter your export destinations'),
-    monthlyVolumes: z.number().min(0, 'Monthly volumes must be positive'),
-    annualRevenue: z.number().min(0, 'Annual revenue must be positive'),
-    employees: z.string().min(1, 'Please select employee range'),
+    companyName: z.string(),
+    industry: z.string(),
+    exportProducts: z.string(),
+    monthlyVolumes: z.number(),
+    employees: z.string(),
     
     // Step 2
     financingTypes: z.array(z.string()),
-    otherFinancingType: z.string().optional(),
-    interestRates: z.string().optional(),
-    financingPeriods: z.string().optional(),
-    totalFinancing: z.number().min(0, 'Total financing must be positive'),
-    
-    // Step 3
-    creditAccess: z.string(),
-    challenges: z.string(),
-    collateralTypes: z.array(z.string()),
-    otherCollateral: z.string().optional(),
-    creditEnhancement: z.string()
+    totalFinancing: z.number(),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -81,20 +34,10 @@ const ExporterOnboarding = () => {
       companyName: '',
       industry: '',
       exportProducts: '',
-      exportDestinations: '',
       monthlyVolumes: 0,
-      annualRevenue: 0,
       employees: '',
       financingTypes: [],
-      otherFinancingType: '',
-      interestRates: '',
-      financingPeriods: '',
       totalFinancing: 0,
-      creditAccess: '',
-      challenges: '',
-      collateralTypes: [],
-      otherCollateral: '',
-      creditEnhancement: ''
     }
   });
 
@@ -102,267 +45,6 @@ const ExporterOnboarding = () => {
     console.log(values);
     // Handle form submission
   };
-
-  const renderStep1 = () => (
-    <div className="space-y-6">
-      <FormField
-        control={form.control}
-        name="companyName"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Company Name</FormLabel>
-            <FormControl>
-              <Input placeholder="Enter company name" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={form.control}
-        name="industry"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Industry/Sector</FormLabel>
-            <Select onValueChange={field.onChange} defaultValue={field.value}>
-              <FormControl>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select industry" />
-                </SelectTrigger>
-              </FormControl>
-              <SelectContent>
-                {industryOptions.map((industry) => (
-                  <SelectItem key={industry} value={industry}>
-                    {industry}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={form.control}
-        name="exportProducts"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Primary Export Products</FormLabel>
-            <FormControl>
-              <Input placeholder="Enter primary export products" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={form.control}
-        name="monthlyVolumes"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Monthly Volumes (EUR)</FormLabel>
-            <FormControl>
-              <Input 
-                type="number" 
-                placeholder="Enter monthly volumes" 
-                {...field}
-                onChange={e => field.onChange(Number(e.target.value))}
-              />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={form.control}
-        name="employees"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Number of Employees</FormLabel>
-            <Select onValueChange={field.onChange} defaultValue={field.value}>
-              <FormControl>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select employee range" />
-                </SelectTrigger>
-              </FormControl>
-              <SelectContent>
-                {employeeRanges.map((range) => (
-                  <SelectItem key={range} value={range}>
-                    {range}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-    </div>
-  );
-
-  const renderStep2 = () => (
-    <div className="space-y-6">
-      <FormField
-        control={form.control}
-        name="financingTypes"
-        render={() => (
-          <FormItem>
-            <FormLabel>Financing Types Used</FormLabel>
-            <div className="space-y-2">
-              {financingTypes.map((type) => (
-                <FormField
-                  key={type.id}
-                  control={form.control}
-                  name="financingTypes"
-                  render={({ field }) => {
-                    return (
-                      <FormItem
-                        key={type.id}
-                        className="flex flex-row items-start space-x-3 space-y-0"
-                      >
-                        <FormControl>
-                          <Checkbox
-                            checked={field.value?.includes(type.id)}
-                            onCheckedChange={(checked) => {
-                              return checked
-                                ? field.onChange([...field.value, type.id])
-                                : field.onChange(
-                                    field.value?.filter(
-                                      (value) => value !== type.id
-                                    )
-                                  )
-                            }}
-                          />
-                        </FormControl>
-                        <FormLabel className="font-normal">
-                          {type.label}
-                        </FormLabel>
-                      </FormItem>
-                    )
-                  }}
-                />
-              ))}
-            </div>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={form.control}
-        name="totalFinancing"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Total Financing in Use (EUR)</FormLabel>
-            <FormControl>
-              <Input 
-                type="number" 
-                placeholder="Enter total financing" 
-                {...field}
-                onChange={e => field.onChange(Number(e.target.value))}
-              />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-    </div>
-  );
-
-  const renderStep3 = () => (
-    <div className="space-y-6">
-      <FormField
-        control={form.control}
-        name="creditAccess"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Rate Access to Credit (1-5)</FormLabel>
-            <FormControl>
-              <RadioGroup
-                onValueChange={field.onChange}
-                defaultValue={field.value}
-                className="flex space-x-4"
-              >
-                {[1, 2, 3, 4, 5].map((value) => (
-                  <FormItem key={value} className="flex items-center space-x-2">
-                    <FormControl>
-                      <RadioGroupItem value={value.toString()} />
-                    </FormControl>
-                    <FormLabel className="font-normal">{value}</FormLabel>
-                  </FormItem>
-                ))}
-              </RadioGroup>
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={form.control}
-        name="challenges"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Challenges Faced in Obtaining Credit</FormLabel>
-            <FormControl>
-              <Input placeholder="Describe challenges faced" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={form.control}
-        name="collateralTypes"
-        render={() => (
-          <FormItem>
-            <FormLabel>Collateral Requirements</FormLabel>
-            <div className="space-y-2">
-              {collateralTypes.map((type) => (
-                <FormField
-                  key={type.id}
-                  control={form.control}
-                  name="collateralTypes"
-                  render={({ field }) => {
-                    return (
-                      <FormItem
-                        key={type.id}
-                        className="flex flex-row items-start space-x-3 space-y-0"
-                      >
-                        <FormControl>
-                          <Checkbox
-                            checked={field.value?.includes(type.id)}
-                            onCheckedChange={(checked) => {
-                              return checked
-                                ? field.onChange([...field.value, type.id])
-                                : field.onChange(
-                                    field.value?.filter(
-                                      (value) => value !== type.id
-                                    )
-                                  )
-                            }}
-                          />
-                        </FormControl>
-                        <FormLabel className="font-normal">
-                          {type.label}
-                        </FormLabel>
-                      </FormItem>
-                    )
-                  }}
-                />
-              ))}
-            </div>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-    </div>
-  );
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -450,7 +132,7 @@ const ExporterOnboarding = () => {
               {/* Progress indicator */}
               <div className="mb-8">
                 <div className="flex justify-between items-center">
-                  {[1, 2, 3].map((step) => (
+                  {[1, 2].map((step) => (
                     <div key={step} className="flex items-center">
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
                         step === currentStep 
@@ -461,7 +143,7 @@ const ExporterOnboarding = () => {
                       }`}>
                         {step < currentStep ? '✓' : step}
                       </div>
-                      {step < 3 && (
+                      {step < 2 && (
                         <div className={`w-24 h-1 mx-2 ${
                           step < currentStep ? 'bg-green-500' : 'bg-gray-200'
                         }`} />
@@ -473,9 +155,8 @@ const ExporterOnboarding = () => {
 
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                  {currentStep === 1 && renderStep1()}
-                  {currentStep === 2 && renderStep2()}
-                  {currentStep === 3 && renderStep3()}
+                  {currentStep === 1 && <CompanyInfoStep form={form} />}
+                  {currentStep === 2 && <FinancingDetailsStep form={form} />}
 
                   {/* Navigation buttons */}
                   <div className="flex justify-between mt-8">
@@ -487,16 +168,16 @@ const ExporterOnboarding = () => {
                     >
                       {t('exporter.questionnaire.previous')}
                     </Button>
-                    {currentStep < 3 ? (
+                    {currentStep < 2 ? (
                       <Button
                         type="button"
-                        onClick={() => setCurrentStep(Math.min(3, currentStep + 1))}
+                        onClick={() => setCurrentStep(Math.min(2, currentStep + 1))}
                       >
                         {t('exporter.questionnaire.next')}
                       </Button>
                     ) : (
                       <Button type="submit">
-                        Submit
+                        {t('exporter.questionnaire.submit')}
                       </Button>
                     )}
                   </div>
