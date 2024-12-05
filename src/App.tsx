@@ -7,6 +7,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import Index from "./pages/Index";
 import Selection from "./pages/Selection";
 import ExporterOnboarding from "./pages/ExporterOnboarding";
+import InvestorOnboarding from "./pages/InvestorOnboarding";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/get-started" element={<Selection />} />
             <Route path="/exporter" element={<ExporterOnboarding />} />
+            <Route path="/investor" element={<InvestorOnboarding />} />
           </Routes>
         </TooltipProvider>
       </LanguageProvider>

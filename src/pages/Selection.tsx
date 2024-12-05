@@ -31,7 +31,10 @@ const Selection = () => {
             <p className="text-gray-600 mb-6">
               {t('selection.investor.description')}
             </p>
-            <button className="btn-primary w-full">
+            <button 
+              className="btn-primary w-full"
+              onClick={() => navigate('/investor')}
+            >
               {t('nav.getStarted')}
             </button>
           </div>

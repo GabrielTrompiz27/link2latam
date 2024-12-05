@@ -76,6 +76,18 @@ const translations = {
     'form.phoneNumber': 'Phone Number',
     'form.preferredContact': 'Preferred Contact Method',
     'form.additionalNotes': 'Additional Notes/Comments (Optional)',
+
+    // Investor Onboarding
+    'investor.back': 'Back',
+    'investor.welcome.title': 'Welcome to Link2Latam Investment Platform',
+    'investor.welcome.subtitle': 'Access exclusive investment opportunities in Latin American export financing with competitive returns.',
+    'investor.whyChoose.title': 'Why Invest with Link2Latam?',
+    'investor.whyChoose.returns.title': 'Competitive Returns',
+    'investor.whyChoose.returns.description': 'Earn attractive returns through carefully vetted export financing opportunities.',
+    'investor.whyChoose.risk.title': 'Risk Management',
+    'investor.whyChoose.risk.description': 'Benefit from our robust due diligence process and diversified investment options.',
+    'investor.whyChoose.market.title': 'Market Access',
+    'investor.whyChoose.market.description': 'Gain direct access to Latin American export markets and growth opportunities.',
   },
   es: {
     // Navbar
@@ -144,6 +156,18 @@ const translations = {
     'form.phoneNumber': 'Número de Teléfono',
     'form.preferredContact': 'Método de Contacto Preferido',
     'form.additionalNotes': 'Notas Adicionales/Comentarios (Opcional)',
+
+    // Investor Onboarding
+    'investor.back': 'Volver',
+    'investor.welcome.title': 'Bienvenido a la Plataforma de Inversión Link2Latam',
+    'investor.welcome.subtitle': 'Acceda a oportunidades exclusivas de inversión en financiamiento de exportaciones latinoamericanas con retornos competitivos.',
+    'investor.whyChoose.title': '¿Por qué invertir con Link2Latam?',
+    'investor.whyChoose.returns.title': 'Retornos Competitivos',
+    'investor.whyChoose.returns.description': 'Obtenga retornos atractivos a través de oportunidades de financiamiento de exportación cuidadosamente evaluadas.',
+    'investor.whyChoose.risk.title': 'Gestión de Riesgos',
+    'investor.whyChoose.risk.description': 'Benefíciese de nuestro sólido proceso de debida diligencia y opciones de inversión diversificadas.',
+    'investor.whyChoose.market.title': 'Acceso al Mercado',
+    'investor.whyChoose.market.description': 'Obtenga acceso directo a los mercados de exportación latinoamericanos y oportunidades de crecimiento.',
   }
 };
 
