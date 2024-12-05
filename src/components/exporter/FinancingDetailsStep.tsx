@@ -4,10 +4,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
 import { financingTypes, currencyOptions } from "./constants/formOptions";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const FinancingDetailsStep = ({ form }: { form: any }) => {
   const [showOtherCurrency, setShowOtherCurrency] = useState(false);
   const selectedCurrency = form.watch('financingCurrency');
+  const { t } = useLanguage();
 
   const RequiredLabel = ({ children }: { children: React.ReactNode }) => (
     <FormLabel>
@@ -22,7 +24,7 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
         name="financingCurrency"
         render={({ field }) => (
           <FormItem className="relative">
-            <RequiredLabel>Currency</RequiredLabel>
+            <RequiredLabel>{t('form.financingCurrency')}</RequiredLabel>
             <Select 
               onValueChange={(value) => {
                 field.onChange(value);
@@ -32,7 +34,7 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
             >
               <FormControl>
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select currency" />
+                  <SelectValue placeholder={t('form.financingCurrency')} />
                 </SelectTrigger>
               </FormControl>
               <SelectContent className="z-50 bg-white text-gray-900">
@@ -54,9 +56,9 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
           name="otherFinancingCurrency"
           render={({ field }) => (
             <FormItem>
-              <RequiredLabel>Specify Currency</RequiredLabel>
+              <RequiredLabel>{t('form.specifyFinancingCurrency')}</RequiredLabel>
               <FormControl>
-                <Input placeholder="Enter currency" {...field} />
+                <Input placeholder={t('form.specifyFinancingCurrency')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -69,7 +71,7 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
         name="financingTypes"
         render={() => (
           <FormItem>
-            <RequiredLabel>Current Financing Methods</RequiredLabel>
+            <RequiredLabel>{t('form.financingTypes')}</RequiredLabel>
             <div className="space-y-2">
               {financingTypes.map((type) => (
                 <FormField
@@ -107,12 +109,12 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
                               name={`interestRates.${type.id}`}
                               render={({ field }) => (
                                 <FormItem>
-                                  <RequiredLabel>Interest Rate (%)</RequiredLabel>
+                                  <RequiredLabel>{t('form.interestRate')}</RequiredLabel>
                                   <FormControl>
                                     <Input 
                                       type="number" 
                                       step="0.01"
-                                      placeholder="Enter interest rate" 
+                                      placeholder={t('form.interestRate')}
                                       {...field}
                                       onChange={e => field.onChange(Number(e.target.value))}
                                     />
@@ -127,11 +129,11 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
                               name={`financingPeriods.${type.id}`}
                               render={({ field }) => (
                                 <FormItem>
-                                  <RequiredLabel>Financing Period (days)</RequiredLabel>
+                                  <RequiredLabel>{t('form.financingPeriod')}</RequiredLabel>
                                   <FormControl>
                                     <Input 
                                       type="number" 
-                                      placeholder="e.g., 30, 60 days" 
+                                      placeholder={t('form.financingPeriod')}
                                       {...field}
                                       onChange={e => field.onChange(Number(e.target.value))}
                                     />
@@ -158,11 +160,11 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
         name="totalFinancing"
         render={({ field }) => (
           <FormItem>
-            <RequiredLabel>Total Active Financing {selectedCurrency && `(${currencyOptions.find(c => c.value === selectedCurrency)?.label || selectedCurrency})`}</RequiredLabel>
+            <RequiredLabel>{t('form.totalFinancing')} {selectedCurrency && `(${currencyOptions.find(c => c.value === selectedCurrency)?.label || selectedCurrency})`}</RequiredLabel>
             <FormControl>
               <Input 
                 type="number" 
-                placeholder="Enter total financing" 
+                placeholder={t('form.totalFinancing')}
                 {...field}
                 onChange={e => field.onChange(Number(e.target.value))}
               />

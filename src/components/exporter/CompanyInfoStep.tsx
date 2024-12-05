@@ -3,10 +3,12 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
 import { industryOptions, employeeRanges, countryOptions, currencyOptions } from "./constants/formOptions";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const CompanyInfoStep = ({ form }: { form: any }) => {
   const [showOtherCountry, setShowOtherCountry] = useState(false);
   const selectedCurrency = form.watch('invoiceCurrency');
+  const { t } = useLanguage();
 
   const RequiredLabel = ({ children }: { children: React.ReactNode }) => (
     <FormLabel>
@@ -21,9 +23,9 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="companyName"
         render={({ field }) => (
           <FormItem>
-            <RequiredLabel>Company Name</RequiredLabel>
+            <RequiredLabel>{t('form.companyName')}</RequiredLabel>
             <FormControl>
-              <Input placeholder="Enter company name" {...field} />
+              <Input placeholder={t('form.companyName')} {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -35,7 +37,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="country"
         render={({ field }) => (
           <FormItem className="relative">
-            <RequiredLabel>Country of Operation</RequiredLabel>
+            <RequiredLabel>{t('form.country')}</RequiredLabel>
             <Select 
               onValueChange={(value) => {
                 field.onChange(value);
@@ -45,7 +47,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
             >
               <FormControl>
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select country" />
+                  <SelectValue placeholder={t('form.country')} />
                 </SelectTrigger>
               </FormControl>
               <SelectContent className="z-50 bg-white text-gray-900">
@@ -67,9 +69,9 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
           name="otherCountry"
           render={({ field }) => (
             <FormItem>
-              <RequiredLabel>Specify Country</RequiredLabel>
+              <RequiredLabel>{t('form.specifyCountry')}</RequiredLabel>
               <FormControl>
-                <Input placeholder="Enter your country" {...field} />
+                <Input placeholder={t('form.specifyCountry')} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -82,11 +84,11 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="industry"
         render={({ field }) => (
           <FormItem className="relative">
-            <RequiredLabel>Industry/Sector</RequiredLabel>
+            <RequiredLabel>{t('form.industry')}</RequiredLabel>
             <Select onValueChange={field.onChange} defaultValue={field.value}>
               <FormControl>
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select industry" />
+                  <SelectValue placeholder={t('form.industry')} />
                 </SelectTrigger>
               </FormControl>
               <SelectContent className="z-50 bg-white text-gray-900">
@@ -107,9 +109,9 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="exportProducts"
         render={({ field }) => (
           <FormItem>
-            <RequiredLabel>Primary Export Products</RequiredLabel>
+            <RequiredLabel>{t('form.exportProducts')}</RequiredLabel>
             <FormControl>
-              <Input placeholder="Enter primary export products" {...field} />
+              <Input placeholder={t('form.exportProducts')} {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -121,11 +123,11 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="invoiceCurrency"
         render={({ field }) => (
           <FormItem className="relative">
-            <RequiredLabel>Invoice Currency</RequiredLabel>
+            <RequiredLabel>{t('form.invoiceCurrency')}</RequiredLabel>
             <Select onValueChange={field.onChange} defaultValue={field.value}>
               <FormControl>
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select currency" />
+                  <SelectValue placeholder={t('form.invoiceCurrency')} />
                 </SelectTrigger>
               </FormControl>
               <SelectContent className="z-50 bg-white text-gray-900">
@@ -146,11 +148,11 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="monthlyVolumes"
         render={({ field }) => (
           <FormItem>
-            <RequiredLabel>Monthly Volumes {selectedCurrency && `(${currencyOptions.find(c => c.value === selectedCurrency)?.label || ''})`}</RequiredLabel>
+            <RequiredLabel>{t('form.monthlyVolumes')} {selectedCurrency && `(${currencyOptions.find(c => c.value === selectedCurrency)?.label || ''})`}</RequiredLabel>
             <FormControl>
               <Input 
                 type="number" 
-                placeholder="Enter monthly volumes"
+                placeholder={t('form.monthlyVolumes')}
                 {...field}
                 onChange={e => field.onChange(Number(e.target.value))}
               />
@@ -165,11 +167,11 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="employees"
         render={({ field }) => (
           <FormItem className="relative">
-            <RequiredLabel>Number of Employees</RequiredLabel>
+            <RequiredLabel>{t('form.employees')}</RequiredLabel>
             <Select onValueChange={field.onChange} defaultValue={field.value}>
               <FormControl>
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select employee range" />
+                  <SelectValue placeholder={t('form.employees')} />
                 </SelectTrigger>
               </FormControl>
               <SelectContent className="z-50 bg-white text-gray-900">

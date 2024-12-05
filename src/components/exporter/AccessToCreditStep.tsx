@@ -2,6 +2,7 @@ import { FormField, FormItem, FormLabel, FormControl } from "@/components/ui/for
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ratingOptions = [1, 2, 3, 4, 5];
 
@@ -13,6 +14,8 @@ const collateralTypes = [
 ];
 
 export const AccessToCreditStep = ({ form }: { form: any }) => {
+  const { t } = useLanguage();
+
   const RequiredLabel = ({ children }: { children: React.ReactNode }) => (
     <FormLabel>
       {children} <span className="text-red-500">*</span>
@@ -26,7 +29,7 @@ export const AccessToCreditStep = ({ form }: { form: any }) => {
         name="creditRating"
         render={({ field }) => (
           <FormItem>
-            <RequiredLabel>Rate Access to Credit (1-5)</RequiredLabel>
+            <RequiredLabel>{t('form.creditRating')}</RequiredLabel>
             <FormControl>
               <RadioGroup
                 onValueChange={field.onChange}
@@ -52,9 +55,9 @@ export const AccessToCreditStep = ({ form }: { form: any }) => {
         name="creditChallenges"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Challenges Faced in Obtaining Credit</FormLabel>
+            <FormLabel>{t('form.creditChallenges')}</FormLabel>
             <FormControl>
-              <Input placeholder="Describe challenges faced" {...field} />
+              <Input placeholder={t('form.creditChallenges')} {...field} />
             </FormControl>
           </FormItem>
         )}
@@ -65,7 +68,7 @@ export const AccessToCreditStep = ({ form }: { form: any }) => {
         name="collateralTypes"
         render={() => (
           <FormItem>
-            <FormLabel>Collateral Requirements</FormLabel>
+            <FormLabel>{t('form.collateralTypes')}</FormLabel>
             <div className="space-y-2">
               {collateralTypes.map((type) => (
                 <FormField
@@ -103,7 +106,7 @@ export const AccessToCreditStep = ({ form }: { form: any }) => {
                               <FormItem className="ml-7">
                                 <FormControl>
                                   <Input
-                                    placeholder="Specify other collateral"
+                                    placeholder={t('form.otherCollateral')}
                                     {...field}
                                   />
                                 </FormControl>
@@ -126,7 +129,7 @@ export const AccessToCreditStep = ({ form }: { form: any }) => {
         name="creditEnhancement"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Use of Credit Enhancement Tools</FormLabel>
+            <FormLabel>{t('form.creditEnhancement')}</FormLabel>
             <FormControl>
               <RadioGroup
                 onValueChange={field.onChange}
@@ -160,10 +163,10 @@ export const AccessToCreditStep = ({ form }: { form: any }) => {
 
           return (
             <FormItem>
-              <FormLabel>Credit Enhancement Details</FormLabel>
+              <FormLabel>{t('form.creditEnhancementDetails')}</FormLabel>
               <FormControl>
                 <Input
-                  placeholder="Describe credit enhancement tools used"
+                  placeholder={t('form.creditEnhancementDetails')}
                   {...field}
                 />
               </FormControl>

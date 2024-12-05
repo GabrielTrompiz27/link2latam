@@ -2,6 +2,7 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const contactMethods = [
   { value: 'email', label: 'Email' },
@@ -10,6 +11,8 @@ const contactMethods = [
 ];
 
 export const ContactInfoStep = ({ form }: { form: any }) => {
+  const { t } = useLanguage();
+
   const RequiredLabel = ({ children }: { children: React.ReactNode }) => (
     <FormLabel>
       {children} <span className="text-red-500">*</span>
@@ -23,9 +26,9 @@ export const ContactInfoStep = ({ form }: { form: any }) => {
         name="fullName"
         render={({ field }) => (
           <FormItem>
-            <RequiredLabel>Full Name</RequiredLabel>
+            <RequiredLabel>{t('form.fullName')}</RequiredLabel>
             <FormControl>
-              <Input placeholder="Enter your full name" {...field} />
+              <Input placeholder={t('form.fullName')} {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -37,9 +40,9 @@ export const ContactInfoStep = ({ form }: { form: any }) => {
         name="position"
         render={({ field }) => (
           <FormItem>
-            <RequiredLabel>Position/Title</RequiredLabel>
+            <RequiredLabel>{t('form.position')}</RequiredLabel>
             <FormControl>
-              <Input placeholder="Enter your position/title" {...field} />
+              <Input placeholder={t('form.position')} {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -51,9 +54,9 @@ export const ContactInfoStep = ({ form }: { form: any }) => {
         name="email"
         render={({ field }) => (
           <FormItem>
-            <RequiredLabel>Email Address</RequiredLabel>
+            <RequiredLabel>{t('form.email')}</RequiredLabel>
             <FormControl>
-              <Input type="email" placeholder="Enter your email address" {...field} />
+              <Input type="email" placeholder={t('form.email')} {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -65,9 +68,9 @@ export const ContactInfoStep = ({ form }: { form: any }) => {
         name="phoneNumber"
         render={({ field }) => (
           <FormItem>
-            <RequiredLabel>Phone Number</RequiredLabel>
+            <RequiredLabel>{t('form.phoneNumber')}</RequiredLabel>
             <FormControl>
-              <Input placeholder="Enter your phone number (include country code)" {...field} />
+              <Input placeholder={t('form.phoneNumber')} {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -79,7 +82,7 @@ export const ContactInfoStep = ({ form }: { form: any }) => {
         name="preferredContact"
         render={({ field }) => (
           <FormItem className="space-y-3">
-            <FormLabel>Preferred Contact Method</FormLabel>
+            <FormLabel>{t('form.preferredContact')}</FormLabel>
             <FormControl>
               <RadioGroup
                 onValueChange={field.onChange}
@@ -106,10 +109,10 @@ export const ContactInfoStep = ({ form }: { form: any }) => {
         name="additionalNotes"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Additional Notes/Comments (Optional)</FormLabel>
+            <FormLabel>{t('form.additionalNotes')}</FormLabel>
             <FormControl>
               <Textarea 
-                placeholder="Provide any additional information or questions you have (optional)"
+                placeholder={t('form.additionalNotes')}
                 className="min-h-[100px]"
                 {...field}
               />
