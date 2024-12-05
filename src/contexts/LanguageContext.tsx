@@ -23,8 +23,7 @@ const translations = {
     'hero.learnMore': 'Learn More',
 
     // Selection
-    'selection.title': 'Welcome Exporters!',
-    'selection.subtitle': 'Discover tailor-made financing solutions to grow your export business with Link2Latam.',
+    'selection.title': 'How would you like to proceed?',
     'selection.investor.title': "I'm an Investor",
     'selection.investor.description': 'Looking to provide funding and expand my investment portfolio in Latin America.',
     'selection.exporter.title': "I'm an Exporter",
@@ -45,8 +44,7 @@ const translations = {
     'hero.learnMore': 'Más Información',
 
     // Selection
-    'selection.title': '¡Bienvenidos Exportadores!',
-    'selection.subtitle': 'Descubre soluciones de financiamiento personalizadas para hacer crecer tu negocio de exportación con Link2Latam.',
+    'selection.title': '¿Cómo deseas proceder?',
     'selection.investor.title': 'Soy Inversionista',
     'selection.investor.description': 'Busco proporcionar financiamiento y expandir mi portafolio de inversiones en América Latina.',
     'selection.exporter.title': 'Soy Exportador',
