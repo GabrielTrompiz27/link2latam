@@ -20,12 +20,16 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#0A2540",
-          light: "#2A4560",
+          DEFAULT: "#0C1E51", // Navy Blue
+          light: "#10458D", // Medium Blue
         },
         accent: {
-          DEFAULT: "#00A3FF",
-          light: "#33B5FF",
+          DEFAULT: "#FFA400", // Vibrant Orange
+          light: "#FFB733", // Lighter Orange for hover states
+        },
+        gray: {
+          DEFAULT: "#494949", // Dark Gray
+          light: "#6B6B6B", // Lighter Gray for secondary text
         },
         success: {
           DEFAULT: "#4CAF50",

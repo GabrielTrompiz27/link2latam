@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply font-sans antialiased text-primary bg-white;
+    @apply font-sans antialiased text-gray bg-white;
   }
 }
 
@@ -16,7 +16,7 @@
   }
   
   .btn-secondary {
-    @apply border-2 border-accent text-accent px-6 py-3 rounded-lg font-medium hover:bg-accent hover:text-white transition-colors duration-200;
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary hover:text-white transition-colors duration-200;
   }
 
   .section-title {
@@ -24,6 +24,6 @@
   }
 
   .section-subtitle {
-    @apply text-lg text-primary-light mb-8 max-w-2xl mx-auto;
+    @apply text-lg text-gray mb-8 max-w-2xl mx-auto;
   }
 }

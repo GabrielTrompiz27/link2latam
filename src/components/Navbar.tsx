@@ -17,9 +17,9 @@ export const Navbar = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-primary hover:text-accent transition-colors">{t('nav.services')}</a>
-            <a href="#about" className="text-primary hover:text-accent transition-colors">{t('nav.about')}</a>
-            <a href="#expertise" className="text-primary hover:text-accent transition-colors">{t('nav.expertise')}</a>
+            <a href="#services" className="text-gray hover:text-primary-light transition-colors">{t('nav.services')}</a>
+            <a href="#about" className="text-gray hover:text-primary-light transition-colors">{t('nav.about')}</a>
+            <a href="#expertise" className="text-gray hover:text-primary-light transition-colors">{t('nav.expertise')}</a>
             <LanguageToggle />
             <button 
               className="btn-primary"
@@ -41,9 +41,9 @@ export const Navbar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pb-6 animate-fade-in">
-            <a href="#services" className="block py-2 text-primary hover:text-accent">{t('nav.services')}</a>
-            <a href="#about" className="block py-2 text-primary hover:text-accent">{t('nav.about')}</a>
-            <a href="#expertise" className="block py-2 text-primary hover:text-accent">{t('nav.expertise')}</a>
+            <a href="#services" className="block py-2 text-gray hover:text-primary-light">{t('nav.services')}</a>
+            <a href="#about" className="block py-2 text-gray hover:text-primary-light">{t('nav.about')}</a>
+            <a href="#expertise" className="block py-2 text-gray hover:text-primary-light">{t('nav.expertise')}</a>
             <button 
               className="btn-primary w-full mt-4"
               onClick={() => navigate('/get-started')}
