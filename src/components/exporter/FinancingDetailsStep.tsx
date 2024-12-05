@@ -1,4 +1,4 @@
-import { FormField, FormItem, FormLabel, FormControl } from "@/components/ui/form";
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 
@@ -11,6 +11,12 @@ const financingTypes = [
 ];
 
 export const FinancingDetailsStep = ({ form }: { form: any }) => {
+  const RequiredLabel = ({ children }: { children: React.ReactNode }) => (
+    <FormLabel>
+      {children} <span className="text-red-500">*</span>
+    </FormLabel>
+  );
+
   return (
     <div className="space-y-6">
       <FormField
@@ -18,7 +24,7 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
         name="financingTypes"
         render={() => (
           <FormItem>
-            <FormLabel>Financing Types Used</FormLabel>
+            <RequiredLabel>Financing Types Used</RequiredLabel>
             <div className="space-y-2">
               {financingTypes.map((type) => (
                 <FormField
@@ -56,7 +62,7 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
                               name={`interestRates.${type.id}`}
                               render={({ field }) => (
                                 <FormItem>
-                                  <FormLabel>Interest Rate (%)</FormLabel>
+                                  <RequiredLabel>Interest Rate (%)</RequiredLabel>
                                   <FormControl>
                                     <Input 
                                       type="number" 
@@ -66,6 +72,7 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
                                       onChange={e => field.onChange(Number(e.target.value))}
                                     />
                                   </FormControl>
+                                  <FormMessage />
                                 </FormItem>
                               )}
                             />
@@ -75,7 +82,7 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
                               name={`financingPeriods.${type.id}`}
                               render={({ field }) => (
                                 <FormItem>
-                                  <FormLabel>Financing Period (days)</FormLabel>
+                                  <RequiredLabel>Financing Period (days)</RequiredLabel>
                                   <FormControl>
                                     <Input 
                                       type="number" 
@@ -84,6 +91,7 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
                                       onChange={e => field.onChange(Number(e.target.value))}
                                     />
                                   </FormControl>
+                                  <FormMessage />
                                 </FormItem>
                               )}
                             />
@@ -95,6 +103,7 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
                 />
               ))}
             </div>
+            <FormMessage />
           </FormItem>
         )}
       />
@@ -104,7 +113,7 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
         name="totalFinancing"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Total Financing in Use (EUR)</FormLabel>
+            <RequiredLabel>Total Financing in Use</RequiredLabel>
             <FormControl>
               <Input 
                 type="number" 
@@ -113,6 +122,7 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
                 onChange={e => field.onChange(Number(e.target.value))}
               />
             </FormControl>
+            <FormMessage />
           </FormItem>
         )}
       />

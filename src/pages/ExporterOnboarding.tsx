@@ -17,13 +17,15 @@ const formSchema = z.object({
   // Step 1 - all fields required
   companyName: z.string().min(1, "Company name is required"),
   country: z.string().min(1, "Country is required"),
-  otherCountry: z.string().optional().superRefine((val, ctx) => {
-    if (ctx.parent.country === 'Other' && !val) {
+  otherCountry: z.string().optional().refine((val, ctx) => {
+    if (ctx.path[0] === 'country' && ctx.path[0] === 'Other' && !val) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         message: "Please specify your country"
       });
+      return false;
     }
+    return true;
   }),
   industry: z.string().min(1, "Industry is required"),
   exportProducts: z.string().min(1, "Export products are required"),
@@ -31,9 +33,11 @@ const formSchema = z.object({
   monthlyVolumes: z.number().min(1, "Monthly volumes are required"),
   employees: z.string().min(1, "Number of employees is required"),
 
-  // Step 2
-  financingTypes: z.array(z.string()),
-  totalFinancing: z.number(),
+  // Step 2 - all fields required
+  financingTypes: z.array(z.string()).min(1, "At least one financing type is required"),
+  interestRates: z.record(z.number().min(0, "Interest rate must be positive")),
+  financingPeriods: z.record(z.number().min(1, "Financing period must be at least 1 day")),
+  totalFinancing: z.number().min(1, "Total financing amount is required"),
 
   // Step 3
   creditRating: z.string(),
