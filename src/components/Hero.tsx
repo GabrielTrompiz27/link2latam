@@ -1,6 +1,9 @@
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="pt-32 pb-20 px-4">
       <div className="container mx-auto text-center">
@@ -11,7 +14,10 @@ export const Hero = () => {
           Fast, flexible, and reliable funding solutions for exporters. Transform your invoices into immediate working capital.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-          <button className="btn-primary inline-flex items-center">
+          <button 
+            className="btn-primary inline-flex items-center"
+            onClick={() => navigate('/get-started')}
+          >
             Get Started <ArrowRight className="ml-2" size={20} />
           </button>
           <button className="btn-secondary">Learn More</button>
