@@ -88,6 +88,18 @@ const translations = {
     'investor.whyChoose.risk.description': 'Benefit from our robust due diligence process and diversified investment options.',
     'investor.whyChoose.market.title': 'Market Access',
     'investor.whyChoose.market.description': 'Gain direct access to Latin American export markets and growth opportunities.',
+
+    // Services Section
+    'services.title': 'Our Services',
+    'services.subtitle': 'Comprehensive trade finance solutions tailored for Latin American exporters',
+    'services.invoiceFactoring.title': 'Invoice Factoring',
+    'services.invoiceFactoring.description': 'Convert your export invoices into immediate working capital with competitive rates.',
+    'services.riskMitigation.title': 'Risk Mitigation',
+    'services.riskMitigation.description': 'Protect your business with comprehensive risk assessment and management solutions.',
+    'services.globalReach.title': 'Global Reach',
+    'services.globalReach.description': 'Access international markets with our extensive network and regional expertise.',
+    'services.quickProcessing.title': 'Quick Processing',
+    'services.quickProcessing.description': 'Fast approval and efficient processing to keep your business moving forward.',
   },
   es: {
     // Navbar
@@ -168,6 +180,18 @@ const translations = {
     'investor.whyChoose.risk.description': 'Benefíciese de nuestro sólido proceso de debida diligencia y opciones de inversión diversificadas.',
     'investor.whyChoose.market.title': 'Acceso al Mercado',
     'investor.whyChoose.market.description': 'Obtenga acceso directo a los mercados de exportación latinoamericanos y oportunidades de crecimiento.',
+
+    // Services Section
+    'services.title': 'Nuestros Servicios',
+    'services.subtitle': 'Soluciones integrales de financiamiento comercial diseñadas para exportadores latinoamericanos',
+    'services.invoiceFactoring.title': 'Factoraje de Facturas',
+    'services.invoiceFactoring.description': 'Convierte tus facturas de exportación en capital de trabajo inmediato con tasas competitivas.',
+    'services.riskMitigation.title': 'Mitigación de Riesgos',
+    'services.riskMitigation.description': 'Protege tu negocio con soluciones integrales de evaluación y gestión de riesgos.',
+    'services.globalReach.title': 'Alcance Global',
+    'services.globalReach.description': 'Accede a mercados internacionales con nuestra extensa red y experiencia regional.',
+    'services.quickProcessing.title': 'Procesamiento Rápido',
+    'services.quickProcessing.description': 'Aprobación rápida y procesamiento eficiente para mantener tu negocio en movimiento.',
   }
 };
 
