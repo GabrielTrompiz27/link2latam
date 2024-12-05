@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "#0C1E51", // Navy Blue
           light: "#10458D", // Medium Blue
+          dark: "#09171a", // New dark color
         },
         accent: {
           DEFAULT: "#FFA400", // Vibrant Orange
