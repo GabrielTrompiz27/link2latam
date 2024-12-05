@@ -17,14 +17,7 @@ const formSchema = z.object({
   // Step 1 - all fields required
   companyName: z.string().min(1, "Company name is required"),
   country: z.string().min(1, "Country is required"),
-  otherCountry: z.string().optional().superRefine((val, ctx) => {
-    if (ctx.parent.country === 'Other' && !val) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message: "Please specify your country"
-      });
-    }
-  }),
+  otherCountry: z.string().optional(),
   industry: z.string().min(1, "Industry is required"),
   exportProducts: z.string().min(1, "Export products are required"),
   invoiceCurrency: z.string().min(1, "Currency is required"),
@@ -34,7 +27,7 @@ const formSchema = z.object({
   // Step 2 - all fields required
   financingCurrency: z.string().min(1, "Currency is required"),
   otherFinancingCurrency: z.string().optional().superRefine((val, ctx) => {
-    if (ctx.parent.financingCurrency === 'OTHER' && !val) {
+    if (ctx.path[0] === 'otherFinancingCurrency' && ctx.parent?.financingCurrency === 'OTHER' && !val) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         message: "Please specify the currency"
