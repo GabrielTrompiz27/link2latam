@@ -10,32 +10,41 @@ import * as z from 'zod';
 import { CompanyInfoStep } from '@/components/exporter/CompanyInfoStep';
 import { FinancingDetailsStep } from '@/components/exporter/FinancingDetailsStep';
 import { AccessToCreditStep } from '@/components/exporter/AccessToCreditStep';
+import { ContactInfoStep } from '@/components/exporter/ContactInfoStep';
+
+const formSchema = z.object({
+  // Step 1
+  companyName: z.string(),
+  industry: z.string(),
+  exportProducts: z.string(),
+  monthlyVolumes: z.number(),
+  employees: z.string(),
+  
+  // Step 2
+  financingTypes: z.array(z.string()),
+  totalFinancing: z.number(),
+
+  // Step 3
+  creditRating: z.string(),
+  creditChallenges: z.string(),
+  collateralTypes: z.array(z.string()),
+  otherCollateral: z.string().optional(),
+  creditEnhancement: z.string(),
+  creditEnhancementDetails: z.string().optional(),
+
+  // Step 4
+  fullName: z.string(),
+  position: z.string(),
+  email: z.string().email(),
+  phoneNumber: z.string(),
+  preferredContact: z.string(),
+  additionalNotes: z.string().optional(),
+});
 
 const ExporterOnboarding = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
   const [currentStep, setCurrentStep] = useState(1);
-
-  const formSchema = z.object({
-    // Step 1
-    companyName: z.string(),
-    industry: z.string(),
-    exportProducts: z.string(),
-    monthlyVolumes: z.number(),
-    employees: z.string(),
-    
-    // Step 2
-    financingTypes: z.array(z.string()),
-    totalFinancing: z.number(),
-
-    // Step 3
-    creditRating: z.string(),
-    creditChallenges: z.string(),
-    collateralTypes: z.array(z.string()),
-    otherCollateral: z.string().optional(),
-    creditEnhancement: z.string(),
-    creditEnhancementDetails: z.string().optional(),
-  });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -53,6 +62,12 @@ const ExporterOnboarding = () => {
       otherCollateral: '',
       creditEnhancement: '',
       creditEnhancementDetails: '',
+      fullName: '',
+      position: '',
+      email: '',
+      phoneNumber: '',
+      preferredContact: 'email',
+      additionalNotes: '',
     }
   });
 
@@ -147,7 +162,7 @@ const ExporterOnboarding = () => {
               {/* Step indicator */}
               <div className="mb-8">
                 <div className="flex justify-between items-center">
-                  {[1, 2, 3].map((step) => (
+                  {[1, 2, 3, 4].map((step) => (
                     <div key={step} className="flex items-center">
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
                         step === currentStep 
@@ -168,6 +183,7 @@ const ExporterOnboarding = () => {
                   {currentStep === 1 && <CompanyInfoStep form={form} />}
                   {currentStep === 2 && <FinancingDetailsStep form={form} />}
                   {currentStep === 3 && <AccessToCreditStep form={form} />}
+                  {currentStep === 4 && <ContactInfoStep form={form} />}
 
                   {/* Navigation buttons */}
                   <div className="flex justify-between mt-8">
@@ -179,10 +195,10 @@ const ExporterOnboarding = () => {
                     >
                       {t('exporter.questionnaire.previous')}
                     </Button>
-                    {currentStep < 3 ? (
+                    {currentStep < 4 ? (
                       <Button
                         type="button"
-                        onClick={() => setCurrentStep(Math.min(3, currentStep + 1))}
+                        onClick={() => setCurrentStep(Math.min(4, currentStep + 1))}
                       >
                         {t('exporter.questionnaire.next')}
                       </Button>
