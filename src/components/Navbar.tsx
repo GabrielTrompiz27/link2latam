@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
@@ -15,7 +17,12 @@ export const Navbar = () => {
             <a href="#services" className="text-primary hover:text-accent transition-colors">Services</a>
             <a href="#about" className="text-primary hover:text-accent transition-colors">About</a>
             <a href="#expertise" className="text-primary hover:text-accent transition-colors">Expertise</a>
-            <button className="btn-primary">Get Started</button>
+            <button 
+              className="btn-primary"
+              onClick={() => navigate('/get-started')}
+            >
+              Get Started
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -30,7 +37,12 @@ export const Navbar = () => {
             <a href="#services" className="block py-2 text-primary hover:text-accent">Services</a>
             <a href="#about" className="block py-2 text-primary hover:text-accent">About</a>
             <a href="#expertise" className="block py-2 text-primary hover:text-accent">Expertise</a>
-            <button className="btn-primary w-full mt-4">Get Started</button>
+            <button 
+              className="btn-primary w-full mt-4"
+              onClick={() => navigate('/get-started')}
+            >
+              Get Started
+            </button>
           </div>
         )}
       </div>
