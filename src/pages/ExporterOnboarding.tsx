@@ -12,17 +12,17 @@ import { QuestionnaireSection } from '@/components/exporter/QuestionnaireSection
 
 const formSchema = z.object({
   // Step 1 - all fields required
-  companyName: z.string().min(1, "Company name is required"),
-  country: z.string().min(1, "Country is required"),
+  companyName: z.string().min(1),
+  country: z.string().min(1),
   otherCountry: z.string().optional(),
-  industry: z.string().min(1, "Industry is required"),
-  exportProducts: z.string().min(1, "Export products are required"),
-  invoiceCurrency: z.string().min(1, "Currency is required"),
-  monthlyVolumes: z.number().min(1, "Monthly volumes are required"),
-  employees: z.string().min(1, "Number of employees is required"),
+  industry: z.string().min(1),
+  exportProducts: z.string().min(1),
+  invoiceCurrency: z.string().min(1),
+  monthlyVolumes: z.number().min(1),
+  employees: z.string().min(1),
 
   // Step 2 - all fields required
-  financingCurrency: z.string().min(1, "Currency is required"),
+  financingCurrency: z.string().min(1),
   otherFinancingCurrency: z.string().optional().superRefine((val, ctx) => {
     const data = ctx.path.length > 0 ? (ctx as any).data : undefined;
     if (data?.financingCurrency === 'OTHER' && !val) {
@@ -32,13 +32,13 @@ const formSchema = z.object({
       });
     }
   }),
-  financingTypes: z.array(z.string()).min(1, "At least one financing type is required"),
-  interestRates: z.record(z.number().min(0, "Interest rate must be positive")),
-  financingPeriods: z.record(z.number().min(1, "Financing period must be at least 1 day")),
-  totalFinancing: z.number().min(1, "Total financing amount is required"),
+  financingTypes: z.array(z.string()).min(1),
+  interestRates: z.record(z.number().min(0)),
+  financingPeriods: z.record(z.number().min(1)),
+  totalFinancing: z.number().min(1),
 
   // Step 3 - credit rating is required
-  creditRating: z.string().min(1, "Credit rating is required"),
+  creditRating: z.string().min(1),
   creditChallenges: z.string().optional(),
   collateralTypes: z.array(z.string()).optional(),
   otherCollateral: z.string().optional(),
@@ -46,10 +46,10 @@ const formSchema = z.object({
   creditEnhancementDetails: z.string().optional(),
 
   // Step 4 - most fields required except preferredContact and additionalNotes
-  fullName: z.string().min(1, "Full name is required"),
-  position: z.string().min(1, "Position is required"),
-  email: z.string().email("Invalid email address").min(1, "Email is required"),
-  phoneNumber: z.string().min(1, "Phone number is required"),
+  fullName: z.string().min(1),
+  position: z.string().min(1),
+  email: z.string().email(),
+  phoneNumber: z.string().min(1),
   preferredContact: z.string().optional(),
   additionalNotes: z.string().optional(),
 });
