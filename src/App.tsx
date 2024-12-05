@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import Index from "./pages/Index";
 import Selection from "./pages/Selection";
+import ExporterOnboarding from "./pages/ExporterOnboarding";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/get-started" element={<Selection />} />
+            <Route path="/exporter" element={<ExporterOnboarding />} />
           </Routes>
         </TooltipProvider>
       </LanguageProvider>

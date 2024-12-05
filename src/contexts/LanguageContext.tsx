@@ -29,6 +29,18 @@ const translations = {
     'selection.exporter.title': "I'm an Exporter",
     'selection.exporter.description': 'Seeking funding solutions to grow my export business in Latin America.',
     'selection.back': 'Back to Home',
+
+    // Exporter Onboarding
+    'exporter.back': 'Back',
+    'exporter.welcome.title': 'Welcome to Link2Latam Export Financing',
+    'exporter.welcome.subtitle': 'Transform your export business with fast, flexible funding solutions tailored to your needs.',
+    'exporter.whyChoose.title': 'Why Choose Link2Latam?',
+    'exporter.whyChoose.fast.title': 'Fast Funding',
+    'exporter.whyChoose.fast.description': 'Get your export invoices funded in as little as 48 hours with our streamlined process.',
+    'exporter.whyChoose.expert.title': 'Expert Support',
+    'exporter.whyChoose.expert.description': 'Our team of trade finance experts is here to guide you every step of the way.',
+    'exporter.whyChoose.global.title': 'Global Network',
+    'exporter.whyChoose.global.description': 'Access our extensive network of international buyers and funding partners.',
   },
   es: {
     // Navbar
@@ -50,6 +62,18 @@ const translations = {
     'selection.exporter.title': 'Soy Exportador',
     'selection.exporter.description': 'Busco soluciones de financiamiento para hacer crecer mi negocio de exportación en América Latina.',
     'selection.back': 'Volver al Inicio',
+
+    // Exporter Onboarding
+    'exporter.back': 'Volver',
+    'exporter.welcome.title': 'Bienvenido a Financiamiento de Exportación Link2Latam',
+    'exporter.welcome.subtitle': 'Transforma tu negocio de exportación con soluciones de financiamiento rápidas y flexibles adaptadas a tus necesidades.',
+    'exporter.whyChoose.title': '¿Por qué elegir Link2Latam?',
+    'exporter.whyChoose.fast.title': 'Financiamiento Rápido',
+    'exporter.whyChoose.fast.description': 'Obtén financiamiento para tus facturas de exportación en tan solo 48 horas con nuestro proceso simplificado.',
+    'exporter.whyChoose.expert.title': 'Soporte Experto',
+    'exporter.whyChoose.expert.description': 'Nuestro equipo de expertos en financiamiento comercial está aquí para guiarte en cada paso.',
+    'exporter.whyChoose.global.title': 'Red Global',
+    'exporter.whyChoose.global.description': 'Accede a nuestra extensa red de compradores internacionales y socios financieros.',
   }
 };
 
