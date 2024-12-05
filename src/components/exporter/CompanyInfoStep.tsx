@@ -47,9 +47,9 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
                   <SelectValue placeholder="Select industry" />
                 </SelectTrigger>
               </FormControl>
-              <SelectContent className="z-50">
+              <SelectContent className="z-50 bg-white text-gray-900">
                 {industryOptions.map((industry) => (
-                  <SelectItem key={industry} value={industry}>
+                  <SelectItem key={industry} value={industry} className="hover:bg-gray-100">
                     {industry}
                   </SelectItem>
                 ))}
@@ -102,9 +102,9 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
                   <SelectValue placeholder="Select employee range" />
                 </SelectTrigger>
               </FormControl>
-              <SelectContent className="z-50">
+              <SelectContent className="z-50 bg-white text-gray-900">
                 {employeeRanges.map((range) => (
-                  <SelectItem key={range} value={range}>
+                  <SelectItem key={range} value={range} className="hover:bg-gray-100">
                     {range}
                   </SelectItem>
                 ))}
