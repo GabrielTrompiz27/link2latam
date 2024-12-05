@@ -23,7 +23,7 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 pt-32 pb-20 px-4">
+      <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
             {t('hero.title')}
