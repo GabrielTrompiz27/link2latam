@@ -57,7 +57,7 @@ const ExporterOnboarding = () => {
       otherCountry: '',
       industry: '',
       exportProducts: '',
-      invoiceCurrency: 'USD',
+      invoiceCurrency: '',
       monthlyVolumes: 0,
       employees: '',
       financingTypes: [],

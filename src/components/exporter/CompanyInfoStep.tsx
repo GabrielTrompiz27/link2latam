@@ -49,7 +49,7 @@ const currencyOptions = [
 
 export const CompanyInfoStep = ({ form }: { form: any }) => {
   const [showOtherCountry, setShowOtherCountry] = useState(false);
-  const selectedCurrency = form.watch('invoiceCurrency') || 'USD';
+  const selectedCurrency = form.watch('invoiceCurrency');
 
   return (
     <div className="space-y-6">
@@ -183,11 +183,11 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="monthlyVolumes"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Monthly Volumes ({selectedCurrency === 'USD' ? '$' : '€'})</FormLabel>
+            <FormLabel>Monthly Volumes {selectedCurrency && `(${currencyOptions.find(c => c.value === selectedCurrency)?.label || ''})`}</FormLabel>
             <FormControl>
               <Input 
                 type="number" 
-                placeholder={`Enter monthly volumes in ${selectedCurrency === 'USD' ? 'USD' : 'EUR'}`}
+                placeholder="Enter monthly volumes"
                 {...field}
                 onChange={e => field.onChange(Number(e.target.value))}
               />
