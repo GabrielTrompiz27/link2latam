@@ -39,7 +39,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone size={16} className="mr-2" />
-                <span className="text-gray-300">+34617816607</span>
+                <span className="text-gray-300">(+34) 617816607</span>
               </li>
               <li className="flex items-center">
                 <MapPin size={16} className="mr-2" />
