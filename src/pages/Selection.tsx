@@ -23,7 +23,7 @@ const Selection = () => {
           <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <h2 className="text-2xl font-semibold mb-4">I'm an Investor</h2>
             <p className="text-gray-600 mb-6">
-              Looking to provide funding and expand your investment portfolio in Latin American exports.
+              Looking to provide funding and expand my investment portfolio in Latin American exports.
             </p>
             <button className="btn-primary w-full">
               Continue as Investor
@@ -33,7 +33,7 @@ const Selection = () => {
           <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
             <h2 className="text-2xl font-semibold mb-4">I'm an Exporter</h2>
             <p className="text-gray-600 mb-6">
-              Seeking funding solutions to grow your export business in Latin America.
+              Seeking funding solutions to grow my export business in Latin America.
             </p>
             <button className="btn-primary w-full">
               Continue as Exporter
