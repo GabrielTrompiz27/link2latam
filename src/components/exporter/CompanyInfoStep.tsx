@@ -2,54 +2,17 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
-
-const industryOptions = [
-  'Agriculture',
-  'Manufacturing',
-  'Technology',
-  'Consumer Goods',
-  'Services',
-  'Other'
-];
-
-const employeeRanges = [
-  '1-10',
-  '11-50',
-  '51-200',
-  '201-500',
-  '500+'
-];
-
-const countryOptions = [
-  'Argentina',
-  'Bolivia',
-  'Brazil',
-  'Chile',
-  'Colombia',
-  'Costa Rica',
-  'Dominican Republic',
-  'Ecuador',
-  'El Salvador',
-  'Guatemala',
-  'Honduras',
-  'Mexico',
-  'Nicaragua',
-  'Panama',
-  'Paraguay',
-  'Peru',
-  'Uruguay',
-  'Venezuela',
-  'Other'
-];
-
-const currencyOptions = [
-  { value: 'USD', label: '$' },
-  { value: 'EUR', label: '€' }
-];
+import { industryOptions, employeeRanges, countryOptions, currencyOptions } from "./constants/formOptions";
 
 export const CompanyInfoStep = ({ form }: { form: any }) => {
   const [showOtherCountry, setShowOtherCountry] = useState(false);
   const selectedCurrency = form.watch('invoiceCurrency');
+
+  const RequiredLabel = ({ children }: { children: React.ReactNode }) => (
+    <FormLabel>
+      {children} <span className="text-red-500">*</span>
+    </FormLabel>
+  );
 
   return (
     <div className="space-y-6">
@@ -58,7 +21,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="companyName"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Company Name</FormLabel>
+            <RequiredLabel>Company Name</RequiredLabel>
             <FormControl>
               <Input placeholder="Enter company name" {...field} />
             </FormControl>
@@ -72,7 +35,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="country"
         render={({ field }) => (
           <FormItem className="relative">
-            <FormLabel>Country of Operation</FormLabel>
+            <RequiredLabel>Country of Operation</RequiredLabel>
             <Select 
               onValueChange={(value) => {
                 field.onChange(value);
@@ -104,7 +67,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
           name="otherCountry"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Specify Country</FormLabel>
+              <RequiredLabel>Specify Country</RequiredLabel>
               <FormControl>
                 <Input placeholder="Enter your country" {...field} />
               </FormControl>
@@ -119,7 +82,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="industry"
         render={({ field }) => (
           <FormItem className="relative">
-            <FormLabel>Industry/Sector</FormLabel>
+            <RequiredLabel>Industry/Sector</RequiredLabel>
             <Select onValueChange={field.onChange} defaultValue={field.value}>
               <FormControl>
                 <SelectTrigger className="w-full">
@@ -144,7 +107,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="exportProducts"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Primary Export Products</FormLabel>
+            <RequiredLabel>Primary Export Products</RequiredLabel>
             <FormControl>
               <Input placeholder="Enter primary export products" {...field} />
             </FormControl>
@@ -158,7 +121,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="invoiceCurrency"
         render={({ field }) => (
           <FormItem className="relative">
-            <FormLabel>Invoice Currency</FormLabel>
+            <RequiredLabel>Invoice Currency</RequiredLabel>
             <Select onValueChange={field.onChange} defaultValue={field.value}>
               <FormControl>
                 <SelectTrigger className="w-full">
@@ -183,7 +146,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="monthlyVolumes"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Monthly Volumes {selectedCurrency && `(${currencyOptions.find(c => c.value === selectedCurrency)?.label || ''})`}</FormLabel>
+            <RequiredLabel>Monthly Volumes {selectedCurrency && `(${currencyOptions.find(c => c.value === selectedCurrency)?.label || ''})`}</RequiredLabel>
             <FormControl>
               <Input 
                 type="number" 
@@ -202,7 +165,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         name="employees"
         render={({ field }) => (
           <FormItem className="relative">
-            <FormLabel>Number of Employees</FormLabel>
+            <RequiredLabel>Number of Employees</RequiredLabel>
             <Select onValueChange={field.onChange} defaultValue={field.value}>
               <FormControl>
                 <SelectTrigger className="w-full">

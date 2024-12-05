@@ -14,16 +14,23 @@ import { ContactInfoStep } from '@/components/exporter/ContactInfoStep';
 import { LanguageToggle } from '@/components/LanguageToggle';
 
 const formSchema = z.object({
-  // Step 1
-  companyName: z.string(),
-  country: z.string(),
-  otherCountry: z.string().optional(),
-  industry: z.string(),
-  exportProducts: z.string(),
-  invoiceCurrency: z.string(),
-  monthlyVolumes: z.number(),
-  employees: z.string(),
-  
+  // Step 1 - all fields required
+  companyName: z.string().min(1, "Company name is required"),
+  country: z.string().min(1, "Country is required"),
+  otherCountry: z.string().optional().superRefine((val, ctx) => {
+    if (ctx.parent.country === 'Other' && !val) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "Please specify your country"
+      });
+    }
+  }),
+  industry: z.string().min(1, "Industry is required"),
+  exportProducts: z.string().min(1, "Export products are required"),
+  invoiceCurrency: z.string().min(1, "Currency is required"),
+  monthlyVolumes: z.number().min(1, "Monthly volumes are required"),
+  employees: z.string().min(1, "Number of employees is required"),
+
   // Step 2
   financingTypes: z.array(z.string()),
   totalFinancing: z.number(),
