@@ -1,16 +1,14 @@
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
-
-const financingTypes = [
-  { id: 'bank-loans', label: 'Bank Loans' },
-  { id: 'trade-credit', label: 'Trade Credit' },
-  { id: 'invoice-factoring', label: 'Invoice Factoring' },
-  { id: 'export-credit', label: 'Export Credit' },
-  { id: 'other', label: 'Other' }
-];
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useState } from "react";
+import { financingTypes, currencyOptions } from "./constants/formOptions";
 
 export const FinancingDetailsStep = ({ form }: { form: any }) => {
+  const [showOtherCurrency, setShowOtherCurrency] = useState(false);
+  const selectedCurrency = form.watch('financingCurrency');
+
   const RequiredLabel = ({ children }: { children: React.ReactNode }) => (
     <FormLabel>
       {children} <span className="text-red-500">*</span>
@@ -21,10 +19,57 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
     <div className="space-y-6">
       <FormField
         control={form.control}
+        name="financingCurrency"
+        render={({ field }) => (
+          <FormItem className="relative">
+            <RequiredLabel>Currency</RequiredLabel>
+            <Select 
+              onValueChange={(value) => {
+                field.onChange(value);
+                setShowOtherCurrency(value === 'OTHER');
+              }} 
+              defaultValue={field.value}
+            >
+              <FormControl>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select currency" />
+                </SelectTrigger>
+              </FormControl>
+              <SelectContent className="z-50 bg-white text-gray-900">
+                {currencyOptions.map((currency) => (
+                  <SelectItem key={currency.value} value={currency.value} className="hover:bg-gray-100">
+                    {currency.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+
+      {showOtherCurrency && (
+        <FormField
+          control={form.control}
+          name="otherFinancingCurrency"
+          render={({ field }) => (
+            <FormItem>
+              <RequiredLabel>Specify Currency</RequiredLabel>
+              <FormControl>
+                <Input placeholder="Enter currency" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      )}
+
+      <FormField
+        control={form.control}
         name="financingTypes"
         render={() => (
           <FormItem>
-            <RequiredLabel>Financing Types Used</RequiredLabel>
+            <RequiredLabel>Current Financing Methods</RequiredLabel>
             <div className="space-y-2">
               {financingTypes.map((type) => (
                 <FormField
@@ -113,7 +158,7 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
         name="totalFinancing"
         render={({ field }) => (
           <FormItem>
-            <RequiredLabel>Total Financing in Use</RequiredLabel>
+            <RequiredLabel>Total Active Financing {selectedCurrency && `(${currencyOptions.find(c => c.value === selectedCurrency)?.label || selectedCurrency})`}</RequiredLabel>
             <FormControl>
               <Input 
                 type="number" 

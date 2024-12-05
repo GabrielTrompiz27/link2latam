@@ -39,5 +39,14 @@ export const countryOptions = [
 
 export const currencyOptions = [
   { value: 'USD', label: '$' },
-  { value: 'EUR', label: '€' }
+  { value: 'EUR', label: '€' },
+  { value: 'OTHER', label: 'Other' }
+];
+
+export const financingTypes = [
+  { id: 'bank-loans', label: 'Bank Loans' },
+  { id: 'trade-credit', label: 'Trade Credit' },
+  { id: 'invoice-factoring', label: 'Invoice Factoring' },
+  { id: 'export-credit', label: 'Export Credit' },
+  { id: 'other', label: 'Other' }
 ];
