@@ -18,8 +18,8 @@ export const Hero = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Dark overlay with new header color */}
+        <div className="absolute inset-0 bg-header"></div>
       </div>
 
       {/* Content */}
