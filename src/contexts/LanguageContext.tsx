@@ -32,7 +32,7 @@ const translations = {
 
     // Exporter Onboarding
     'exporter.back': 'Back',
-    'exporter.welcome.title': 'Welcome to Link2Latam Export Financing',
+    'exporter.welcome.title': 'Welcome to Link2Latam',
     'exporter.welcome.subtitle': 'Transform your export business with fast, flexible funding solutions tailored to your needs.',
     'exporter.whyChoose.title': 'Why Choose Link2Latam?',
     'exporter.whyChoose.fast.title': 'Fast Funding',
