@@ -1,6 +1,7 @@
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useState } from "react";
 
 const industryOptions = [
   'Agriculture',
@@ -19,7 +20,31 @@ const employeeRanges = [
   '500+'
 ];
 
+const countryOptions = [
+  'Argentina',
+  'Bolivia',
+  'Brazil',
+  'Chile',
+  'Colombia',
+  'Costa Rica',
+  'Dominican Republic',
+  'Ecuador',
+  'El Salvador',
+  'Guatemala',
+  'Honduras',
+  'Mexico',
+  'Nicaragua',
+  'Panama',
+  'Paraguay',
+  'Peru',
+  'Uruguay',
+  'Venezuela',
+  'Other'
+];
+
 export const CompanyInfoStep = ({ form }: { form: any }) => {
+  const [showOtherCountry, setShowOtherCountry] = useState(false);
+
   return (
     <div className="space-y-6">
       <FormField
@@ -31,9 +56,57 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
             <FormControl>
               <Input placeholder="Enter company name" {...field} />
             </FormControl>
+            <FormMessage />
           </FormItem>
         )}
       />
+
+      <FormField
+        control={form.control}
+        name="country"
+        render={({ field }) => (
+          <FormItem className="relative">
+            <FormLabel>Country of Operation</FormLabel>
+            <Select 
+              onValueChange={(value) => {
+                field.onChange(value);
+                setShowOtherCountry(value === 'Other');
+              }} 
+              defaultValue={field.value}
+            >
+              <FormControl>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select country" />
+                </SelectTrigger>
+              </FormControl>
+              <SelectContent className="z-50 bg-white text-gray-900">
+                {countryOptions.map((country) => (
+                  <SelectItem key={country} value={country} className="hover:bg-gray-100">
+                    {country}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+
+      {showOtherCountry && (
+        <FormField
+          control={form.control}
+          name="otherCountry"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Specify Country</FormLabel>
+              <FormControl>
+                <Input placeholder="Enter your country" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      )}
 
       <FormField
         control={form.control}
@@ -55,6 +128,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
                 ))}
               </SelectContent>
             </Select>
+            <FormMessage />
           </FormItem>
         )}
       />
@@ -68,6 +142,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
             <FormControl>
               <Input placeholder="Enter primary export products" {...field} />
             </FormControl>
+            <FormMessage />
           </FormItem>
         )}
       />
@@ -86,6 +161,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
                 onChange={e => field.onChange(Number(e.target.value))}
               />
             </FormControl>
+            <FormMessage />
           </FormItem>
         )}
       />
@@ -110,6 +186,7 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
                 ))}
               </SelectContent>
             </Select>
+            <FormMessage />
           </FormItem>
         )}
       />

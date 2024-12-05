@@ -15,6 +15,8 @@ import { ContactInfoStep } from '@/components/exporter/ContactInfoStep';
 const formSchema = z.object({
   // Step 1
   companyName: z.string(),
+  country: z.string(),
+  otherCountry: z.string().optional(),
   industry: z.string(),
   exportProducts: z.string(),
   monthlyVolumes: z.number(),
@@ -50,6 +52,8 @@ const ExporterOnboarding = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       companyName: '',
+      country: '',
+      otherCountry: '',
       industry: '',
       exportProducts: '',
       monthlyVolumes: 0,
