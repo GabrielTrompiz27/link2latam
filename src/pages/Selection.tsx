@@ -1,8 +1,10 @@
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Selection = () => {
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-gray-50 py-20">
@@ -12,31 +14,31 @@ const Selection = () => {
           className="flex items-center text-primary hover:text-accent mb-8"
         >
           <ArrowLeft className="mr-2" size={20} />
-          Back to Home
+          {t('selection.back')}
         </button>
         
         <h1 className="text-4xl font-bold text-primary mb-8 text-center">
-          How would you like to proceed?
+          {t('selection.title')}
         </h1>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <h2 className="text-2xl font-semibold mb-4">I'm an Investor</h2>
+            <h2 className="text-2xl font-semibold mb-4">{t('selection.investor.title')}</h2>
             <p className="text-gray-600 mb-6">
-              Looking to provide funding and expand my investment portfolio in Latin America.
+              {t('selection.investor.description')}
             </p>
             <button className="btn-primary w-full">
-              Continue as Investor
+              {t('nav.getStarted')}
             </button>
           </div>
           
           <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-            <h2 className="text-2xl font-semibold mb-4">I'm an Exporter</h2>
+            <h2 className="text-2xl font-semibold mb-4">{t('selection.exporter.title')}</h2>
             <p className="text-gray-600 mb-6">
-              Seeking funding solutions to grow my export business in Latin America.
+              {t('selection.exporter.description')}
             </p>
             <button className="btn-primary w-full">
-              Continue as Exporter
+              {t('nav.getStarted')}
             </button>
           </div>
         </div>
