@@ -24,8 +24,8 @@ export const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-between min-h-screen p-8 md:p-16">
-        {/* Top left text */}
-        <div className="max-w-2xl">
+        {/* Top centered text */}
+        <div className="w-full text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
             {t('hero.title')}
           </h1>
