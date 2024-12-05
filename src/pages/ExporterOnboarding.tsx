@@ -205,13 +205,14 @@ const ExporterOnboarding = () => {
                     {currentStep < 4 ? (
                       <Button
                         type="button"
+                        variant="outline"
                         onClick={() => setCurrentStep(Math.min(4, currentStep + 1))}
                         className="font-medium"
                       >
                         {t('exporter.questionnaire.next')}
                       </Button>
                     ) : (
-                      <Button type="submit" className="font-medium">
+                      <Button type="submit" variant="outline" className="font-medium">
                         {t('exporter.questionnaire.submit')}
                       </Button>
                     )}
