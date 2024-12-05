@@ -18,8 +18,8 @@ export const Navbar = () => {
             className="flex items-center gap-2 text-2xl font-bold text-white hover:text-white/90 transition-colors"
           >
             <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0H70V30H30V70H0V0Z" fill="none" stroke="#FFFFFF" strokeWidth="4"/>
-              <path d="M30 30H100V100H70V70H30V30Z" fill="none" stroke="#FFA400" strokeWidth="4"/>
+              <rect x="0" y="0" width="70" height="70" fill="none" stroke="#FFFFFF" strokeWidth="6"/>
+              <rect x="30" y="30" width="70" height="70" fill="none" stroke="#FFA400" strokeWidth="6"/>
             </svg>
             Link2Latam
           </button>
