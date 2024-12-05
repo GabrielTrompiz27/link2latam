@@ -10,6 +10,12 @@ const contactMethods = [
 ];
 
 export const ContactInfoStep = ({ form }: { form: any }) => {
+  const RequiredLabel = ({ children }: { children: React.ReactNode }) => (
+    <FormLabel>
+      {children} <span className="text-red-500">*</span>
+    </FormLabel>
+  );
+
   return (
     <div className="space-y-6">
       <FormField
@@ -17,7 +23,7 @@ export const ContactInfoStep = ({ form }: { form: any }) => {
         name="fullName"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Full Name</FormLabel>
+            <RequiredLabel>Full Name</RequiredLabel>
             <FormControl>
               <Input placeholder="Enter your full name" {...field} />
             </FormControl>
@@ -31,7 +37,7 @@ export const ContactInfoStep = ({ form }: { form: any }) => {
         name="position"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Position/Title</FormLabel>
+            <RequiredLabel>Position/Title</RequiredLabel>
             <FormControl>
               <Input placeholder="Enter your position/title" {...field} />
             </FormControl>
@@ -45,7 +51,7 @@ export const ContactInfoStep = ({ form }: { form: any }) => {
         name="email"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Email Address</FormLabel>
+            <RequiredLabel>Email Address</RequiredLabel>
             <FormControl>
               <Input type="email" placeholder="Enter your email address" {...field} />
             </FormControl>
@@ -59,7 +65,7 @@ export const ContactInfoStep = ({ form }: { form: any }) => {
         name="phoneNumber"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Phone Number</FormLabel>
+            <RequiredLabel>Phone Number</RequiredLabel>
             <FormControl>
               <Input placeholder="Enter your phone number (include country code)" {...field} />
             </FormControl>

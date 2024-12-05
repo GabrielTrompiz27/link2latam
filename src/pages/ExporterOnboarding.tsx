@@ -45,11 +45,11 @@ const formSchema = z.object({
   creditEnhancement: z.string().optional(),
   creditEnhancementDetails: z.string().optional(),
 
-  // Step 4 - all fields optional
-  fullName: z.string().optional(),
-  position: z.string().optional(),
-  email: z.string().email().optional(),
-  phoneNumber: z.string().optional(),
+  // Step 4 - most fields required except preferredContact and additionalNotes
+  fullName: z.string().min(1, "Full name is required"),
+  position: z.string().min(1, "Position is required"),
+  email: z.string().email("Invalid email address").min(1, "Email is required"),
+  phoneNumber: z.string().min(1, "Phone number is required"),
   preferredContact: z.string().optional(),
   additionalNotes: z.string().optional(),
 });
