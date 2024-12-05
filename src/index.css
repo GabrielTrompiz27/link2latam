@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,11 +6,7 @@
 
 @layer base {
   body {
-    @apply font-sans antialiased text-neutral bg-white;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold text-primary;
+    @apply font-sans antialiased text-primary bg-white;
   }
 }
 
@@ -28,6 +24,6 @@
   }
 
   .section-subtitle {
-    @apply text-lg text-primary-light mb-8 max-w-2xl mx-auto font-light;
+    @apply text-lg text-primary-light mb-8 max-w-2xl mx-auto;
   }
 }

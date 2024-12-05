@@ -20,24 +20,29 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#0C1E51", // Navy Blue
-          light: "#10458D", // Medium Blue
+          DEFAULT: "#0A2540",
+          light: "#2A4560",
         },
         accent: {
-          DEFAULT: "#FFA400", // Vibrant Orange
-          light: "#FFB733",
+          DEFAULT: "#00A3FF",
+          light: "#33B5FF",
         },
         success: {
           DEFAULT: "#4CAF50",
           light: "#81C784",
         },
-        neutral: {
-          DEFAULT: "#494949", // Dark Gray
-          light: "#CEEAF7", // Light Blue
-        }
       },
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
+      },
+      keyframes: {
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 0.5s ease-out",
       },
     },
   },
