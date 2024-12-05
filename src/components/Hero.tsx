@@ -43,7 +43,7 @@ export const Hero = () => {
             >
               {t('hero.getStarted')} <ArrowRight className="ml-2" size={20} />
             </button>
-            <button className="btn-secondary">
+            <button className="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200">
               {t('hero.learnMore')}
             </button>
           </div>
