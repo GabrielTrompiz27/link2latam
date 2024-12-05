@@ -39,15 +39,15 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         control={form.control}
         name="industry"
         render={({ field }) => (
-          <FormItem>
+          <FormItem className="relative">
             <FormLabel>Industry/Sector</FormLabel>
             <Select onValueChange={field.onChange} defaultValue={field.value}>
               <FormControl>
-                <SelectTrigger>
+                <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select industry" />
                 </SelectTrigger>
               </FormControl>
-              <SelectContent>
+              <SelectContent className="z-50">
                 {industryOptions.map((industry) => (
                   <SelectItem key={industry} value={industry}>
                     {industry}
@@ -94,15 +94,15 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
         control={form.control}
         name="employees"
         render={({ field }) => (
-          <FormItem>
+          <FormItem className="relative">
             <FormLabel>Number of Employees</FormLabel>
             <Select onValueChange={field.onChange} defaultValue={field.value}>
               <FormControl>
-                <SelectTrigger>
+                <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select employee range" />
                 </SelectTrigger>
               </FormControl>
-              <SelectContent>
+              <SelectContent className="z-50">
                 {employeeRanges.map((range) => (
                   <SelectItem key={range} value={range}>
                     {range}
