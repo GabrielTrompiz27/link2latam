@@ -1,10 +1,13 @@
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
 
 const ExporterOnboarding = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
+  const [currentStep, setCurrentStep] = useState(1);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -24,10 +27,10 @@ const ExporterOnboarding = () => {
       {/* Welcome Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-primary mb-6 animate-fade-in">
+          <h1 className="text-4xl font-bold text-primary mb-6">
             {t('exporter.welcome.title')}
           </h1>
-          <p className="text-xl text-primary-light mb-8 animate-fade-in">
+          <p className="text-xl text-primary-light mb-8">
             {t('exporter.welcome.subtitle')}
           </p>
         </div>
@@ -71,6 +74,72 @@ const ExporterOnboarding = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">{t('exporter.whyChoose.global.title')}</h3>
               <p className="text-primary-light">{t('exporter.whyChoose.global.description')}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Questionnaire Section */}
+      <div className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-primary text-center mb-4">
+              Let's Tailor Your Financing Options
+            </h2>
+            <p className="text-center text-primary-light mb-12">
+              Please fill out the form below to help us understand your business and financing needs. 
+              Based on your responses, we'll provide custom financing solutions.
+            </p>
+            
+            {/* Multi-step form container */}
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              {/* Progress indicator */}
+              <div className="mb-8">
+                <div className="flex justify-between items-center">
+                  {[1, 2, 3].map((step) => (
+                    <div key={step} className="flex items-center">
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                        step === currentStep 
+                          ? 'bg-accent text-white' 
+                          : step < currentStep 
+                            ? 'bg-green-500 text-white'
+                            : 'bg-gray-200 text-gray-600'
+                      }`}>
+                        {step < currentStep ? '✓' : step}
+                      </div>
+                      {step < 3 && (
+                        <div className={`w-24 h-1 mx-2 ${
+                          step < currentStep ? 'bg-green-500' : 'bg-gray-200'
+                        }`} />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Form content - placeholder for now */}
+              <div className="space-y-6">
+                <p className="text-center text-gray-500">
+                  Form questions will be added here in the next step
+                </p>
+              </div>
+
+              {/* Navigation buttons */}
+              <div className="flex justify-between mt-8">
+                <Button
+                  variant="outline"
+                  onClick={() => setCurrentStep(Math.max(1, currentStep - 1))}
+                  disabled={currentStep === 1}
+                >
+                  Previous
+                </Button>
+                <Button
+                  onClick={() => setCurrentStep(Math.min(3, currentStep + 1))}
+                  disabled={currentStep === 3}
+                >
+                  Next
+                </Button>
+              </div>
             </div>
           </div>
         </div>

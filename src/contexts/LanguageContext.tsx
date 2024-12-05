@@ -41,6 +41,12 @@ const translations = {
     'exporter.whyChoose.expert.description': 'Our team of trade finance experts is here to guide you every step of the way.',
     'exporter.whyChoose.global.title': 'Global Network',
     'exporter.whyChoose.global.description': 'Access our extensive network of international buyers and funding partners.',
+    
+    // Questionnaire Section
+    'exporter.questionnaire.title': "Let's Tailor Your Financing Options",
+    'exporter.questionnaire.subtitle': "Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions.",
+    'exporter.questionnaire.previous': "Previous",
+    'exporter.questionnaire.next': "Next",
   },
   es: {
     // Navbar
@@ -74,6 +80,12 @@ const translations = {
     'exporter.whyChoose.expert.description': 'Nuestro equipo de expertos en financiamiento comercial está aquí para guiarte en cada paso.',
     'exporter.whyChoose.global.title': 'Red Global',
     'exporter.whyChoose.global.description': 'Accede a nuestra extensa red de compradores internacionales y socios financieros.',
+    
+    // Questionnaire Section
+    'exporter.questionnaire.title': "Adaptemos Sus Opciones de Financiamiento",
+    'exporter.questionnaire.subtitle': "Complete el formulario a continuación para ayudarnos a comprender su negocio y necesidades de financiamiento. Basado en sus respuestas, le proporcionaremos soluciones de financiamiento personalizadas.",
+    'exporter.questionnaire.previous': "Anterior",
+    'exporter.questionnaire.next': "Siguiente",
   }
 };
 
