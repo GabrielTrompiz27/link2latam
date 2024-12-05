@@ -2,9 +2,9 @@ import { CheckCircle } from 'lucide-react';
 
 const regions = [
   "Mexico",
-  "Brazil",
+  "Ecuador",
   "Colombia",
-  "Chile",
+  "Bolivia",
   "Peru",
   "Argentina"
 ];
