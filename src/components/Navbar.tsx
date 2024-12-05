@@ -13,7 +13,12 @@ export const Navbar = () => {
     <nav className="fixed w-full bg-primary z-50 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
-          <div className="text-2xl font-bold text-white">Link2Latam</div>
+          <button 
+            onClick={() => navigate('/')} 
+            className="text-2xl font-bold text-white hover:text-white/90 transition-colors"
+          >
+            Link2Latam
+          </button>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">

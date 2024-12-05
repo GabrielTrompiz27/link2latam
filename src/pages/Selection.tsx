@@ -1,26 +1,15 @@
-import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { LanguageToggle } from '@/components/LanguageToggle';
+import { Navbar } from '@/components/Navbar';
 
 const Selection = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-gray-50 py-20">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center mb-8">
-          <button 
-            onClick={() => navigate('/')} 
-            className="flex items-center text-primary hover:text-accent"
-          >
-            <ArrowLeft className="mr-2" size={20} />
-            {t('selection.back')}
-          </button>
-          <LanguageToggle />
-        </div>
-        
+    <div className="min-h-screen bg-gray-50">
+      <Navbar />
+      <div className="container mx-auto px-4 pt-32">
         <h1 className="text-4xl font-bold text-primary mb-8 text-center">
           {t('selection.title')}
         </h1>
