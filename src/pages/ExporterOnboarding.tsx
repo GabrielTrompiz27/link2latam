@@ -37,7 +37,7 @@ const formSchema = z.object({
   financingPeriods: z.record(z.number().min(1, "Financing period must be at least 1 day")),
   totalFinancing: z.number().min(1, "Total financing amount is required"),
 
-  // Step 3 - only credit rating is required
+  // Step 3 - credit rating is now required
   creditRating: z.string().min(1, "Credit rating is required"),
   creditChallenges: z.string().optional(),
   collateralTypes: z.array(z.string()).optional(),
