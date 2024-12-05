@@ -8,7 +8,7 @@ export const Navbar = () => {
     <nav className="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
-          <div className="text-2xl font-bold text-primary">TradeFinex</div>
+          <div className="text-2xl font-bold text-primary">Link2Latam</div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
