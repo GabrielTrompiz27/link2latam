@@ -32,12 +32,12 @@ const formSchema = z.object({
   creditEnhancement: z.string(),
   creditEnhancementDetails: z.string().optional(),
 
-  // Step 4
-  fullName: z.string(),
-  position: z.string(),
-  email: z.string().email(),
-  phoneNumber: z.string(),
-  preferredContact: z.string(),
+  // Step 4 - all fields optional
+  fullName: z.string().optional(),
+  position: z.string().optional(),
+  email: z.string().email().optional(),
+  phoneNumber: z.string().optional(),
+  preferredContact: z.string().optional(),
   additionalNotes: z.string().optional(),
 });
 
