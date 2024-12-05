@@ -19,6 +19,7 @@ const formSchema = z.object({
   otherCountry: z.string().optional(),
   industry: z.string(),
   exportProducts: z.string(),
+  invoiceCurrency: z.string(),
   monthlyVolumes: z.number(),
   employees: z.string(),
   
@@ -56,6 +57,7 @@ const ExporterOnboarding = () => {
       otherCountry: '',
       industry: '',
       exportProducts: '',
+      invoiceCurrency: 'USD',
       monthlyVolumes: 0,
       employees: '',
       financingTypes: [],

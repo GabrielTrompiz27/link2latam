@@ -42,8 +42,14 @@ const countryOptions = [
   'Other'
 ];
 
+const currencyOptions = [
+  { value: 'USD', label: '$' },
+  { value: 'EUR', label: '€' }
+];
+
 export const CompanyInfoStep = ({ form }: { form: any }) => {
   const [showOtherCountry, setShowOtherCountry] = useState(false);
+  const selectedCurrency = form.watch('invoiceCurrency') || 'USD';
 
   return (
     <div className="space-y-6">
@@ -149,14 +155,39 @@ export const CompanyInfoStep = ({ form }: { form: any }) => {
 
       <FormField
         control={form.control}
+        name="invoiceCurrency"
+        render={({ field }) => (
+          <FormItem className="relative">
+            <FormLabel>Invoice Currency</FormLabel>
+            <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <FormControl>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select currency" />
+                </SelectTrigger>
+              </FormControl>
+              <SelectContent className="z-50 bg-white text-gray-900">
+                {currencyOptions.map((currency) => (
+                  <SelectItem key={currency.value} value={currency.value} className="hover:bg-gray-100">
+                    {currency.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+
+      <FormField
+        control={form.control}
         name="monthlyVolumes"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Monthly Volumes (EUR)</FormLabel>
+            <FormLabel>Monthly Volumes ({selectedCurrency === 'USD' ? '$' : '€'})</FormLabel>
             <FormControl>
               <Input 
                 type="number" 
-                placeholder="Enter monthly volumes" 
+                placeholder={`Enter monthly volumes in ${selectedCurrency === 'USD' ? 'USD' : 'EUR'}`}
                 {...field}
                 onChange={e => field.onChange(Number(e.target.value))}
               />
