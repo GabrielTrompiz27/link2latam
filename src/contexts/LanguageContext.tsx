@@ -100,6 +100,11 @@ const translations = {
     'services.globalReach.description': 'Access international markets with our extensive network and regional expertise.',
     'services.quickProcessing.title': 'Quick Processing',
     'services.quickProcessing.description': 'Fast approval and efficient processing to keep your business moving forward.',
+    
+    // Regional Expertise Section
+    'expertise.title': 'Regional Expertise Across Latin America',
+    'expertise.subtitle': 'With deep understanding of local markets and regulations, we provide tailored solutions for businesses across Latin America.',
+    'expertise.mapAlt': 'Regional Map',
   },
   es: {
     // Navbar
@@ -192,6 +197,11 @@ const translations = {
     'services.globalReach.description': 'Accede a mercados internacionales con nuestra extensa red y experiencia regional.',
     'services.quickProcessing.title': 'Procesamiento Rápido',
     'services.quickProcessing.description': 'Aprobación rápida y procesamiento eficiente para mantener tu negocio en movimiento.',
+    
+    // Regional Expertise Section
+    'expertise.title': 'Experiencia Regional en América Latina',
+    'expertise.subtitle': 'Con un profundo entendimiento de los mercados locales y regulaciones, proporcionamos soluciones personalizadas para negocios en América Latina.',
+    'expertise.mapAlt': 'Mapa Regional',
   }
 };
 
@@ -218,3 +228,4 @@ export const useLanguage = () => {
   }
   return context;
 };
+
