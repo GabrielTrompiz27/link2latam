@@ -35,9 +35,6 @@ export default {
           DEFAULT: "#4CAF50",
           light: "#81C784",
         },
-        header: {
-          DEFAULT: "#09171a", // New header color
-        },
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
