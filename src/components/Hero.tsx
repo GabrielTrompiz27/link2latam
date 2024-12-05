@@ -19,7 +19,7 @@ export const Hero = () => {
         }}
       >
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-primary-dark/80"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Content */}
