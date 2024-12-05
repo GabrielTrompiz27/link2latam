@@ -15,8 +15,12 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           <button 
             onClick={() => navigate('/')} 
-            className="text-2xl font-bold text-white hover:text-white/90 transition-colors"
+            className="flex items-center gap-2 text-2xl font-bold text-white hover:text-white/90 transition-colors"
           >
+            <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0H70V30H30V70H0V0Z" fill="#FFA400"/>
+              <path d="M30 30H100V100H70V70H30V30Z" fill="#FFA400"/>
+            </svg>
             Link2Latam
           </button>
           
