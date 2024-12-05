@@ -9,6 +9,7 @@ import { LanguageToggle } from '@/components/LanguageToggle';
 import { WelcomeSection } from '@/components/exporter/WelcomeSection';
 import { WhyChooseSection } from '@/components/exporter/WhyChooseSection';
 import { QuestionnaireSection } from '@/components/exporter/QuestionnaireSection';
+import { Navbar } from '@/components/Navbar';
 
 const formSchema = z.object({
   // Step 1 - all fields required
@@ -89,29 +90,16 @@ const ExporterOnboarding = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header Section */}
-      <div className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <button 
-              onClick={() => navigate('/get-started')} 
-              className="flex items-center text-primary hover:text-accent transition-colors"
-            >
-              <ArrowLeft className="mr-2" size={20} />
-              {t('exporter.back')}
-            </button>
-            <LanguageToggle />
-          </div>
-        </div>
+      <Navbar />
+      <div className="pt-20">
+        <WelcomeSection />
+        <WhyChooseSection />
+        <QuestionnaireSection 
+          currentStep={currentStep}
+          setCurrentStep={setCurrentStep}
+          form={form}
+        />
       </div>
-
-      <WelcomeSection />
-      <WhyChooseSection />
-      <QuestionnaireSection 
-        currentStep={currentStep}
-        setCurrentStep={setCurrentStep}
-        form={form}
-      />
     </div>
   );
 };
