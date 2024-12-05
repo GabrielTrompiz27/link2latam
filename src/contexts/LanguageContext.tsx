@@ -47,6 +47,7 @@ const translations = {
     'exporter.questionnaire.subtitle': "Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions.",
     'exporter.questionnaire.previous': "Previous",
     'exporter.questionnaire.next': "Next",
+    'exporter.questionnaire.submit': "Submit",
   },
   es: {
     // Navbar
@@ -86,6 +87,7 @@ const translations = {
     'exporter.questionnaire.subtitle': "Complete el formulario a continuación para ayudarnos a comprender su negocio y necesidades de financiamiento. Basado en sus respuestas, le proporcionaremos soluciones de financiamiento personalizadas.",
     'exporter.questionnaire.previous': "Anterior",
     'exporter.questionnaire.next': "Siguiente",
+    'exporter.questionnaire.submit': "Enviar",
   }
 };
 
