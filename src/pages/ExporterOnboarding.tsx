@@ -11,6 +11,7 @@ import { CompanyInfoStep } from '@/components/exporter/CompanyInfoStep';
 import { FinancingDetailsStep } from '@/components/exporter/FinancingDetailsStep';
 import { AccessToCreditStep } from '@/components/exporter/AccessToCreditStep';
 import { ContactInfoStep } from '@/components/exporter/ContactInfoStep';
+import { LanguageToggle } from '@/components/LanguageToggle';
 
 const formSchema = z.object({
   // Step 1
@@ -87,13 +88,16 @@ const ExporterOnboarding = () => {
       {/* Header Section */}
       <div className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4">
-          <button 
-            onClick={() => navigate('/get-started')} 
-            className="flex items-center text-primary hover:text-accent transition-colors"
-          >
-            <ArrowLeft className="mr-2" size={20} />
-            {t('exporter.back')}
-          </button>
+          <div className="flex justify-between items-center">
+            <button 
+              onClick={() => navigate('/get-started')} 
+              className="flex items-center text-primary hover:text-accent transition-colors"
+            >
+              <ArrowLeft className="mr-2" size={20} />
+              {t('exporter.back')}
+            </button>
+            <LanguageToggle />
+          </div>
         </div>
       </div>
 
