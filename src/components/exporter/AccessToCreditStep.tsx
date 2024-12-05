@@ -13,6 +13,12 @@ const collateralTypes = [
 ];
 
 export const AccessToCreditStep = ({ form }: { form: any }) => {
+  const RequiredLabel = ({ children }: { children: React.ReactNode }) => (
+    <FormLabel>
+      {children} <span className="text-red-500">*</span>
+    </FormLabel>
+  );
+
   return (
     <div className="space-y-6">
       <FormField
@@ -20,7 +26,7 @@ export const AccessToCreditStep = ({ form }: { form: any }) => {
         name="creditRating"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Rate Access to Credit (1-5)</FormLabel>
+            <RequiredLabel>Rate Access to Credit (1-5)</RequiredLabel>
             <FormControl>
               <RadioGroup
                 onValueChange={field.onChange}
