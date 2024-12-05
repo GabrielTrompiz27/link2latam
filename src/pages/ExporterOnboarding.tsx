@@ -27,7 +27,7 @@ const formSchema = z.object({
   // Step 2 - all fields required
   financingCurrency: z.string().min(1, "Currency is required"),
   otherFinancingCurrency: z.string().optional().superRefine((val, ctx) => {
-    if (ctx.path[0] === 'otherFinancingCurrency' && ctx.parent?.financingCurrency === 'OTHER' && !val) {
+    if (ctx.path[0] === 'otherFinancingCurrency' && ctx.data?.financingCurrency === 'OTHER' && !val) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         message: "Please specify the currency"
