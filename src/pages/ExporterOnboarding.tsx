@@ -9,6 +9,7 @@ import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { CompanyInfoStep } from '@/components/exporter/CompanyInfoStep';
 import { FinancingDetailsStep } from '@/components/exporter/FinancingDetailsStep';
+import { AccessToCreditStep } from '@/components/exporter/AccessToCreditStep';
 
 const ExporterOnboarding = () => {
   const navigate = useNavigate();
@@ -26,6 +27,14 @@ const ExporterOnboarding = () => {
     // Step 2
     financingTypes: z.array(z.string()),
     totalFinancing: z.number(),
+
+    // Step 3
+    creditRating: z.string(),
+    creditChallenges: z.string(),
+    collateralTypes: z.array(z.string()),
+    otherCollateral: z.string().optional(),
+    creditEnhancement: z.string(),
+    creditEnhancementDetails: z.string().optional(),
   });
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -38,6 +47,12 @@ const ExporterOnboarding = () => {
       employees: '',
       financingTypes: [],
       totalFinancing: 0,
+      creditRating: '',
+      creditChallenges: '',
+      collateralTypes: [],
+      otherCollateral: '',
+      creditEnhancement: '',
+      creditEnhancementDetails: '',
     }
   });
 
@@ -106,7 +121,7 @@ const ExporterOnboarding = () => {
             <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="text-accent mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 002 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2">{t('exporter.whyChoose.global.title')}</h3>
@@ -129,10 +144,10 @@ const ExporterOnboarding = () => {
             
             {/* Multi-step form container */}
             <div className="bg-white rounded-xl shadow-lg p-8">
-              {/* Progress indicator */}
+              {/* Step indicator */}
               <div className="mb-8">
                 <div className="flex justify-between items-center">
-                  {[1, 2].map((step) => (
+                  {[1, 2, 3].map((step) => (
                     <div key={step} className="flex items-center">
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
                         step === currentStep 
@@ -143,11 +158,6 @@ const ExporterOnboarding = () => {
                       }`}>
                         {step < currentStep ? '✓' : step}
                       </div>
-                      {step < 2 && (
-                        <div className={`w-24 h-1 mx-2 ${
-                          step < currentStep ? 'bg-green-500' : 'bg-gray-200'
-                        }`} />
-                      )}
                     </div>
                   ))}
                 </div>
@@ -157,6 +167,7 @@ const ExporterOnboarding = () => {
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                   {currentStep === 1 && <CompanyInfoStep form={form} />}
                   {currentStep === 2 && <FinancingDetailsStep form={form} />}
+                  {currentStep === 3 && <AccessToCreditStep form={form} />}
 
                   {/* Navigation buttons */}
                   <div className="flex justify-between mt-8">
@@ -168,10 +179,10 @@ const ExporterOnboarding = () => {
                     >
                       {t('exporter.questionnaire.previous')}
                     </Button>
-                    {currentStep < 2 ? (
+                    {currentStep < 3 ? (
                       <Button
                         type="button"
-                        onClick={() => setCurrentStep(Math.min(2, currentStep + 1))}
+                        onClick={() => setCurrentStep(Math.min(3, currentStep + 1))}
                       >
                         {t('exporter.questionnaire.next')}
                       </Button>
