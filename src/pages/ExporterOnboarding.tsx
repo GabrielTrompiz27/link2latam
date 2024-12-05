@@ -198,6 +198,7 @@ const ExporterOnboarding = () => {
                       variant="outline"
                       onClick={() => setCurrentStep(Math.max(1, currentStep - 1))}
                       disabled={currentStep === 1}
+                      className="font-medium"
                     >
                       {t('exporter.questionnaire.previous')}
                     </Button>
@@ -205,11 +206,12 @@ const ExporterOnboarding = () => {
                       <Button
                         type="button"
                         onClick={() => setCurrentStep(Math.min(4, currentStep + 1))}
+                        className="font-medium"
                       >
                         {t('exporter.questionnaire.next')}
                       </Button>
                     ) : (
-                      <Button type="submit">
+                      <Button type="submit" className="font-medium">
                         {t('exporter.questionnaire.submit')}
                       </Button>
                     )}
