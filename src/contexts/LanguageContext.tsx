@@ -129,7 +129,7 @@ const translations = {
 
     // Exporter Onboarding
     'exporter.back': 'Volver',
-    'exporter.welcome.title': 'Bienvenido a Financiamiento de Exportación Link2Latam',
+    'exporter.welcome.title': 'Bienvenido a Link2Latam',
     'exporter.welcome.subtitle': 'Transforma tu negocio de exportación con soluciones de financiamiento rápidas y flexibles adaptadas a tus necesidades.',
     'exporter.whyChoose.title': '¿Por qué elegir Link2Latam?',
     'exporter.whyChoose.fast.title': 'Financiamiento Rápido',
