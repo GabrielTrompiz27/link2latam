@@ -36,7 +36,7 @@ const translations = {
     'exporter.welcome.subtitle': 'Transform your export business with fast, flexible funding solutions tailored to your needs.',
     'exporter.whyChoose.title': 'Why Choose Link2Latam?',
     'exporter.whyChoose.fast.title': 'Fast Funding',
-    'exporter.whyChoose.fast.description': 'Get your export invoices funded in as little as 48 hours with our streamlined process.',
+    'exporter.whyChoose.fast.description': 'Get your export invoices funded quickly through our streamlined process.',
     'exporter.whyChoose.expert.title': 'Expert Support',
     'exporter.whyChoose.expert.description': 'Our team of trade finance experts is here to guide you every step of the way.',
     'exporter.whyChoose.global.title': 'Global Network',
