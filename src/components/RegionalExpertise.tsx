@@ -1,4 +1,4 @@
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Flag } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const regions = [
@@ -16,17 +16,25 @@ export const RegionalExpertise = () => {
   return (
     <section id="expertise" className="py-20">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <h2 className="section-title">{t('expertise.title')}</h2>
             <p className="text-primary-light mb-8">
               {t('expertise.subtitle')}
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 mb-8">
               {regions.map((region, index) => (
                 <div key={index} className="flex items-center space-x-2">
                   <CheckCircle className="text-success" size={20} />
                   <span>{region}</span>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {regions.map((region, index) => (
+                <div key={`flag-${index}`} className="flex flex-col items-center">
+                  <Flag className="text-primary h-6 w-6" />
+                  <span className="text-sm mt-1">{region}</span>
                 </div>
               ))}
             </div>
