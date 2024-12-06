@@ -133,7 +133,7 @@ const translations = {
     'exporter.welcome.subtitle': 'Transforma tu negocio de exportación con soluciones de financiamiento rápidas y flexibles adaptadas a tus necesidades.',
     'exporter.whyChoose.title': '¿Por qué elegir Link2Latam?',
     'exporter.whyChoose.fast.title': 'Financiamiento Rápido',
-    'exporter.whyChoose.fast.description': 'Obtén financiamiento para tus facturas de exportación en tan solo 48 horas con nuestro proceso simplificado.',
+    'exporter.whyChoose.fast.description': 'Obtén financiamiento para tus facturas de exportación rápidamente a través de nuestro proceso simplificado.',
     'exporter.whyChoose.expert.title': 'Soporte Experto',
     'exporter.whyChoose.expert.description': 'Nuestro equipo de expertos en financiamiento comercial está aquí para guiarte en cada paso.',
     'exporter.whyChoose.global.title': 'Red Global',
