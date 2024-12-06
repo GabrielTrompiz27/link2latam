@@ -34,7 +34,7 @@ export const RegionalExpertise = () => {
           <div className="relative">
             <div className="aspect-square bg-accent/10 rounded-full absolute inset-0 animate-pulse"></div>
             <img
-              src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+              src="/lovable-uploads/11f1f11c-64f6-4d9f-9855-72dacb1fa7fe.png"
               alt={t('expertise.mapAlt')}
               className="relative rounded-lg shadow-xl"
             />
