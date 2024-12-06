@@ -32,13 +32,13 @@ export const RegionalExpertise = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-square bg-accent/10 rounded-full absolute inset-0 animate-pulse"></div>
-            <div className="relative">
+            <div className="w-full aspect-[4/3] bg-accent/10 rounded-full absolute inset-0 animate-pulse"></div>
+            <div className="relative w-full aspect-[4/3]">
               <div className="absolute inset-0 bg-primary/30 rounded-lg"></div>
               <img
                 src="/lovable-uploads/11f1f11c-64f6-4d9f-9855-72dacb1fa7fe.png"
                 alt={t('expertise.mapAlt')}
-                className="relative rounded-lg shadow-xl"
+                className="relative rounded-lg shadow-xl w-full h-full object-cover"
               />
             </div>
           </div>
