@@ -25,12 +25,6 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
           <p className="text-center text-primary-light mb-8">
             Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions.
           </p>
-          <h3 className="text-2xl font-bold text-primary text-center mb-4">
-            {t('exporter.questionnaire.title')}
-          </h3>
-          <p className="text-center text-primary-light mb-12">
-            {t('exporter.questionnaire.subtitle')}
-          </p>
           
           {/* Multi-step form container */}
           <div className="bg-white rounded-xl shadow-lg p-8">
