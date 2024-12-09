@@ -58,25 +58,24 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
                 <div className="flex justify-between mt-8">
                   <Button
                     type="button"
+                    variant="outline"
                     onClick={() => setCurrentStep(Math.max(1, currentStep - 1))}
                     disabled={currentStep === 1}
-                    className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-medium"
+                    className="font-medium"
                   >
                     {t('exporter.questionnaire.previous')}
                   </Button>
                   {currentStep < 4 ? (
                     <Button
                       type="button"
+                      variant="outline"
                       onClick={() => setCurrentStep(Math.min(4, currentStep + 1))}
-                      className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-medium"
+                      className="font-medium"
                     >
                       {t('exporter.questionnaire.next')}
                     </Button>
                   ) : (
-                    <Button 
-                      type="submit"
-                      className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-medium"
-                    >
+                    <Button type="submit" variant="outline" className="font-medium">
                       {t('exporter.questionnaire.submit')}
                     </Button>
                   )}
