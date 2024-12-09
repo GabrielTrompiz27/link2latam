@@ -87,7 +87,7 @@ const translations = {
     'investor.whyChoose.risk.title': 'Risk Management',
     'investor.whyChoose.risk.description': 'Benefit from our robust due diligence process and diversified investment options.',
     'investor.whyChoose.market.title': 'Market Access',
-    'investor.whyChoose.market.description': 'Gain direct access to investment opportunities in south America through our extensive network and partnerships.',
+    'investor.whyChoose.market.description': 'Gain direct access to Latin American export markets and growth opportunities.',
 
     // Services Section
     'services.title': 'Our Services',
