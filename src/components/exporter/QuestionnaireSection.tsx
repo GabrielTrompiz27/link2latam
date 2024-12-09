@@ -63,7 +63,7 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
                     disabled={currentStep === 1}
                     className="font-medium"
                   >
-                    {t('exporter.questionnaire.previous')}
+                    Previous
                   </Button>
                   {currentStep < 4 ? (
                     <Button
@@ -72,11 +72,11 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
                       onClick={() => setCurrentStep(Math.min(4, currentStep + 1))}
                       className="font-medium"
                     >
-                      {t('exporter.questionnaire.next')}
+                      Next
                     </Button>
                   ) : (
                     <Button type="submit" variant="outline" className="font-medium">
-                      {t('exporter.questionnaire.submit')}
+                      Submit
                     </Button>
                   )}
                 </div>
