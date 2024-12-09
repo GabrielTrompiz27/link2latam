@@ -21,6 +21,17 @@ export const WhyChooseSection = () => {
             <p className="text-primary-light">{t('investor.whyChoose.returns.description')}</p>
           </div>
 
+          {/* Short-Term Investment Cycles */}
+          <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="text-accent mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">{t('investor.whyChoose.cycles.title')}</h3>
+            <p className="text-primary-light">{t('investor.whyChoose.cycles.description')}</p>
+          </div>
+
           {/* Risk Management */}
           <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
             <div className="text-accent mb-4">
@@ -41,17 +52,6 @@ export const WhyChooseSection = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2">{t('investor.whyChoose.market.title')}</h3>
             <p className="text-primary-light">{t('investor.whyChoose.market.description')}</p>
-          </div>
-
-          {/* Short-Term Investment Cycles */}
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <div className="text-accent mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">{t('investor.whyChoose.cycles.title')}</h3>
-            <p className="text-primary-light">{t('investor.whyChoose.cycles.description')}</p>
           </div>
         </div>
       </div>
