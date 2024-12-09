@@ -42,6 +42,8 @@ export const enTranslations = {
   'investor.whyChoose.risk.description': 'Benefit from our robust due diligence process and diversified investment options.',
   'investor.whyChoose.market.title': 'Market Access',
   'investor.whyChoose.market.description': 'Gain direct access to investment opportunities in Latin America through our extensive network and partnerships.',
+  'investor.whyChoose.cycles.title': 'Short-Term Investment Cycles',
+  'investor.whyChoose.cycles.description': 'Enjoy the flexibility of short-term investments with interest payments typically made within 60 to 90 days, allowing you to see quick returns and reinvest efficiently.',
 
   // Services Section
   'services.title': 'Our Services',
