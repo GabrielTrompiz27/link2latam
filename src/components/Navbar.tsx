@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Building2 } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageToggle } from './LanguageToggle';
@@ -30,11 +30,7 @@ export const Navbar = () => {
             onClick={() => navigate('/')} 
             className="flex items-center gap-2 text-2xl font-bold text-white hover:text-white/90 transition-colors"
           >
-            <img 
-              src="/lovable-uploads/db1998be-b532-49ac-b9cb-513d200a9155.png" 
-              alt="Link2Latam Logo" 
-              className="h-8 w-auto"
-            />
+            <Building2 size={32} className="text-white" />
             Link2Latam
           </button>
           
