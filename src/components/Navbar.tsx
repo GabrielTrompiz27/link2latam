@@ -30,10 +30,11 @@ export const Navbar = () => {
             onClick={() => navigate('/')} 
             className="flex items-center gap-2 text-2xl font-bold text-white hover:text-white/90 transition-colors"
           >
-            <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 10H70V70H10V10Z" fill="none" stroke="#FFFFFF" strokeWidth="8"/>
-              <path d="M30 30H90V90H30V30Z" fill="none" stroke="#FFA400" strokeWidth="8"/>
-            </svg>
+            <img 
+              src="/lovable-uploads/db1998be-b532-49ac-b9cb-513d200a9155.png" 
+              alt="Link2Latam Logo" 
+              className="h-8 w-auto"
+            />
             Link2Latam
           </button>
           
