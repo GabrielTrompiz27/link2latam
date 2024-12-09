@@ -24,7 +24,7 @@ export const FinancingDetailsStep = ({ form }: { form: any }) => {
         name="financingCurrency"
         render={({ field }) => (
           <FormItem className="relative">
-            <RequiredLabel>Financing Currency</RequiredLabel>
+            <RequiredLabel>{t('form.financingCurrency')}</RequiredLabel>
             <Select 
               onValueChange={(value) => {
                 field.onChange(value);
