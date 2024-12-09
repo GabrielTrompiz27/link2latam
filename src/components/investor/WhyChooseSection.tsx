@@ -1,7 +1,31 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Textarea } from '@/components/ui/textarea';
+import { useState } from 'react';
 
 export const WhyChooseSection = () => {
   const { t } = useLanguage();
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    contactMethod: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    // Here you would typically handle the form submission
+  };
   
   return (
     <div className="bg-white py-16">
@@ -53,6 +77,93 @@ export const WhyChooseSection = () => {
             <h3 className="text-xl font-semibold mb-2">{t('investor.whyChoose.market.title')}</h3>
             <p className="text-primary-light">{t('investor.whyChoose.market.description')}</p>
           </div>
+        </div>
+
+        {/* Consultation Section */}
+        <div className="mt-20 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-primary text-center mb-4">
+            Let's Discuss Your Investment Goals
+          </h2>
+          <p className="text-center text-primary-light mb-8">
+            Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives. Our team is ready to provide personalized guidance and demonstrate our platform's capabilities.
+          </p>
+
+          <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-lg shadow-sm">
+            <div className="space-y-4">
+              <div>
+                <label htmlFor="fullName" className="block text-sm font-medium text-primary mb-1">
+                  Full Name *
+                </label>
+                <Input
+                  id="fullName"
+                  required
+                  value={formData.fullName}
+                  onChange={(e) => setFormData({...formData, fullName: e.target.value})}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-primary mb-1">
+                  Email Address *
+                </label>
+                <Input
+                  id="email"
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-primary mb-1">
+                  Phone Number *
+                </label>
+                <Input
+                  id="phone"
+                  type="tel"
+                  required
+                  value={formData.phone}
+                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="contactMethod" className="block text-sm font-medium text-primary mb-1">
+                  Preferred Contact Method *
+                </label>
+                <Select
+                  value={formData.contactMethod}
+                  onValueChange={(value) => setFormData({...formData, contactMethod: value})}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select contact method" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="email">Email</SelectItem>
+                    <SelectItem value="phone">Phone</SelectItem>
+                    <SelectItem value="video">Video Call</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-primary mb-1">
+                  Message (Optional)
+                </label>
+                <Textarea
+                  id="message"
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  className="min-h-[100px]"
+                />
+              </div>
+
+              <Button type="submit" className="w-full">
+                Request a Consultation
+              </Button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
