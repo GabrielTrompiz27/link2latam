@@ -98,6 +98,7 @@ export const WhyChooseSection = () => {
                 <Input
                   id="fullName"
                   required
+                  placeholder="Enter your full name"
                   value={formData.fullName}
                   onChange={(e) => setFormData({...formData, fullName: e.target.value})}
                 />
@@ -111,6 +112,7 @@ export const WhyChooseSection = () => {
                   id="email"
                   type="email"
                   required
+                  placeholder="Enter your email address"
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
                 />
@@ -124,6 +126,7 @@ export const WhyChooseSection = () => {
                   id="phone"
                   type="tel"
                   required
+                  placeholder="Enter your phone number"
                   value={formData.phone}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
                 />
@@ -138,7 +141,7 @@ export const WhyChooseSection = () => {
                   onValueChange={(value) => setFormData({...formData, contactMethod: value})}
                 >
                   <SelectTrigger>
-                    <SelectValue placeholder="Select contact method" />
+                    <SelectValue placeholder="Select your preferred contact method" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="email">Email</SelectItem>
@@ -156,6 +159,7 @@ export const WhyChooseSection = () => {
                   id="message"
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  placeholder="Tell us about your investment goals and any specific questions you have"
                   className="min-h-[100px]"
                 />
               </div>
