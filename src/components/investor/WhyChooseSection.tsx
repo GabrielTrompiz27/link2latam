@@ -167,8 +167,8 @@ export const WhyChooseSection = () => {
               <Button type="submit" className="w-full">
                 Request a Consultation
               </Button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
