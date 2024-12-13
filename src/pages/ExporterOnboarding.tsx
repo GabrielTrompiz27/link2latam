@@ -10,6 +10,9 @@ import { WelcomeSection } from '@/components/exporter/WelcomeSection';
 import { WhyChooseSection } from '@/components/exporter/WhyChooseSection';
 import { QuestionnaireSection } from '@/components/exporter/QuestionnaireSection';
 import { Navbar } from '@/components/Navbar';
+import { supabase } from '@/lib/supabase';
+import { useToast } from '@/components/ui/use-toast';
+import { toast } from 'sonner';
 
 const formSchema = z.object({
   // Step 1 - all fields required
@@ -59,6 +62,7 @@ const ExporterOnboarding = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
   const [currentStep, setCurrentStep] = useState(1);
+  const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -88,6 +92,31 @@ const ExporterOnboarding = () => {
     }
   });
 
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      const { error } = await supabase
+        .from('exporter_submissions')
+        .insert([values]);
+
+      if (error) throw error;
+
+      toast({
+        title: "Success!",
+        description: "Your form has been submitted successfully. We'll be in touch soon.",
+      });
+
+      // Optional: redirect to a thank you page or home
+      navigate('/');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "There was a problem submitting your form. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -98,6 +127,7 @@ const ExporterOnboarding = () => {
           currentStep={currentStep}
           setCurrentStep={setCurrentStep}
           form={form}
+          onSubmit={onSubmit}
         />
       </div>
     </div>
