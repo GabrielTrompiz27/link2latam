@@ -1,7 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { useToast } from '@/components/ui/use-toast';
 import {
   Select,
   SelectContent,
@@ -11,54 +10,24 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from '@/components/ui/textarea';
 import { useState } from 'react';
-import { supabase } from '@/lib/supabaseClient';
 
-export const WhyChooseSection = () => {
+interface WhyChooseSectionProps {
+  onSubmit: (formData: any) => Promise<void>;
+}
+
+export const WhyChooseSection = ({ onSubmit }: WhyChooseSectionProps) => {
   const { t } = useLanguage();
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
-    full_name: '',
+    fullName: '',
     email: '',
     phone: '',
-    contact_method: '',
+    contactMethod: '',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const { error } = await supabase
-        .from('investor_submissions')
-        .insert([formData]);
-
-      if (error) throw error;
-
-      toast({
-        title: "Success!",
-        description: "Your information has been submitted successfully.",
-      });
-
-      // Reset form
-      setFormData({
-        full_name: '',
-        email: '',
-        phone: '',
-        contact_method: '',
-        message: ''
-      });
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      toast({
-        title: "Error",
-        description: "There was a problem submitting your information. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    await onSubmit(formData);
   };
   
   return (
@@ -127,15 +96,15 @@ export const WhyChooseSection = () => {
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="full_name" className="block text-sm font-medium text-primary mb-1">
+                <label htmlFor="fullName" className="block text-sm font-medium text-primary mb-1">
                   Full Name <span className="text-red-500">*</span>
                 </label>
                 <Input
-                  id="full_name"
+                  id="fullName"
                   required
                   placeholder="Enter your full name"
-                  value={formData.full_name}
-                  onChange={(e) => setFormData({...formData, full_name: e.target.value})}
+                  value={formData.fullName}
+                  onChange={(e) => setFormData({...formData, fullName: e.target.value})}
                 />
               </div>
 
@@ -168,17 +137,17 @@ export const WhyChooseSection = () => {
               </div>
 
               <div>
-                <label htmlFor="contact_method" className="block text-sm font-medium text-primary mb-1">
+                <label htmlFor="contactMethod" className="block text-sm font-medium text-primary mb-1">
                   Preferred Contact Method <span className="text-red-500">*</span>
                 </label>
                 <Select
-                  value={formData.contact_method}
-                  onValueChange={(value) => setFormData({...formData, contact_method: value})}
+                  value={formData.contactMethod}
+                  onValueChange={(value) => setFormData({...formData, contactMethod: value})}
                 >
-                  <SelectTrigger className="bg-white">
+                  <SelectTrigger>
                     <SelectValue placeholder="Select your preferred contact method" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="bg-white border shadow-md">
                     <SelectItem value="email">Email</SelectItem>
                     <SelectItem value="phone">Phone</SelectItem>
                     <SelectItem value="video">Video Call</SelectItem>
@@ -199,8 +168,8 @@ export const WhyChooseSection = () => {
                 />
               </div>
 
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Request a Consultation"}
+              <Button type="submit" className="w-full">
+                Request a Consultation
               </Button>
             </form>
           </div>
