@@ -6,7 +6,6 @@ import { WhyChooseSection } from '@/components/investor/WhyChooseSection';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { Navbar } from '@/components/Navbar';
 import { supabase } from '@/lib/supabase';
-import { useToast } from '@/components/ui/use-toast';
 import { toast } from 'sonner';
 
 const InvestorOnboarding = () => {
@@ -15,7 +14,8 @@ const InvestorOnboarding = () => {
 
   const handleFormSubmit = async (formData: any) => {
     try {
-      // Add a timestamp to the data
+      console.log('Submitting form data:', formData);
+      
       const submissionData = {
         full_name: formData.fullName,
         email: formData.email,
@@ -25,15 +25,17 @@ const InvestorOnboarding = () => {
         created_at: new Date().toISOString()
       };
 
-      const { error } = await supabase
+      const { data, error } = await supabase
         .from('investor_submissions')
-        .insert([submissionData]);
+        .insert([submissionData])
+        .select();
 
       if (error) {
-        console.error('Error details:', error);
+        console.error('Supabase error:', error);
         throw error;
       }
 
+      console.log('Submission successful:', data);
       toast.success("Your consultation request has been submitted successfully. We'll be in touch soon.");
       navigate('/');
     } catch (error) {
