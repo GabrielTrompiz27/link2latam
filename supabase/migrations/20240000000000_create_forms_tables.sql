@@ -6,7 +6,7 @@ create table public.investor_submissions (
   phone text not null,
   contact_method text not null,
   message text,
-  created_at timestamp with time zone default now() not null
+  created_at timestamptz default now()
 );
 
 -- Set up RLS policies

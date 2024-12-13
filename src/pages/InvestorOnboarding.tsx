@@ -21,8 +21,7 @@ const InvestorOnboarding = () => {
         email: formData.email,
         phone: formData.phone,
         contact_method: formData.contactMethod,
-        message: formData.message,
-        created_at: new Date().toISOString()
+        message: formData.message
       };
 
       const { data, error } = await supabase
