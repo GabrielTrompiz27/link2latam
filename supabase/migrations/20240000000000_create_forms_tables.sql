@@ -16,6 +16,6 @@ alter table public.investor_submissions enable row level security;
 create policy "Enable insert for all users" on public.investor_submissions
   for insert with check (true);
 
--- Create policy that only allows users to read their own submissions
-create policy "Enable read access for users based on email" on public.investor_submissions
-  for select using (auth.jwt() ->> 'email' = email);
+-- Create policy that allows reading all rows
+create policy "Enable read access for all users" on public.investor_submissions
+  for select using (true);
