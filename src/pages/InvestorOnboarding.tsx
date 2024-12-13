@@ -15,17 +15,24 @@ const InvestorOnboarding = () => {
 
   const handleFormSubmit = async (formData: any) => {
     try {
+      // Add a timestamp to the data
+      const submissionData = {
+        full_name: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        contact_method: formData.contactMethod,
+        message: formData.message,
+        created_at: new Date().toISOString()
+      };
+
       const { error } = await supabase
         .from('investor_submissions')
-        .insert([{
-          full_name: formData.fullName,
-          email: formData.email,
-          phone: formData.phone,
-          contact_method: formData.contactMethod,
-          message: formData.message,
-        }]);
+        .insert([submissionData]);
 
-      if (error) throw error;
+      if (error) {
+        console.error('Error details:', error);
+        throw error;
+      }
 
       toast.success("Your consultation request has been submitted successfully. We'll be in touch soon.");
       navigate('/');
