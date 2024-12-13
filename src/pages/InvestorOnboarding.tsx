@@ -7,34 +7,31 @@ import { LanguageToggle } from '@/components/LanguageToggle';
 import { Navbar } from '@/components/Navbar';
 import { supabase } from '@/lib/supabase';
 import { useToast } from '@/components/ui/use-toast';
+import { toast } from 'sonner';
 
 const InvestorOnboarding = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
-  const { toast } = useToast();
 
   const handleFormSubmit = async (formData: any) => {
     try {
       const { error } = await supabase
         .from('investor_submissions')
-        .insert([formData]);
+        .insert([{
+          full_name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          contact_method: formData.contactMethod,
+          message: formData.message,
+        }]);
 
       if (error) throw error;
 
-      toast({
-        title: "Success!",
-        description: "Your consultation request has been submitted successfully. We'll be in touch soon.",
-      });
-
-      // Optional: redirect to a thank you page or home
+      toast.success("Your consultation request has been submitted successfully. We'll be in touch soon.");
       navigate('/');
     } catch (error) {
       console.error('Error submitting form:', error);
-      toast({
-        title: "Error",
-        description: "There was a problem submitting your form. Please try again.",
-        variant: "destructive",
-      });
+      toast.error("There was a problem submitting your form. Please try again.");
     }
   };
 
