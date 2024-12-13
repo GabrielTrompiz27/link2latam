@@ -11,7 +11,11 @@ import {
 import { Textarea } from '@/components/ui/textarea';
 import { useState } from 'react';
 
-export const WhyChooseSection = () => {
+interface WhyChooseSectionProps {
+  onSubmit: (formData: any) => Promise<void>;
+}
+
+export const WhyChooseSection = ({ onSubmit }: WhyChooseSectionProps) => {
   const { t } = useLanguage();
   const [formData, setFormData] = useState({
     fullName: '',
@@ -21,9 +25,9 @@ export const WhyChooseSection = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    await onSubmit(formData);
   };
   
   return (
