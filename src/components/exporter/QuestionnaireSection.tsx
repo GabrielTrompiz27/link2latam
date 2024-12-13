@@ -5,16 +5,14 @@ import { CompanyInfoStep } from './CompanyInfoStep';
 import { FinancingDetailsStep } from './FinancingDetailsStep';
 import { AccessToCreditStep } from './AccessToCreditStep';
 import { ContactInfoStep } from './ContactInfoStep';
-import { UseFormReturn } from 'react-hook-form';
 
 interface QuestionnaireSectionProps {
   currentStep: number;
   setCurrentStep: (step: number) => void;
-  form: UseFormReturn<any>;
-  onSubmit: (values: any) => Promise<void>;
+  form: any;
 }
 
-export const QuestionnaireSection = ({ currentStep, setCurrentStep, form, onSubmit }: QuestionnaireSectionProps) => {
+export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: QuestionnaireSectionProps) => {
   const { t } = useLanguage();
 
   return (
@@ -50,7 +48,7 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form, onSubm
             </div>
 
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+              <form onSubmit={form.handleSubmit((values: any) => console.log(values))} className="space-y-8">
                 {currentStep === 1 && <CompanyInfoStep form={form} />}
                 {currentStep === 2 && <FinancingDetailsStep form={form} />}
                 {currentStep === 3 && <AccessToCreditStep form={form} />}
