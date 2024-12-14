@@ -13,6 +13,10 @@ import { Navbar } from '@/components/Navbar';
 import { supabase } from '@/lib/supabase';
 import { useToast } from '@/components/ui/use-toast';
 import { toast } from 'sonner';
+import emailjs from '@emailjs/browser';
+
+// Initialize EmailJS with your public key
+emailjs.init("WlivaL7VCZCUVpj0n");
 
 const formSchema = z.object({
   // Step 1 - all fields required
@@ -92,28 +96,41 @@ const ExporterOnboarding = () => {
     }
   });
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  const handleFormSubmit = async (formData: any) => {
     try {
-      const { error } = await supabase
+      // First save to Supabase
+      const { error: supabaseError } = await supabase
         .from('exporter_submissions')
-        .insert([values]);
+        .insert([formData]);
 
-      if (error) throw error;
+      if (supabaseError) throw supabaseError;
 
-      toast({
-        title: "Success!",
-        description: "Your form has been submitted successfully. We'll be in touch soon.",
-      });
+      // Then send email
+      const emailParams = {
+        from_name: formData.fullName || 'Not provided',
+        from_email: formData.email || 'Not provided',
+        phone: formData.phoneNumber || 'Not provided',
+        contact_method: formData.preferredContact || 'Not provided',
+        message: formData.additionalNotes || 'No additional notes',
+        subject: 'New Exporter Registration',
+        to_email: 'gabrieltrompiz27@gmail.com'
+      };
 
-      // Optional: redirect to a thank you page or home
-      navigate('/');
+      const emailResponse = await emailjs.send(
+        'default_service', // You'll need to replace this with your actual service ID
+        'template_uhlfing',
+        emailParams
+      );
+
+      if (emailResponse.status === 200) {
+        toast.success("Your form has been submitted successfully. We'll be in touch soon.");
+        navigate('/');
+      } else {
+        throw new Error('Failed to send email');
+      }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      toast({
-        title: "Error",
-        description: "There was a problem submitting your form. Please try again.",
-        variant: "destructive",
-      });
+      console.error('Error:', error);
+      toast.error("There was a problem submitting your form. Please try again.");
     }
   };
 
@@ -127,7 +144,7 @@ const ExporterOnboarding = () => {
           currentStep={currentStep}
           setCurrentStep={setCurrentStep}
           form={form}
-          onSubmit={onSubmit}
+          onSubmit={handleFormSubmit}
         />
       </div>
     </div>
