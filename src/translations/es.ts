@@ -5,11 +5,21 @@ export const esTranslations = {
   'nav.expertise': 'Experiencia',
   'nav.getStarted': 'Comenzar',
 
-  // Form Titles
-  'exporter.form.title': 'Personalicemos sus Opciones de Financiamiento',
-  'exporter.form.subtitle': 'Complete el formulario a continuación para ayudarnos a comprender su negocio y necesidades de financiamiento. Basado en sus respuestas, le proporcionaremos soluciones de financiamiento personalizadas.',
-  'investor.form.title': 'Hablemos de sus Objetivos de Inversión',
-  'investor.form.subtitle': 'Programe una consulta personalizada con nuestros expertos en inversiones para explorar cómo Link2Latam puede ayudarle a alcanzar sus objetivos de inversión.',
+  // Footer
+  'footer.about': 'Potenciando las exportaciones latinoamericanas a través de soluciones financieras innovadoras.',
+  'footer.quickLinks': 'Enlaces Rápidos',
+  'footer.services': 'Servicios',
+  'footer.invoiceFactoring': 'Factoraje de Facturas',
+  'footer.riskManagement': 'Gestión de Riesgos',
+  'footer.tradeFinance': 'Financiamiento Comercial',
+  'footer.contact': 'Contacto',
+  'footer.copyright': '© 2024 Link2Latam. Todos los derechos reservados.',
+
+  // Contact Form
+  'form.messagePlaceholder': 'Cuéntanos sobre tus objetivos de inversión y cualquier pregunta específica que tengas',
+  'form.contactEmail': 'Correo',
+  'form.contactPhone': 'Teléfono',
+  'form.contactVideo': 'Videollamada',
 
   // Hero
   'hero.title': 'Potenciando las Exportaciones Latinoamericanas a través de Finanzas Innovadoras',
@@ -70,10 +80,6 @@ export const esTranslations = {
   'form.preferredContact': 'Método de Contacto Preferido',
   'form.message': 'Mensaje (Opcional)',
   'form.submit': 'Solicitar Consulta',
-  'form.messagePlaceholder': 'Cuéntanos sobre tus objetivos de inversión y cualquier pregunta específica que tengas',
-  'form.contactEmail': 'Correo',
-  'form.contactPhone': 'Teléfono',
-  'form.contactVideo': 'Videollamada',
 
   // Form Messages
   'form.success': '¡Éxito!',
