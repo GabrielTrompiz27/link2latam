@@ -47,19 +47,45 @@ const formSchema = z.object({
   additionalNotes: z.string().optional(),
 });
 
-interface QuestionnaireSectionProps {
-  currentStep: number;
-  setCurrentStep: (step: number) => void;
-  form: any;
-  onSubmit: (data: any) => Promise<void>;
-}
-
-export const QuestionnaireSection = ({ currentStep, setCurrentStep, form, onSubmit }: QuestionnaireSectionProps) => {
+export const QuestionnaireSection = ({ onSubmit }: { onSubmit: (data: any) => Promise<void> }) => {
+  const [step, setStep] = useState(1);
   const { t } = useLanguage();
+  
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      companyName: '',
+      country: '',
+      otherCountry: '',
+      industry: '',
+      exportProducts: '',
+      invoiceCurrency: '',
+      monthlyVolumes: 0,
+      employees: '',
+      financingCurrency: '',
+      otherFinancingCurrency: '',
+      financingTypes: [],
+      interestRates: {},
+      financingPeriods: {},
+      totalFinancing: 0,
+      creditRating: '',
+      creditChallenges: '',
+      collateralTypes: [],
+      otherCollateral: '',
+      creditEnhancement: '',
+      creditEnhancementDetails: '',
+      fullName: '',
+      position: '',
+      email: '',
+      phoneNumber: '',
+      preferredContact: 'email',
+      additionalNotes: '',
+    }
+  });
 
   const handleSubmit = async (data: z.infer<typeof formSchema>) => {
-    if (currentStep < 4) {
-      setCurrentStep(currentStep + 1);
+    if (step < 4) {
+      setStep(step + 1);
     } else {
       await onSubmit(data);
     }
@@ -69,23 +95,23 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form, onSubm
     <div className="max-w-3xl mx-auto p-6">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-          {currentStep === 1 && <CompanyInfoStep form={form} />}
-          {currentStep === 2 && <FinancingDetailsStep form={form} />}
-          {currentStep === 3 && <AccessToCreditStep form={form} />}
-          {currentStep === 4 && <ContactInfoStep form={form} />}
+          {step === 1 && <CompanyInfoStep form={form} />}
+          {step === 2 && <FinancingDetailsStep form={form} />}
+          {step === 3 && <AccessToCreditStep form={form} />}
+          {step === 4 && <ContactInfoStep form={form} />}
           
           <div className="flex justify-between">
-            {currentStep > 1 && (
+            {step > 1 && (
               <Button
                 type="button"
                 variant="outline"
-                onClick={() => setCurrentStep(currentStep - 1)}
+                onClick={() => setStep(step - 1)}
               >
                 {t('form.previous')}
               </Button>
             )}
             <Button type="submit">
-              {currentStep === 4 ? t('form.submit') : t('form.next')}
+              {step === 4 ? t('form.submit') : t('form.next')}
             </Button>
           </div>
         </form>
