@@ -1,33 +1,10 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { FormField, FormItem, FormLabel, FormControl, FormMessage, Form } from "@/components/ui/form";
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
-
-const formSchema = z.object({
-  fullName: z.string().min(2, { message: "Name must be at least 2 characters" }),
-  email: z.string().email({ message: "Invalid email address" }),
-  phoneNumber: z.string().min(10, { message: "Phone number must be at least 10 digits" }),
-});
 
 export const ConsultationForm = () => {
   const { t } = useLanguage();
-  
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      fullName: "",
-      email: "",
-      phoneNumber: "",
-    },
-  });
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    // Handle form submission here
-  }
   
   return (
     <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
@@ -38,8 +15,8 @@ export const ConsultationForm = () => {
         {t('investor.form.subtitle')}
       </p>
       
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <Form>
+        <form className="space-y-6">
           <FormField
             control={form.control}
             name="fullName"
