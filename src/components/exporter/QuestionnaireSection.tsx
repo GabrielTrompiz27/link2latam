@@ -19,17 +19,16 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
   const { toast } = useToast();
 
   const formatKeyValueData = (data: Record<string, any>) => {
-    if (!data) return '';
     return Object.entries(data)
       .map(([key, value]) => `${key}: ${value}`)
       .join(', ');
   };
 
-  const onSubmit = async (values: any) => {
+  const handleSubmit = async (values: any) => {
     try {
       // Format the interest rates and financing periods
-      const formattedInterestRates = formatKeyValueData(values.interestRates);
-      const formattedFinancingPeriods = formatKeyValueData(values.financingPeriods);
+      const formattedInterestRates = values.interestRates ? formatKeyValueData(values.interestRates) : '';
+      const formattedFinancingPeriods = values.financingPeriods ? formatKeyValueData(values.financingPeriods) : '';
 
       await emailjs.send(
         'default_service',
@@ -70,7 +69,6 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
         description: "Your form has been submitted successfully.",
       });
     } catch (error) {
-      console.error('Form submission error:', error);
       toast({
         title: "Error",
         description: "Failed to submit form. Please try again.",
@@ -84,13 +82,15 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-primary text-center mb-4">
-            {t('form.title')}
+            Let's Tailor Your Financing Options
           </h2>
           <p className="text-center text-primary-light mb-8">
-            {t('form.description')}
+            Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions.
           </p>
           
+          {/* Multi-step form container */}
           <div className="bg-white rounded-xl shadow-lg p-8">
+            {/* Step indicator */}
             <div className="mb-8">
               <div className="flex justify-between items-center">
                 {[1, 2, 3, 4].map((step) => (
@@ -110,12 +110,13 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
             </div>
 
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+              <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
                 {currentStep === 1 && <CompanyInfoStep form={form} />}
                 {currentStep === 2 && <FinancingDetailsStep form={form} />}
                 {currentStep === 3 && <AccessToCreditStep form={form} />}
                 {currentStep === 4 && <ContactInfoStep form={form} />}
 
+                {/* Navigation buttons */}
                 <div className="flex justify-between mt-8">
                   <Button
                     type="button"
@@ -124,7 +125,7 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
                     disabled={currentStep === 1}
                     className="font-medium"
                   >
-                    {t('form.previous')}
+                    Previous
                   </Button>
                   {currentStep < 4 ? (
                     <Button
@@ -133,11 +134,11 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
                       onClick={() => setCurrentStep(Math.min(4, currentStep + 1))}
                       className="font-medium"
                     >
-                      {t('form.next')}
+                      Next
                     </Button>
                   ) : (
                     <Button type="submit" variant="outline" className="font-medium">
-                      {t('form.submit')}
+                      Submit
                     </Button>
                   )}
                 </div>
