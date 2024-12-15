@@ -85,8 +85,28 @@ export const esTranslations = {
   'form.preferredContact': 'Método de Contacto Preferido',
   'form.additionalNotes': 'Notas Adicionales/Comentarios (Opcional)',
 
-  // Regional Expertise Section
-  'expertise.title': 'Experiencia Regional en América Latina',
-  'expertise.subtitle': 'Con un profundo entendimiento de los mercados locales y regulaciones, proporcionamos soluciones personalizadas para negocios en América Latina.',
-  'expertise.mapAlt': 'Mapa Regional',
+  // Form Messages
+  'form.success': '¡Éxito!',
+  'form.successMessage': 'Su formulario ha sido enviado exitosamente.',
+  'form.error': 'Error',
+  'form.errorMessage': 'Error al enviar el formulario. Por favor, inténtelo de nuevo.',
+  'form.previous': 'Anterior',
+  'form.next': 'Siguiente',
+  'form.submit': 'Enviar',
+
+  // Investor Form
+  'investor.consultation.title': 'Hablemos de sus Objetivos de Inversión',
+  'investor.consultation.subtitle': 'Programe una consulta personalizada con nuestros expertos en inversiones para explorar cómo Link2Latam puede ayudarle a alcanzar sus objetivos de inversión.',
+  'form.fullNamePlaceholder': 'Ingrese su nombre completo',
+  'form.emailPlaceholder': 'Ingrese su correo electrónico',
+  'form.phonePlaceholder': 'Ingrese su número de teléfono',
+  'form.preferredContactPlaceholder': 'Seleccione su método de contacto preferido',
+  'form.contactEmail': 'Correo Electrónico',
+  'form.contactPhone': 'Teléfono',
+  'form.contactVideo': 'Videollamada',
+  'form.messagePlaceholder': 'Cuéntenos sobre sus objetivos de inversión y cualquier pregunta específica que tenga',
+
+  // Exporter Form
+  'exporter.form.title': 'Personalicemos sus Opciones de Financiamiento',
+  'exporter.form.subtitle': 'Complete el formulario a continuación para ayudarnos a comprender su negocio y necesidades de financiamiento. Basado en sus respuestas, le proporcionaremos soluciones de financiamiento personalizadas.',
 } as const;

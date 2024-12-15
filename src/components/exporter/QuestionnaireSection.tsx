@@ -19,59 +19,67 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
   const { toast } = useToast();
 
   const formatKeyValueData = (data: Record<string, any>) => {
+    if (!data) return '';
     return Object.entries(data)
       .map(([key, value]) => `${key}: ${value}`)
       .join(', ');
   };
 
-  const handleSubmit = async (values: any) => {
+  const onSubmit = async (values: any) => {
     try {
+      console.log('Form values:', values);
+      
       // Format the interest rates and financing periods
       const formattedInterestRates = values.interestRates ? formatKeyValueData(values.interestRates) : '';
       const formattedFinancingPeriods = values.financingPeriods ? formatKeyValueData(values.financingPeriods) : '';
 
+      const emailData = {
+        company_name: values.companyName,
+        country: values.country,
+        other_country: values.otherCountry,
+        industry: values.industry,
+        export_products: values.exportProducts,
+        invoice_currency: values.invoiceCurrency,
+        monthly_volumes: values.monthlyVolumes,
+        employees: values.employees,
+        financing_currency: values.financingCurrency,
+        other_financing_currency: values.otherFinancingCurrency,
+        financing_types: values.financingTypes?.join(', '),
+        interest_rates: formattedInterestRates,
+        financing_periods: formattedFinancingPeriods,
+        total_financing: values.totalFinancing,
+        credit_rating: values.creditRating,
+        credit_challenges: values.creditChallenges,
+        collateral_types: values.collateralTypes?.join(', '),
+        other_collateral: values.otherCollateral,
+        credit_enhancement: values.creditEnhancement,
+        credit_enhancement_details: values.creditEnhancementDetails,
+        full_name: values.fullName,
+        position: values.position,
+        email: values.email,
+        phone_number: values.phoneNumber,
+        preferred_contact: values.preferredContact,
+        additional_notes: values.additionalNotes
+      };
+
+      console.log('Email data:', emailData);
+
       await emailjs.send(
         'default_service',
         'template_85fm34j',
-        {
-          company_name: values.companyName,
-          country: values.country,
-          other_country: values.otherCountry,
-          industry: values.industry,
-          export_products: values.exportProducts,
-          invoice_currency: values.invoiceCurrency,
-          monthly_volumes: values.monthlyVolumes,
-          employees: values.employees,
-          financing_currency: values.financingCurrency,
-          other_financing_currency: values.otherFinancingCurrency,
-          financing_types: values.financingTypes?.join(', '),
-          interest_rates: formattedInterestRates,
-          financing_periods: formattedFinancingPeriods,
-          total_financing: values.totalFinancing,
-          credit_rating: values.creditRating,
-          credit_challenges: values.creditChallenges,
-          collateral_types: values.collateralTypes?.join(', '),
-          other_collateral: values.otherCollateral,
-          credit_enhancement: values.creditEnhancement,
-          credit_enhancement_details: values.creditEnhancementDetails,
-          full_name: values.fullName,
-          position: values.position,
-          email: values.email,
-          phone_number: values.phoneNumber,
-          preferred_contact: values.preferredContact,
-          additional_notes: values.additionalNotes
-        },
+        emailData,
         'WlivaL7VCZCUVpj0n'
       );
 
       toast({
-        title: "Success!",
-        description: "Your form has been submitted successfully.",
+        title: t('form.success'),
+        description: t('form.successMessage'),
       });
     } catch (error) {
+      console.error('Form submission error:', error);
       toast({
-        title: "Error",
-        description: "Failed to submit form. Please try again.",
+        title: t('form.error'),
+        description: t('form.errorMessage'),
         variant: "destructive"
       });
     }
@@ -82,10 +90,10 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-primary text-center mb-4">
-            Let's Tailor Your Financing Options
+            {t('exporter.form.title')}
           </h2>
           <p className="text-center text-primary-light mb-8">
-            Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions.
+            {t('exporter.form.subtitle')}
           </p>
           
           {/* Multi-step form container */}
@@ -110,7 +118,7 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
             </div>
 
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 {currentStep === 1 && <CompanyInfoStep form={form} />}
                 {currentStep === 2 && <FinancingDetailsStep form={form} />}
                 {currentStep === 3 && <AccessToCreditStep form={form} />}
@@ -125,7 +133,7 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
                     disabled={currentStep === 1}
                     className="font-medium"
                   >
-                    Previous
+                    {t('form.previous')}
                   </Button>
                   {currentStep < 4 ? (
                     <Button
@@ -134,11 +142,11 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
                       onClick={() => setCurrentStep(Math.min(4, currentStep + 1))}
                       className="font-medium"
                     >
-                      Next
+                      {t('form.next')}
                     </Button>
                   ) : (
                     <Button type="submit" variant="outline" className="font-medium">
-                      Submit
+                      {t('form.submit')}
                     </Button>
                   )}
                 </div>

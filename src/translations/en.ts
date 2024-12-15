@@ -85,8 +85,28 @@ export const enTranslations = {
   'form.preferredContact': 'Preferred Contact Method',
   'form.additionalNotes': 'Additional Notes/Comments (Optional)',
 
-  // Regional Expertise Section
-  'expertise.title': 'Regional Expertise Across Latin America',
-  'expertise.subtitle': 'With deep understanding of local markets and regulations, we provide tailored solutions for businesses across Latin America.',
-  'expertise.mapAlt': 'Regional Map',
+  // Form Messages
+  'form.success': 'Success!',
+  'form.successMessage': 'Your form has been submitted successfully.',
+  'form.error': 'Error',
+  'form.errorMessage': 'Failed to submit form. Please try again.',
+  'form.previous': 'Previous',
+  'form.next': 'Next',
+  'form.submit': 'Submit',
+
+  // Investor Form
+  'investor.consultation.title': "Let's Discuss Your Investment Goals",
+  'investor.consultation.subtitle': 'Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives.',
+  'form.fullNamePlaceholder': 'Enter your full name',
+  'form.emailPlaceholder': 'Enter your email address',
+  'form.phonePlaceholder': 'Enter your phone number',
+  'form.preferredContactPlaceholder': 'Select your preferred contact method',
+  'form.contactEmail': 'Email',
+  'form.contactPhone': 'Phone',
+  'form.contactVideo': 'Video Call',
+  'form.messagePlaceholder': 'Tell us about your investment goals and any specific questions you have',
+
+  // Exporter Form
+  'exporter.form.title': "Let's Tailor Your Financing Options",
+  'exporter.form.subtitle': 'Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions.',
 } as const;
