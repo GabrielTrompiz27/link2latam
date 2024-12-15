@@ -18,8 +18,18 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
   const { t } = useLanguage();
   const { toast } = useToast();
 
+  const formatKeyValueData = (data: Record<string, any>) => {
+    return Object.entries(data)
+      .map(([key, value]) => `${key}: ${value}`)
+      .join(', ');
+  };
+
   const handleSubmit = async (values: any) => {
     try {
+      // Format the interest rates and financing periods
+      const formattedInterestRates = values.interestRates ? formatKeyValueData(values.interestRates) : '';
+      const formattedFinancingPeriods = values.financingPeriods ? formatKeyValueData(values.financingPeriods) : '';
+
       await emailjs.send(
         'default_service',
         'template_85fm34j',
@@ -35,8 +45,8 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
           financing_currency: values.financingCurrency,
           other_financing_currency: values.otherFinancingCurrency,
           financing_types: values.financingTypes?.join(', '),
-          interest_rates: JSON.stringify(values.interestRates),
-          financing_periods: JSON.stringify(values.financingPeriods),
+          interest_rates: formattedInterestRates,
+          financing_periods: formattedFinancingPeriods,
           total_financing: values.totalFinancing,
           credit_rating: values.creditRating,
           credit_challenges: values.creditChallenges,
