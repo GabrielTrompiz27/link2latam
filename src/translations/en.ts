@@ -31,10 +31,11 @@ export const enTranslations = {
   'exporter.whyChoose.global.title': 'Global Network',
   'exporter.whyChoose.global.description': 'Access our extensive network of international buyers and funding partners.',
 
-  // Expertise Section
-  'expertise.title': 'Regional Expertise',
-  'expertise.subtitle': 'Our deep understanding of Latin American markets enables us to provide tailored solutions',
-  'expertise.mapAlt': 'Map of Latin America highlighting our areas of operation',
+  // Form Titles
+  'exporter.form.title': 'Let\'s Customize Your Financing Options',
+  'exporter.form.subtitle': 'Complete the form below to help us understand your business and financing needs. Based on your responses, we will provide you with personalized financing solutions.',
+  'investor.form.title': 'Let\'s Discuss Your Investment Goals',
+  'investor.form.subtitle': 'Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives.',
 
   // Investor Onboarding
   'investor.back': 'Back',
@@ -61,16 +62,6 @@ export const enTranslations = {
   'services.globalReach.description': 'Access international markets with our extensive network and regional expertise.',
   'services.quickProcessing.title': 'Quick Processing',
   'services.quickProcessing.description': 'Fast approval and efficient processing to keep your business moving forward.',
-
-  // Footer
-  'footer.about': 'Empowering Latin American exports through innovative finance solutions.',
-  'footer.quickLinks': 'Quick Links',
-  'footer.services': 'Services',
-  'footer.invoiceFactoring': 'Invoice Factoring',
-  'footer.riskManagement': 'Risk Management',
-  'footer.tradeFinance': 'Trade Finance',
-  'footer.contact': 'Contact',
-  'footer.copyright': '© 2024 Link2Latam. All rights reserved.',
 
   // Form Fields
   'form.companyName': 'Company Name',
