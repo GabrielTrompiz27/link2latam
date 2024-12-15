@@ -61,6 +61,10 @@ export const esTranslations = {
   'investor.whyChoose.cycles.title': 'Ciclos de Inversión a Corto Plazo',
   'investor.whyChoose.cycles.description': 'Disfrute de la flexibilidad de inversiones a corto plazo con pagos de intereses típicamente realizados dentro de 60 a 90 días.',
 
+  // Investor Consultation
+  'investor.consultation.title': 'Hablemos de sus Objetivos de Inversión',
+  'investor.consultation.subtitle': 'Programe una consulta personalizada con nuestros expertos en inversiones para explorar cómo Link2Latam puede ayudarlo a alcanzar sus objetivos de inversión.',
+
   // Services Section
   'services.title': 'Nuestros Servicios',
   'services.subtitle': 'Soluciones integrales de financiamiento comercial diseñadas para exportadores latinoamericanos',

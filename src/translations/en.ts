@@ -50,6 +50,10 @@ export const enTranslations = {
   'investor.whyChoose.cycles.title': 'Short-Term Investment Cycles',
   'investor.whyChoose.cycles.description': 'Enjoy the flexibility of short-term investments with interest payments typically made within 60 to 90 days.',
 
+  // Investor Consultation
+  'investor.consultation.title': "Let's Discuss Your Investment Goals",
+  'investor.consultation.subtitle': 'Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives.',
+
   // Services Section
   'services.title': 'Our Services',
   'services.subtitle': 'Comprehensive trade finance solutions tailored for Latin American exporters',
