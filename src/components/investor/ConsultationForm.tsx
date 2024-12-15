@@ -75,7 +75,7 @@ export const ConsultationForm = () => {
             <Input
               id="fullName"
               required
-              placeholder={t('form.fullNamePlaceholder')}
+              placeholder={t('form.fullName')}
               value={formData.fullName}
               onChange={(e) => setFormData({...formData, fullName: e.target.value})}
             />
@@ -89,7 +89,7 @@ export const ConsultationForm = () => {
               id="email"
               type="email"
               required
-              placeholder={t('form.emailPlaceholder')}
+              placeholder={t('form.email')}
               value={formData.email}
               onChange={(e) => setFormData({...formData, email: e.target.value})}
             />
@@ -103,7 +103,7 @@ export const ConsultationForm = () => {
               id="phone"
               type="tel"
               required
-              placeholder={t('form.phonePlaceholder')}
+              placeholder={t('form.phoneNumber')}
               value={formData.phone}
               onChange={(e) => setFormData({...formData, phone: e.target.value})}
             />
@@ -116,11 +116,12 @@ export const ConsultationForm = () => {
             <Select
               value={formData.contactMethod}
               onValueChange={(value) => setFormData({...formData, contactMethod: value})}
+              required
             >
-              <SelectTrigger>
-                <SelectValue placeholder={t('form.preferredContactPlaceholder')} />
+              <SelectTrigger className="w-full">
+                <SelectValue placeholder={t('form.preferredContact')} />
               </SelectTrigger>
-              <SelectContent className="bg-white border shadow-md">
+              <SelectContent>
                 <SelectItem value="email">{t('form.contactEmail')}</SelectItem>
                 <SelectItem value="phone">{t('form.contactPhone')}</SelectItem>
                 <SelectItem value="video">{t('form.contactVideo')}</SelectItem>
