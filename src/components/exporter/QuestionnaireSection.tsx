@@ -90,10 +90,10 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-primary text-center mb-4">
-            Let's Tailor Your Financing Options
+            {t('form.title')}
           </h2>
           <p className="text-center text-primary-light mb-8">
-            Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions.
+            {t('form.subtitle')}
           </p>
           
           {/* Multi-step form container */}

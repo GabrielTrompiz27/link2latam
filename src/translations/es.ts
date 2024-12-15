@@ -73,23 +73,40 @@ export const esTranslations = {
   'services.quickProcessing.title': 'Procesamiento Rápido',
   'services.quickProcessing.description': 'Aprobación rápida y procesamiento eficiente para mantener tu negocio en movimiento.',
 
-  // Form Fields
+  // Form Section
+  'form.title': 'Personalicemos sus Opciones de Financiamiento',
+  'form.subtitle': 'Complete el formulario a continuación para ayudarnos a comprender su negocio y necesidades de financiamiento. Según sus respuestas, le proporcionaremos soluciones de financiamiento personalizadas.',
+  'form.companyName': 'Nombre de la Empresa',
+  'form.country': 'País de Operación',
+  'form.specifyCountry': 'Especifique País',
+  'form.industry': 'Industria/Sector',
+  'form.exportProducts': 'Productos Principales de Exportación',
+  'form.invoiceCurrency': 'Moneda de Facturación',
+  'form.monthlyVolumes': 'Volúmenes Mensuales',
+  'form.employees': 'Número de Empleados',
+  'form.financingCurrency': 'Moneda de Financiamiento',
+  'form.specifyFinancingCurrency': 'Especifique Moneda',
+  'form.financingTypes': 'Métodos Actuales de Financiamiento',
+  'form.interestRate': 'Tasa de Interés (%)',
+  'form.financingPeriod': 'Período de Financiamiento (días)',
+  'form.totalFinancing': 'Financiamiento Activo Total',
+  'form.creditRating': 'Califique Acceso al Crédito (1-5)',
+  'form.creditChallenges': 'Desafíos en la Obtención de Crédito',
+  'form.collateralTypes': 'Requisitos de Garantía',
+  'form.otherCollateral': 'Especifique otra garantía',
+  'form.creditEnhancement': 'Uso de Herramientas de Mejora Crediticia',
+  'form.creditEnhancementDetails': 'Detalles de Mejora Crediticia',
   'form.fullName': 'Nombre Completo',
+  'form.position': 'Cargo',
   'form.email': 'Correo Electrónico',
   'form.phoneNumber': 'Número de Teléfono',
   'form.preferredContact': 'Método de Contacto Preferido',
-  'form.message': 'Mensaje (Opcional)',
-  'form.submit': 'Solicitar Consulta',
-
-  // Form Messages
+  'form.additionalNotes': 'Notas Adicionales',
+  'form.previous': 'Anterior',
+  'form.next': 'Siguiente',
+  'form.submit': 'Enviar',
   'form.success': '¡Éxito!',
   'form.successMessage': 'Su formulario ha sido enviado exitosamente.',
   'form.error': 'Error',
   'form.errorMessage': 'Error al enviar el formulario. Por favor, inténtelo de nuevo.',
-  'form.previous': 'Anterior',
-  'form.next': 'Siguiente',
-
-  // Investor Form
-  'investor.consultation.title': 'Hablemos de tus Objetivos de Inversión',
-  'investor.consultation.subtitle': 'Programa una consulta personalizada con nuestros expertos en inversiones para explorar cómo Link2Latam puede ayudarte a alcanzar tus objetivos de inversión.'
 } as const;

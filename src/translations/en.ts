@@ -72,7 +72,9 @@ export const enTranslations = {
   'footer.contact': 'Contact',
   'footer.copyright': '© 2024 Link2Latam. All rights reserved.',
 
-  // Form Fields
+  // Form Section
+  'form.title': "Let's Tailor Your Financing Options",
+  'form.subtitle': "Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions.",
   'form.companyName': 'Company Name',
   'form.country': 'Country of Operation',
   'form.specifyCountry': 'Specify Country',
@@ -94,22 +96,16 @@ export const enTranslations = {
   'form.creditEnhancement': 'Use of Credit Enhancement Tools',
   'form.creditEnhancementDetails': 'Credit Enhancement Details',
   'form.fullName': 'Full Name',
+  'form.position': 'Position',
   'form.email': 'Email Address',
   'form.phoneNumber': 'Phone Number',
   'form.preferredContact': 'Preferred Contact Method',
-  'form.message': 'Message (Optional)',
-  'form.messagePlaceholder': 'Tell us about your investment goals and any specific questions you have',
-  'form.submit': 'Request a Consultation',
-
-  // Form Messages
+  'form.additionalNotes': 'Additional Notes',
+  'form.previous': 'Previous',
+  'form.next': 'Next',
+  'form.submit': 'Submit',
   'form.success': 'Success!',
   'form.successMessage': 'Your form has been submitted successfully.',
   'form.error': 'Error',
   'form.errorMessage': 'Error submitting the form. Please try again.',
-  'form.previous': 'Previous',
-  'form.next': 'Next',
-
-  // Investor Form
-  'investor.consultation.title': "Let's Discuss Your Investment Goals",
-  'investor.consultation.subtitle': 'Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives.',
 } as const;
