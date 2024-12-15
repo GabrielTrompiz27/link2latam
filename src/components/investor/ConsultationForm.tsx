@@ -122,9 +122,9 @@ export const ConsultationForm = () => {
                 <SelectValue placeholder="Select your preferred method of contact" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="email">Email</SelectItem>
-                <SelectItem value="phone">Phone</SelectItem>
-                <SelectItem value="video">Video Call</SelectItem>
+                <SelectItem value="email" className="hover:bg-[#F5A524] focus:bg-[#F5A524] data-[state=checked]:bg-[#F5A524]">Email</SelectItem>
+                <SelectItem value="phone" className="hover:bg-[#F5A524] focus:bg-[#F5A524] data-[state=checked]:bg-[#F5A524]">Phone</SelectItem>
+                <SelectItem value="video" className="hover:bg-[#F5A524] focus:bg-[#F5A524] data-[state=checked]:bg-[#F5A524]">Video Call</SelectItem>
               </SelectContent>
             </Select>
           </div>
