@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { useToast } from '@/components/ui/use-toast';
 import {
   Select,
   SelectContent,
@@ -10,9 +11,11 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from '@/components/ui/textarea';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export const WhyChooseSection = () => {
   const { t } = useLanguage();
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -21,9 +24,44 @@ export const WhyChooseSection = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    try {
+      await emailjs.send(
+        'default_service',
+        'template_uhlfing',
+        {
+          to_email: 'gabrieltrompiz27@gmail.com',
+          from_name: formData.fullName,
+          from_email: formData.email,
+          phone: formData.phone,
+          preferred_contact: formData.contactMethod,
+          message: formData.message
+        },
+        'WlivaL7VCZCUVpj0n'
+      );
+
+      toast({
+        title: "Success!",
+        description: "Your message has been sent successfully.",
+      });
+
+      // Reset form
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        contactMethod: '',
+        message: ''
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    }
   };
   
   return (
