@@ -89,17 +89,4 @@ export const esTranslations = {
   'expertise.title': 'Experiencia Regional en América Latina',
   'expertise.subtitle': 'Con un profundo entendimiento de los mercados locales y regulaciones, proporcionamos soluciones personalizadas para negocios en América Latina.',
   'expertise.mapAlt': 'Mapa Regional',
-
-  // Investor Form
-  'investor.form.title': 'Hablemos de tus Objetivos de Inversión',
-  'investor.form.subtitle': 'Programa una consulta personalizada con nuestros expertos en inversiones para explorar cómo Link2Latam puede ayudarte a alcanzar tus objetivos de inversión.',
-  'investor.form.fullName': 'Nombre Completo',
-  'investor.form.email': 'Correo Electrónico',
-  'investor.form.phone': 'Número de Teléfono',
-  'investor.form.contactMethod': 'Método de Contacto Preferido',
-  'investor.form.message': 'Mensaje (Opcional)',
-  'investor.form.submit': 'Solicitar una Consulta',
-  'investor.form.emailOption': 'Correo',
-  'investor.form.phoneOption': 'Teléfono',
-  'investor.form.videoOption': 'Videollamada'
-};
+} as const;
