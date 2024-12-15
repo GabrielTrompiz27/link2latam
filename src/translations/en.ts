@@ -108,5 +108,5 @@ export const enTranslations = {
 
   // Exporter Form
   'exporter.form.title': "Let's Tailor Your Financing Options",
-  'exporter.form.subtitle': "Please fill out the form below to help us understand your business and financing needs. Based on your responses, we will provide custom financing solutions."
+  'exporter.form.subtitle': "Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions."
 } as const;
