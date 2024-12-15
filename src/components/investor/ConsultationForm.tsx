@@ -75,7 +75,7 @@ export const ConsultationForm = () => {
             <Input
               id="fullName"
               required
-              placeholder={t('form.fullName')}
+              placeholder={t('form.fullNamePlaceholder')}
               value={formData.fullName}
               onChange={(e) => setFormData({...formData, fullName: e.target.value})}
             />
@@ -89,7 +89,7 @@ export const ConsultationForm = () => {
               id="email"
               type="email"
               required
-              placeholder={t('form.email')}
+              placeholder={t('form.emailPlaceholder')}
               value={formData.email}
               onChange={(e) => setFormData({...formData, email: e.target.value})}
             />
@@ -103,7 +103,7 @@ export const ConsultationForm = () => {
               id="phone"
               type="tel"
               required
-              placeholder={t('form.phoneNumber')}
+              placeholder={t('form.phonePlaceholder')}
               value={formData.phone}
               onChange={(e) => setFormData({...formData, phone: e.target.value})}
             />

@@ -78,12 +78,7 @@ export const esTranslations = {
   'form.email': 'Correo Electrónico',
   'form.phoneNumber': 'Número de Teléfono',
   'form.preferredContact': 'Método de Contacto Preferido',
-  'form.preferredContactPlaceholder': 'Seleccione su método de contacto preferido',
-  'form.contactEmail': 'Correo',
-  'form.contactPhone': 'Teléfono',
-  'form.contactVideo': 'Videollamada',
   'form.message': 'Mensaje (Opcional)',
-  'form.messagePlaceholder': 'Cuéntanos sobre tus objetivos de inversión y cualquier pregunta específica que tengas',
   'form.submit': 'Solicitar Consulta',
 
   // Form Messages
