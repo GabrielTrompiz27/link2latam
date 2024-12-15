@@ -125,7 +125,7 @@ export const WhyChooseSection = () => {
               Let's Discuss Your Investment Goals
             </h2>
             <p className="text-center text-primary-light mb-8">
-              Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives. Our team is ready to provide personalized guidance and demonstrate our platform's capabilities.
+              Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives.
             </p>
             
             <form onSubmit={handleSubmit} className="space-y-6">
