@@ -64,6 +64,7 @@ const formSchema = z.object({
 const ExporterOnboarding = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
+  const [currentStep, setCurrentStep] = useState(1);
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -145,7 +146,12 @@ const ExporterOnboarding = () => {
       <div className="pt-20">
         <WelcomeSection />
         <WhyChooseSection />
-        <QuestionnaireSection onSubmit={handleFormSubmit} />
+        <QuestionnaireSection 
+          currentStep={currentStep}
+          setCurrentStep={setCurrentStep}
+          form={form}
+          onSubmit={handleFormSubmit}
+        />
       </div>
     </div>
   );
