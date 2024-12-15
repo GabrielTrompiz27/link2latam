@@ -1,121 +1,90 @@
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
+import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { CompanyInfoStep } from './CompanyInfoStep';
 import { FinancingDetailsStep } from './FinancingDetailsStep';
 import { AccessToCreditStep } from './AccessToCreditStep';
 import { ContactInfoStep } from './ContactInfoStep';
-import { useLanguage } from '@/contexts/LanguageContext';
 
-const formSchema = z.object({
-  companyName: z.string().min(1, { message: ' ' }),
-  country: z.string().min(1, { message: ' ' }),
-  otherCountry: z.string().optional(),
-  industry: z.string().min(1, { message: ' ' }),
-  exportProducts: z.string().min(1, { message: ' ' }),
-  invoiceCurrency: z.string().min(1, { message: ' ' }),
-  monthlyVolumes: z.number().min(1, { message: ' ' }),
-  employees: z.string().min(1, { message: ' ' }),
-  financingCurrency: z.string().min(1, { message: ' ' }),
-  otherFinancingCurrency: z.string().optional().superRefine((val, ctx) => {
-    const data = ctx.path.length > 0 ? (ctx as any).data : undefined;
-    if (data?.financingCurrency === 'OTHER' && !val) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message: " "
-      });
-    }
-  }),
-  financingTypes: z.array(z.string()).min(1, { message: ' ' }),
-  interestRates: z.record(z.number().min(0, { message: ' ' })),
-  financingPeriods: z.record(z.number().min(1, { message: ' ' })),
-  totalFinancing: z.number().min(1, { message: ' ' }),
-  creditRating: z.string().min(1, { message: ' ' }),
-  creditChallenges: z.string().optional(),
-  collateralTypes: z.array(z.string()).optional(),
-  otherCollateral: z.string().optional(),
-  creditEnhancement: z.string().optional(),
-  creditEnhancementDetails: z.string().optional(),
-  fullName: z.string().min(1, { message: ' ' }),
-  position: z.string().min(1, { message: ' ' }),
-  email: z.string().email({ message: ' ' }),
-  phoneNumber: z.string().min(1, { message: ' ' }),
-  preferredContact: z.string().optional(),
-  additionalNotes: z.string().optional(),
-});
+interface QuestionnaireSectionProps {
+  currentStep: number;
+  setCurrentStep: (step: number) => void;
+  form: any;
+}
 
-export const QuestionnaireSection = ({ onSubmit }: { onSubmit: (data: any) => Promise<void> }) => {
-  const [step, setStep] = useState(1);
+export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: QuestionnaireSectionProps) => {
   const { t } = useLanguage();
-  
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      companyName: '',
-      country: '',
-      otherCountry: '',
-      industry: '',
-      exportProducts: '',
-      invoiceCurrency: '',
-      monthlyVolumes: 0,
-      employees: '',
-      financingCurrency: '',
-      otherFinancingCurrency: '',
-      financingTypes: [],
-      interestRates: {},
-      financingPeriods: {},
-      totalFinancing: 0,
-      creditRating: '',
-      creditChallenges: '',
-      collateralTypes: [],
-      otherCollateral: '',
-      creditEnhancement: '',
-      creditEnhancementDetails: '',
-      fullName: '',
-      position: '',
-      email: '',
-      phoneNumber: '',
-      preferredContact: 'email',
-      additionalNotes: '',
-    }
-  });
-
-  const handleSubmit = async (data: z.infer<typeof formSchema>) => {
-    if (step < 4) {
-      setStep(step + 1);
-    } else {
-      await onSubmit(data);
-    }
-  };
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-          {step === 1 && <CompanyInfoStep form={form} />}
-          {step === 2 && <FinancingDetailsStep form={form} />}
-          {step === 3 && <AccessToCreditStep form={form} />}
-          {step === 4 && <ContactInfoStep form={form} />}
+    <div className="bg-gray-50 py-16">
+      <div className="container mx-auto px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-primary text-center mb-4">
+            Let's Tailor Your Financing Options
+          </h2>
+          <p className="text-center text-primary-light mb-8">
+            Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions.
+          </p>
           
-          <div className="flex justify-between">
-            {step > 1 && (
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => setStep(step - 1)}
-              >
-                {t('form.previous')}
-              </Button>
-            )}
-            <Button type="submit">
-              {step === 4 ? t('form.submit') : t('form.next')}
-            </Button>
+          {/* Multi-step form container */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            {/* Step indicator */}
+            <div className="mb-8">
+              <div className="flex justify-between items-center">
+                {[1, 2, 3, 4].map((step) => (
+                  <div key={step} className="flex items-center">
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                      step === currentStep 
+                        ? 'bg-accent text-white' 
+                        : step < currentStep 
+                          ? 'bg-green-500 text-white'
+                          : 'bg-gray-200 text-gray-600'
+                    }`}>
+                      {step < currentStep ? '✓' : step}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit((values: any) => console.log(values))} className="space-y-8">
+                {currentStep === 1 && <CompanyInfoStep form={form} />}
+                {currentStep === 2 && <FinancingDetailsStep form={form} />}
+                {currentStep === 3 && <AccessToCreditStep form={form} />}
+                {currentStep === 4 && <ContactInfoStep form={form} />}
+
+                {/* Navigation buttons */}
+                <div className="flex justify-between mt-8">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={() => setCurrentStep(Math.max(1, currentStep - 1))}
+                    disabled={currentStep === 1}
+                    className="font-medium"
+                  >
+                    Previous
+                  </Button>
+                  {currentStep < 4 ? (
+                    <Button
+                      type="button"
+                      variant="outline"
+                      onClick={() => setCurrentStep(Math.min(4, currentStep + 1))}
+                      className="font-medium"
+                    >
+                      Next
+                    </Button>
+                  ) : (
+                    <Button type="submit" variant="outline" className="font-medium">
+                      Submit
+                    </Button>
+                  )}
+                </div>
+              </form>
+            </Form>
           </div>
-        </form>
-      </Form>
+        </div>
+      </div>
     </div>
   );
 };
