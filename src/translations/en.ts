@@ -97,9 +97,9 @@ export const enTranslations = {
   'form.email': 'Email Address',
   'form.phoneNumber': 'Phone Number',
   'form.preferredContact': 'Preferred Contact Method',
-  'form.message': 'Message (Optional)',
+  'form.message': 'Additional Notes/Comments (Optional)',
   'form.messagePlaceholder': 'Tell us about your investment goals and any specific questions you have',
-  'form.submit': 'Request a Consultation',
+  'form.submit': 'Submit',
 
   // Form Messages
   'form.success': 'Success!',
@@ -110,6 +110,6 @@ export const enTranslations = {
   'form.next': 'Next',
 
   // Investor Form
-  'investor.form.title': "Let's Discuss Your Investment Goals",
-  'investor.form.subtitle': 'Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives.',
+  'investor.consultation.title': 'Schedule a Consultation',
+  'investor.consultation.subtitle': 'Get in touch with our investment experts to discuss your goals and explore opportunities.',
 } as const;

@@ -100,11 +100,12 @@ export const esTranslations = {
   'form.creditEnhancement': 'Uso de Herramientas de Mejora Crediticia',
   'form.creditEnhancementDetails': 'Detalles de Mejora Crediticia',
   'form.fullName': 'Nombre Completo',
-  'form.position': 'Cargo/Título',
   'form.email': 'Correo Electrónico',
   'form.phoneNumber': 'Número de Teléfono',
   'form.preferredContact': 'Método de Contacto Preferido',
-  'form.additionalNotes': 'Notas Adicionales/Comentarios (Opcional)',
+  'form.message': 'Notas Adicionales/Comentarios (Opcional)',
+  'form.messagePlaceholder': 'Cuéntanos sobre tus objetivos de inversión y cualquier pregunta específica que tengas',
+  'form.submit': 'Enviar',
 
   // Form Messages
   'form.success': '¡Éxito!',
@@ -113,13 +114,8 @@ export const esTranslations = {
   'form.errorMessage': 'Error al enviar el formulario. Por favor, inténtelo de nuevo.',
   'form.previous': 'Anterior',
   'form.next': 'Siguiente',
-  'form.submit': 'Enviar',
-
-  // Exporter Form
-  'exporter.form.title': 'Personalicemos sus Opciones de Financiamiento',
-  'exporter.form.subtitle': 'Complete el formulario a continuación para ayudarnos a comprender su negocio y necesidades de financiamiento. Basado en sus respuestas, le proporcionaremos soluciones de financiamiento personalizadas.',
 
   // Investor Form
-  'investor.form.title': 'Hablemos de tus Objetivos de Inversión',
-  'investor.form.subtitle': 'Programa una consulta personalizada con nuestros expertos en inversiones para explorar cómo Link2Latam puede ayudarte a alcanzar tus objetivos de inversión.'
+  'investor.consultation.title': 'Programa una Consulta',
+  'investor.consultation.subtitle': 'Ponte en contacto con nuestros expertos en inversiones para discutir tus objetivos y explorar oportunidades.',
 } as const;
