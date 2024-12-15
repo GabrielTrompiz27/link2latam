@@ -66,7 +66,7 @@ export const enTranslations = {
   'form.invoiceCurrency': 'Invoice Currency',
   'form.monthlyVolumes': 'Monthly Volumes',
   'form.employees': 'Number of Employees',
-  'form.financingCurrency': 'Currency',
+  'form.financingCurrency': 'Financing Currency',
   'form.specifyFinancingCurrency': 'Specify Currency',
   'form.financingTypes': 'Current Financing Methods',
   'form.interestRate': 'Interest Rate (%)',
@@ -85,15 +85,6 @@ export const enTranslations = {
   'form.preferredContact': 'Preferred Contact Method',
   'form.additionalNotes': 'Additional Notes/Comments (Optional)',
 
-  // Form Messages
-  'form.success': 'Success!',
-  'form.successMessage': 'Your form has been submitted successfully.',
-  'form.error': 'Error',
-  'form.errorMessage': 'Failed to submit form. Please try again.',
-  'form.previous': 'Previous',
-  'form.next': 'Next',
-  'form.submit': 'Submit',
-
   // Investor Form
   'investor.consultation.title': "Let's Discuss Your Investment Goals",
   'investor.consultation.subtitle': 'Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives.',
@@ -104,7 +95,7 @@ export const enTranslations = {
   'form.contactEmail': 'Email',
   'form.contactPhone': 'Phone',
   'form.contactVideo': 'Video Call',
-  'form.messagePlaceholder': 'Tell us about your investment goals and any specific questions you have',
+  'form.message': 'Additional Notes/Comments (Optional)',
 
   // Exporter Form
   'exporter.form.title': "Let's Tailor Your Financing Options",

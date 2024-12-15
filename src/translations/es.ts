@@ -66,7 +66,7 @@ export const esTranslations = {
   'form.invoiceCurrency': 'Moneda de Facturación',
   'form.monthlyVolumes': 'Volúmenes Mensuales',
   'form.employees': 'Número de Empleados',
-  'form.financingCurrency': 'Moneda',
+  'form.financingCurrency': 'Moneda de Financiamiento',
   'form.specifyFinancingCurrency': 'Especificar Moneda',
   'form.financingTypes': 'Métodos de Financiamiento Actuales',
   'form.interestRate': 'Tasa de Interés (%)',
@@ -104,9 +104,9 @@ export const esTranslations = {
   'form.contactEmail': 'Correo Electrónico',
   'form.contactPhone': 'Teléfono',
   'form.contactVideo': 'Videollamada',
-  'form.messagePlaceholder': 'Cuéntenos sobre sus objetivos de inversión y cualquier pregunta específica que tenga',
+  'form.message': 'Notas Adicionales/Comentarios (Opcional)',
 
   // Exporter Form
   'exporter.form.title': 'Personalicemos sus Opciones de Financiamiento',
-  'exporter.form.subtitle': 'Complete el formulario a continuación para ayudarnos a comprender su negocio y necesidades de financiamiento. Basado en sus respuestas, le proporcionaremos soluciones de financiamiento personalizadas.',
+  'exporter.form.subtitle': 'Complete el formulario a continuación para ayudarnos a comprender su negocio y necesidades de financiamiento. Basado en sus respuestas, le proporcionaremos soluciones de financiamiento personalizadas.'
 } as const;
