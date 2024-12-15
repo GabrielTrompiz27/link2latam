@@ -105,7 +105,7 @@ export const esTranslations = {
   'form.email': 'Correo Electrónico',
   'form.phoneNumber': 'Número de Teléfono',
   'form.preferredContact': 'Método de Contacto Preferido',
-  'form.additionalNotes': 'Notas Adicionales',
+  'form.message': 'Notas Adicionales',
   'form.previous': 'Anterior',
   'form.next': 'Siguiente',
   'form.submit': 'Enviar',
