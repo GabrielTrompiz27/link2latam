@@ -89,18 +89,7 @@ export const enTranslations = {
   'form.phoneNumber': 'Phone Number',
   'form.preferredContact': 'Preferred Contact Method',
   'form.additionalNotes': 'Additional Notes/Comments (Optional)',
-
-  // Investor Form
-  'investor.consultation.title': "Let's Discuss Your Investment Goals",
-  'investor.consultation.subtitle': 'Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives.',
-  'form.fullNamePlaceholder': 'Enter your full name',
-  'form.emailPlaceholder': 'Enter your email address',
-  'form.phonePlaceholder': 'Enter your phone number',
-  'form.preferredContactPlaceholder': 'Select your preferred contact method',
-  'form.contactEmail': 'Email',
-  'form.contactPhone': 'Phone',
-  'form.contactVideo': 'Video Call',
-  'form.message': 'Additional Notes/Comments (Optional)',
+  'form.messagePlaceholder': 'Tell us about your investment goals and any specific questions you have',
 
   // Form Messages
   'form.success': 'Success!',
@@ -110,4 +99,8 @@ export const enTranslations = {
   'form.previous': 'Previous',
   'form.next': 'Next',
   'form.submit': 'Submit',
+
+  // Exporter Form
+  'exporter.form.title': "Let's Tailor Your Financing Options",
+  'exporter.form.subtitle': "Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions."
 } as const;

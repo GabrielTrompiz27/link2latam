@@ -72,7 +72,25 @@ export const esTranslations = {
   'form.monthlyVolumes': 'Volúmenes Mensuales',
   'form.employees': 'Número de Empleados',
   'form.financingCurrency': 'Moneda de Financiamiento',
-  
+  'form.specifyFinancingCurrency': 'Especificar Moneda',
+  'form.financingTypes': 'Métodos de Financiamiento Actuales',
+  'form.interestRate': 'Tasa de Interés (%)',
+  'form.financingPeriod': 'Período de Financiamiento (días)',
+  'form.totalFinancing': 'Financiamiento Activo Total',
+  'form.creditRating': 'Califica el Acceso al Crédito (1-5)',
+  'form.creditChallenges': 'Desafíos Enfrentados para Obtener Crédito',
+  'form.collateralTypes': 'Requisitos de Garantía',
+  'form.otherCollateral': 'Especificar otra garantía',
+  'form.creditEnhancement': 'Uso de Herramientas de Mejora Crediticia',
+  'form.creditEnhancementDetails': 'Detalles de Mejora Crediticia',
+  'form.fullName': 'Nombre Completo',
+  'form.position': 'Cargo/Título',
+  'form.email': 'Correo Electrónico',
+  'form.phoneNumber': 'Número de Teléfono',
+  'form.preferredContact': 'Método de Contacto Preferido',
+  'form.additionalNotes': 'Notas Adicionales/Comentarios (Opcional)',
+  'form.messagePlaceholder': 'Cuéntanos sobre tus objetivos de inversión y cualquier pregunta específica que tengas',
+
   // Form Messages
   'form.success': '¡Éxito!',
   'form.successMessage': 'Su formulario ha sido enviado exitosamente.',
@@ -81,18 +99,6 @@ export const esTranslations = {
   'form.previous': 'Anterior',
   'form.next': 'Siguiente',
   'form.submit': 'Enviar',
-
-  // Investor Form
-  'investor.consultation.title': 'Hablemos de sus Objetivos de Inversión',
-  'investor.consultation.subtitle': 'Programe una consulta personalizada con nuestros expertos en inversiones para explorar cómo Link2Latam puede ayudarle a alcanzar sus objetivos de inversión.',
-  'form.fullNamePlaceholder': 'Ingrese su nombre completo',
-  'form.emailPlaceholder': 'Ingrese su correo electrónico',
-  'form.phonePlaceholder': 'Ingrese su número de teléfono',
-  'form.preferredContactPlaceholder': 'Seleccione su método de contacto preferido',
-  'form.contactEmail': 'Correo Electrónico',
-  'form.contactPhone': 'Teléfono',
-  'form.contactVideo': 'Videollamada',
-  'form.message': 'Notas Adicionales/Comentarios (Opcional)',
 
   // Exporter Form
   'exporter.form.title': 'Personalicemos sus Opciones de Financiamiento',
