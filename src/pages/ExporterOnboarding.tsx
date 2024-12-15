@@ -12,7 +12,6 @@ import { QuestionnaireSection } from '@/components/exporter/QuestionnaireSection
 import { Navbar } from '@/components/Navbar';
 import { supabase } from '@/lib/supabase';
 import { useToast } from '@/components/ui/use-toast';
-import { toast } from 'sonner';
 import emailjs from '@emailjs/browser';
 
 // Initialize EmailJS with your public key
@@ -65,7 +64,6 @@ const formSchema = z.object({
 const ExporterOnboarding = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
-  const [currentStep, setCurrentStep] = useState(1);
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -117,20 +115,27 @@ const ExporterOnboarding = () => {
       };
 
       const emailResponse = await emailjs.send(
-        'default_service', // You'll need to replace this with your actual service ID
+        'default_service',
         'template_uhlfing',
         emailParams
       );
 
       if (emailResponse.status === 200) {
-        toast.success("Your form has been submitted successfully. We'll be in touch soon.");
+        toast({
+          title: "Success",
+          description: "Your form has been submitted successfully. We'll be in touch soon.",
+        });
         navigate('/');
       } else {
         throw new Error('Failed to send email');
       }
     } catch (error) {
       console.error('Error:', error);
-      toast.error("There was a problem submitting your form. Please try again.");
+      toast({
+        title: "Error",
+        description: "There was a problem submitting your form. Please try again.",
+        variant: "destructive",
+      });
     }
   };
 
@@ -140,12 +145,7 @@ const ExporterOnboarding = () => {
       <div className="pt-20">
         <WelcomeSection />
         <WhyChooseSection />
-        <QuestionnaireSection 
-          currentStep={currentStep}
-          setCurrentStep={setCurrentStep}
-          form={form}
-          onSubmit={handleFormSubmit}
-        />
+        <QuestionnaireSection onSubmit={handleFormSubmit} />
       </div>
     </div>
   );
