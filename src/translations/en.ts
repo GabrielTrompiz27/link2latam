@@ -31,6 +31,11 @@ export const enTranslations = {
   'exporter.whyChoose.global.title': 'Global Network',
   'exporter.whyChoose.global.description': 'Access our extensive network of international buyers and funding partners.',
 
+  // Expertise Section
+  'expertise.title': 'Regional Expertise',
+  'expertise.subtitle': 'Our deep understanding of Latin American markets enables us to provide tailored solutions',
+  'expertise.mapAlt': 'Map of Latin America highlighting our areas of operation',
+
   // Investor Onboarding
   'investor.back': 'Back',
   'investor.welcome.title': 'Welcome to Link2Latam Investment Platform',
@@ -97,7 +102,12 @@ export const enTranslations = {
   'form.contactVideo': 'Video Call',
   'form.message': 'Additional Notes/Comments (Optional)',
 
-  // Exporter Form
-  'exporter.form.title': "Let's Tailor Your Financing Options",
-  'exporter.form.subtitle': "Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions."
+  // Form Messages
+  'form.success': 'Success!',
+  'form.successMessage': 'Your form has been submitted successfully.',
+  'form.error': 'Error',
+  'form.errorMessage': 'Error submitting the form. Please try again.',
+  'form.previous': 'Previous',
+  'form.next': 'Next',
+  'form.submit': 'Submit',
 } as const;
