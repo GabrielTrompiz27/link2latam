@@ -110,6 +110,6 @@ export const enTranslations = {
   'form.next': 'Next',
 
   // Investor Form
-  'investor.form.title': "Let's Discuss Your Investment Goals",
-  'investor.form.subtitle': 'Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives.',
+  'investor.consultation.title': "Let's Discuss Your Investment Goals",
+  'investor.consultation.subtitle': 'Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives.',
 } as const;
