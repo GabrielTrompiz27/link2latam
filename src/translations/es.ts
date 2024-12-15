@@ -15,17 +15,8 @@ export const esTranslations = {
   'footer.contact': 'Contacto',
   'footer.copyright': '© 2024 Link2Latam. Todos los derechos reservados.',
 
-  // Form Fields
-  'form.fullName': 'Nombre Completo',
-  'form.email': 'Correo Electrónico',
-  'form.phoneNumber': 'Número de Teléfono',
-  'form.preferredContact': 'Método de Contacto Preferido',
-  'form.message': 'Mensaje (Opcional)',
-  'form.submit': 'Enviar',
-  'form.success': '¡Éxito!',
-  'form.successMessage': 'Su formulario ha sido enviado exitosamente.',
-  'form.error': 'Error',
-  'form.errorMessage': 'Error al enviar el formulario. Por favor, inténtelo de nuevo.',
+  // Contact Form
+  'form.messagePlaceholder': 'Cuéntanos sobre tus objetivos de inversión y cualquier pregunta específica que tengas',
   'form.contactEmail': 'Correo',
   'form.contactPhone': 'Teléfono',
   'form.contactVideo': 'Videollamada',
@@ -114,7 +105,6 @@ export const esTranslations = {
   'form.phoneNumber': 'Número de Teléfono',
   'form.preferredContact': 'Método de Contacto Preferido',
   'form.additionalNotes': 'Notas Adicionales/Comentarios (Opcional)',
-  'form.messagePlaceholder': 'Cuéntanos sobre tus objetivos de inversión y cualquier pregunta específica que tengas',
 
   // Form Messages
   'form.success': '¡Éxito!',
