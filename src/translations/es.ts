@@ -117,5 +117,9 @@ export const esTranslations = {
 
   // Exporter Form
   'exporter.form.title': 'Personalicemos sus Opciones de Financiamiento',
-  'exporter.form.subtitle': 'Complete el formulario a continuación para ayudarnos a comprender su negocio y necesidades de financiamiento. Basado en sus respuestas, le proporcionaremos soluciones de financiamiento personalizadas.'
+  'exporter.form.subtitle': 'Complete el formulario a continuación para ayudarnos a comprender su negocio y necesidades de financiamiento. Basado en sus respuestas, le proporcionaremos soluciones de financiamiento personalizadas.',
+
+  // Investor Form
+  'investor.form.title': 'Hablemos de tus Objetivos de Inversión',
+  'investor.form.subtitle': 'Programa una consulta personalizada con nuestros expertos en inversiones para explorar cómo Link2Latam puede ayudarte a alcanzar tus objetivos de inversión.'
 } as const;

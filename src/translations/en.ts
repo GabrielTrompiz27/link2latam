@@ -94,12 +94,12 @@ export const enTranslations = {
   'form.creditEnhancement': 'Use of Credit Enhancement Tools',
   'form.creditEnhancementDetails': 'Credit Enhancement Details',
   'form.fullName': 'Full Name',
-  'form.position': 'Position/Title',
   'form.email': 'Email Address',
   'form.phoneNumber': 'Phone Number',
   'form.preferredContact': 'Preferred Contact Method',
-  'form.additionalNotes': 'Additional Notes/Comments (Optional)',
+  'form.message': 'Message (Optional)',
   'form.messagePlaceholder': 'Tell us about your investment goals and any specific questions you have',
+  'form.submit': 'Request a Consultation',
 
   // Form Messages
   'form.success': 'Success!',
@@ -108,9 +108,8 @@ export const enTranslations = {
   'form.errorMessage': 'Error submitting the form. Please try again.',
   'form.previous': 'Previous',
   'form.next': 'Next',
-  'form.submit': 'Submit',
 
-  // Exporter Form
-  'exporter.form.title': "Let's Tailor Your Financing Options",
-  'exporter.form.subtitle': "Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions."
+  // Investor Form
+  'investor.form.title': "Let's Discuss Your Investment Goals",
+  'investor.form.subtitle': 'Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives.',
 } as const;
