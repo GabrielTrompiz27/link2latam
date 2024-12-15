@@ -4,7 +4,32 @@ export const esTranslations = {
   'nav.about': 'Acerca de',
   'nav.expertise': 'Experiencia',
   'nav.getStarted': 'Comenzar',
-  
+
+  // Footer
+  'footer.about': 'Potenciando las exportaciones latinoamericanas a través de soluciones financieras innovadoras.',
+  'footer.quickLinks': 'Enlaces Rápidos',
+  'footer.services': 'Servicios',
+  'footer.invoiceFactoring': 'Factoraje de Facturas',
+  'footer.riskManagement': 'Gestión de Riesgos',
+  'footer.tradeFinance': 'Financiamiento Comercial',
+  'footer.contact': 'Contacto',
+  'footer.copyright': '© 2024 Link2Latam. Todos los derechos reservados.',
+
+  // Form Fields
+  'form.fullName': 'Nombre Completo',
+  'form.email': 'Correo Electrónico',
+  'form.phoneNumber': 'Número de Teléfono',
+  'form.preferredContact': 'Método de Contacto Preferido',
+  'form.message': 'Mensaje (Opcional)',
+  'form.submit': 'Enviar',
+  'form.success': '¡Éxito!',
+  'form.successMessage': 'Su formulario ha sido enviado exitosamente.',
+  'form.error': 'Error',
+  'form.errorMessage': 'Error al enviar el formulario. Por favor, inténtelo de nuevo.',
+  'form.contactEmail': 'Correo',
+  'form.contactPhone': 'Teléfono',
+  'form.contactVideo': 'Videollamada',
+
   // Hero
   'hero.title': 'Potenciando las Exportaciones Latinoamericanas a través de Finanzas Innovadoras',
   'hero.subtitle': 'Soluciones de financiamiento rápidas, flexibles y confiables para exportadores. Transforma tus facturas en capital de trabajo inmediato.',

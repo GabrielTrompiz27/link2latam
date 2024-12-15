@@ -1,6 +1,9 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-4">
@@ -8,30 +11,30 @@ export const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">Link2Latam</h3>
             <p className="text-gray-300">
-              Empowering Latin American exports through innovative finance solutions.
+              {t('footer.about')}
             </p>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
-              <li><a href="#services" className="text-gray-300 hover:text-white">Services</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-white">About Us</a></li>
-              <li><a href="#expertise" className="text-gray-300 hover:text-white">Expertise</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white">{t('nav.services')}</a></li>
+              <li><a href="#about" className="text-gray-300 hover:text-white">{t('nav.about')}</a></li>
+              <li><a href="#expertise" className="text-gray-300 hover:text-white">{t('nav.expertise')}</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
+            <h4 className="font-semibold mb-4">{t('footer.services')}</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-white">Invoice Factoring</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Risk Management</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Trade Finance</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white">{t('footer.invoiceFactoring')}</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white">{t('footer.riskManagement')}</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white">{t('footer.tradeFinance')}</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
+            <h4 className="font-semibold mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Mail size={16} className="mr-2" />
@@ -50,7 +53,7 @@ export const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Link2Latam. All rights reserved.</p>
+          <p>{t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

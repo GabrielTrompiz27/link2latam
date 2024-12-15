@@ -62,6 +62,16 @@ export const enTranslations = {
   'services.quickProcessing.title': 'Quick Processing',
   'services.quickProcessing.description': 'Fast approval and efficient processing to keep your business moving forward.',
 
+  // Footer
+  'footer.about': 'Empowering Latin American exports through innovative finance solutions.',
+  'footer.quickLinks': 'Quick Links',
+  'footer.services': 'Services',
+  'footer.invoiceFactoring': 'Invoice Factoring',
+  'footer.riskManagement': 'Risk Management',
+  'footer.tradeFinance': 'Trade Finance',
+  'footer.contact': 'Contact',
+  'footer.copyright': '© 2024 Link2Latam. All rights reserved.',
+
   // Form Fields
   'form.companyName': 'Company Name',
   'form.country': 'Country of Operation',
