@@ -5,22 +5,6 @@ export const esTranslations = {
   'nav.expertise': 'Experiencia',
   'nav.getStarted': 'Comenzar',
 
-  // Footer
-  'footer.about': 'Potenciando las exportaciones latinoamericanas a través de soluciones financieras innovadoras.',
-  'footer.quickLinks': 'Enlaces Rápidos',
-  'footer.services': 'Servicios',
-  'footer.invoiceFactoring': 'Factoraje de Facturas',
-  'footer.riskManagement': 'Gestión de Riesgos',
-  'footer.tradeFinance': 'Financiamiento Comercial',
-  'footer.contact': 'Contacto',
-  'footer.copyright': '© 2024 Link2Latam. Todos los derechos reservados.',
-
-  // Contact Form
-  'form.messagePlaceholder': 'Cuéntanos sobre tus objetivos de inversión y cualquier pregunta específica que tengas',
-  'form.contactEmail': 'Correo',
-  'form.contactPhone': 'Teléfono',
-  'form.contactVideo': 'Videollamada',
-
   // Hero
   'hero.title': 'Potenciando las Exportaciones Latinoamericanas a través de Finanzas Innovadoras',
   'hero.subtitle': 'Soluciones de financiamiento rápidas, flexibles y confiables para exportadores. Transforma tus facturas en capital de trabajo inmediato.',
@@ -80,6 +64,10 @@ export const esTranslations = {
   'form.preferredContact': 'Método de Contacto Preferido',
   'form.message': 'Mensaje (Opcional)',
   'form.submit': 'Solicitar Consulta',
+  'form.messagePlaceholder': 'Cuéntanos sobre tus objetivos de inversión y cualquier pregunta específica que tengas',
+  'form.contactEmail': 'Correo',
+  'form.contactPhone': 'Teléfono',
+  'form.contactVideo': 'Videollamada',
 
   // Form Messages
   'form.success': '¡Éxito!',
