@@ -5,12 +5,6 @@ export const esTranslations = {
   'nav.expertise': 'Experiencia',
   'nav.getStarted': 'Comenzar',
 
-  // Form Titles
-  'exporter.form.title': 'Personalicemos sus Opciones de Financiamiento',
-  'exporter.form.subtitle': 'Complete el formulario a continuación para ayudarnos a comprender su negocio y necesidades de financiamiento. Basado en sus respuestas, le proporcionaremos soluciones de financiamiento personalizadas.',
-  'investor.form.title': 'Hablemos de sus Objetivos de Inversión',
-  'investor.form.subtitle': 'Programe una consulta personalizada con nuestros expertos en inversiones para explorar cómo Link2Latam puede ayudarle a alcanzar sus objetivos de inversión.',
-
   // Hero
   'hero.title': 'Potenciando las Exportaciones Latinoamericanas a través de Finanzas Innovadoras',
   'hero.subtitle': 'Soluciones de financiamiento rápidas, flexibles y confiables para exportadores. Transforma tus facturas en capital de trabajo inmediato.',

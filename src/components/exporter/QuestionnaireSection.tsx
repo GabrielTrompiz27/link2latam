@@ -96,6 +96,7 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
             {t('exporter.form.subtitle')}
           </p>
           
+          {/* Multi-step form container */}
           <div className="bg-white rounded-xl shadow-lg p-8">
             {/* Step indicator */}
             <div className="mb-8">
