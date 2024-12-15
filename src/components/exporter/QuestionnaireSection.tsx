@@ -5,6 +5,8 @@ import { CompanyInfoStep } from './CompanyInfoStep';
 import { FinancingDetailsStep } from './FinancingDetailsStep';
 import { AccessToCreditStep } from './AccessToCreditStep';
 import { ContactInfoStep } from './ContactInfoStep';
+import { useToast } from '@/components/ui/use-toast';
+import emailjs from '@emailjs/browser';
 
 interface QuestionnaireSectionProps {
   currentStep: number;
@@ -14,6 +16,56 @@ interface QuestionnaireSectionProps {
 
 export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: QuestionnaireSectionProps) => {
   const { t } = useLanguage();
+  const { toast } = useToast();
+
+  const handleSubmit = async (values: any) => {
+    try {
+      await emailjs.send(
+        'default_service',
+        'template_85fm34j',
+        {
+          company_name: values.companyName,
+          country: values.country,
+          other_country: values.otherCountry,
+          industry: values.industry,
+          export_products: values.exportProducts,
+          invoice_currency: values.invoiceCurrency,
+          monthly_volumes: values.monthlyVolumes,
+          employees: values.employees,
+          financing_currency: values.financingCurrency,
+          other_financing_currency: values.otherFinancingCurrency,
+          financing_types: values.financingTypes?.join(', '),
+          interest_rates: JSON.stringify(values.interestRates),
+          financing_periods: JSON.stringify(values.financingPeriods),
+          total_financing: values.totalFinancing,
+          credit_rating: values.creditRating,
+          credit_challenges: values.creditChallenges,
+          collateral_types: values.collateralTypes?.join(', '),
+          other_collateral: values.otherCollateral,
+          credit_enhancement: values.creditEnhancement,
+          credit_enhancement_details: values.creditEnhancementDetails,
+          full_name: values.fullName,
+          position: values.position,
+          email: values.email,
+          phone_number: values.phoneNumber,
+          preferred_contact: values.preferredContact,
+          additional_notes: values.additionalNotes
+        },
+        'WlivaL7VCZCUVpj0n'
+      );
+
+      toast({
+        title: "Success!",
+        description: "Your form has been submitted successfully.",
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to submit form. Please try again.",
+        variant: "destructive"
+      });
+    }
+  };
 
   return (
     <div className="bg-gray-50 py-16">
@@ -48,7 +100,7 @@ export const QuestionnaireSection = ({ currentStep, setCurrentStep, form }: Ques
             </div>
 
             <Form {...form}>
-              <form onSubmit={form.handleSubmit((values: any) => console.log(values))} className="space-y-8">
+              <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
                 {currentStep === 1 && <CompanyInfoStep form={form} />}
                 {currentStep === 2 && <FinancingDetailsStep form={form} />}
                 {currentStep === 3 && <AccessToCreditStep form={form} />}
