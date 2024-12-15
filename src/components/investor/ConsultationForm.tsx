@@ -119,7 +119,7 @@ export const ConsultationForm = () => {
               required
             >
               <SelectTrigger className="w-full">
-                <SelectValue placeholder={t('form.preferredContact')} />
+                <SelectValue placeholder="Select preferred contact method" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="email">{t('form.contactEmail')}</SelectItem>
