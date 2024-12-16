@@ -22,17 +22,18 @@ export const ConsultationForm = () => {
     e.preventDefault();
     
     try {
+      const templateParams = {
+        from_name: formData.fullName,
+        from_email: formData.email,
+        phone: formData.phone,
+        preferred_contact: formData.contactMethod,
+        message: formData.message
+      };
+
       await emailjs.send(
         'default_service',
         'template_uhlfing',
-        {
-          to_email: 'gabrieltrompiz27@gmail.com',
-          from_name: formData.fullName,
-          from_email: formData.email,
-          phone: formData.phone,
-          preferred_contact: formData.contactMethod,
-          message: formData.message
-        },
+        templateParams,
         'WlivaL7VCZCUVpj0n'
       );
 
@@ -49,6 +50,7 @@ export const ConsultationForm = () => {
         message: ''
       });
     } catch (error) {
+      console.error('Email sending error:', error);
       toast({
         title: t('form.error'),
         description: t('form.errorMessage'),
