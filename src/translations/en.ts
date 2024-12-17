@@ -116,12 +116,9 @@ export const enTranslations = {
   
   // About Section
   'about.title': 'About',
+  'about.subtitle': 'Fast, flexible, and reliable funding solutions.',
   'about.whoWeAre.title': 'Who we are?',
   'about.whoWeAre.description': 'At Link2Latam, we specialize in providing tailored private debt solutions for businesses across Latin America. With over 30 years of deep financial expertise in the region, we offer unparalleled insights and strategic guidance to companies seeking robust financial support. Our distinctive advantage lies in our comprehensive understanding of the LATAM market landscape and our extensive professional network, which enables us to craft sophisticated debt strategies that address the unique challenges and opportunities of each client. Drawing from decades of experience navigating the complex financial ecosystems of Latin American markets, we are committed to delivering innovative, responsive, and value-driven financial solutions that empower businesses to achieve their growth objectives with confidence.',
-  'about.pillars.transparency.title': 'Transparency',
-  'about.pillars.transparency.description': 'Simple structure connecting importer, exporter, and investor.',
-  'about.pillars.network.title': 'Network',
-  'about.pillars.network.description': 'Various sources of investments',
-  'about.pillars.platform.title': 'Platform',
-  'about.pillars.platform.description': 'Streamline investment flows and manage transactions closely.',
+  'about.ecosystem.title': 'Our Ecosystem',
+  'about.ecosystem.description': 'Our success is built on strategic partnerships and a robust ecosystem of trusted collaborators across Europe and Latin America. We work closely with leading financial institutions, legal advisory firms, and private corporations that share our commitment to innovative debt solutions. Our network spans key financial centers in Argentina, Bolivia, Colombia, Ecuador, Peru and Mexico, allowing us to leverage deep local expertise and global insights. Our stakeholders include private investors, financial technology with extensive investment experience, european financial institutions and entrepreneurial ventures seeking sophisticated debt management solutions, united by a shared vision of impact investment for a sustainable financial growth and strategic regional development.',
 };
