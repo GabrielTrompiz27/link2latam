@@ -1,13 +1,18 @@
 import { CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const regions = [
-  "Mexico",
-  "Ecuador",
-  "Colombia",
-  "Bolivia",
-  "Peru",
-  "Argentina"
+type RegionDisplay = {
+  name: string;
+  flag?: string;
+}
+
+const regions: RegionDisplay[] = [
+  { name: "Mexico" },
+  { name: "Ecuador" },
+  { name: "Colombia" },
+  { name: "Bolivia" },
+  { name: "Peru", flag: "/lovable-uploads/fe57848d-868d-4153-8903-4df3414fac43.png" },
+  { name: "Argentina" }
 ];
 
 export const RegionalExpertise = () => {
@@ -25,8 +30,18 @@ export const RegionalExpertise = () => {
             <div className="grid grid-cols-2 gap-4">
               {regions.map((region, index) => (
                 <div key={index} className="flex items-center space-x-2">
-                  <CheckCircle className="text-success" size={20} />
-                  <span>{region}</span>
+                  {region.flag ? (
+                    <img 
+                      src={region.flag} 
+                      alt={region.name}
+                      className="w-8 h-5 object-cover rounded"
+                    />
+                  ) : (
+                    <>
+                      <CheckCircle className="text-success" size={20} />
+                      <span>{region.name}</span>
+                    </>
+                  )}
                 </div>
               ))}
             </div>
