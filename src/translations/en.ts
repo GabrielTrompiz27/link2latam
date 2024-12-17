@@ -115,7 +115,7 @@ export const enTranslations = {
   'form.errorMessage': 'Error submitting the form. Please try again.',
   
   // About Section
-  'about.title': 'Empowering Latin American SMEs Through Innovative Finance',
+  'about.title': 'About',
   'about.subtitle': 'Fast, flexible, and reliable funding solutions.',
   'about.whoWeAre.title': 'Who we are?',
   'about.whoWeAre.description': 'At Link2Latam, we specialize in providing tailored private debt solutions for businesses across Latin America. With over 30 years of deep financial expertise in the region, we offer unparalleled insights and strategic guidance to companies seeking robust financial support. Our distinctive advantage lies in our comprehensive understanding of the LATAM market landscape and our extensive professional network, which enables us to craft sophisticated debt strategies that address the unique challenges and opportunities of each client. Drawing from decades of experience navigating the complex financial ecosystems of Latin American markets, we are committed to delivering innovative, responsive, and value-driven financial solutions that empower businesses to achieve their growth objectives with confidence.',
