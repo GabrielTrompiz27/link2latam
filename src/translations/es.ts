@@ -116,12 +116,9 @@ export const esTranslations = {
 
   // About Section
   'about.title': 'Acerca de',
+  'about.subtitle': 'Soluciones de financiamiento rápidas, flexibles y confiables.',
   'about.whoWeAre.title': '¿Quiénes somos?',
   'about.whoWeAre.description': 'En Link2Latam, nos especializamos en proporcionar soluciones de deuda privada personalizadas para empresas en toda América Latina. Con más de 30 años de profunda experiencia financiera en la región, ofrecemos perspectivas sin igual y orientación estratégica a empresas que buscan un sólido apoyo financiero. Nuestra ventaja distintiva radica en nuestra comprensión integral del panorama del mercado LATAM y nuestra extensa red profesional, que nos permite diseñar estrategias de deuda sofisticadas que abordan los desafíos y oportunidades únicos de cada cliente. Basándonos en décadas de experiencia navegando por los complejos ecosistemas financieros de los mercados latinoamericanos, estamos comprometidos a ofrecer soluciones financieras innovadoras, receptivas y orientadas al valor que permitan a las empresas alcanzar sus objetivos de crecimiento con confianza.',
-  'about.pillars.transparency.title': 'Transparencia',
-  'about.pillars.transparency.description': 'Estructura simple que conecta importador, exportador e inversor.',
-  'about.pillars.network.title': 'Red',
-  'about.pillars.network.description': 'Diversas fuentes de inversiones',
-  'about.pillars.platform.title': 'Plataforma',
-  'about.pillars.platform.description': 'Optimice los flujos de inversión y gestione las transacciones de cerca.',
+  'about.ecosystem.title': 'Nuestro Ecosistema',
+  'about.ecosystem.description': 'Nuestro éxito se basa en alianzas estratégicas y un sólido ecosistema de colaboradores de confianza en Europa y América Latina. Trabajamos en estrecha colaboración con instituciones financieras líderes, firmas de asesoría legal y corporaciones privadas que comparten nuestro compromiso con soluciones de deuda innovadoras. Nuestra red abarca los principales centros financieros de Argentina, Bolivia, Colombia, Ecuador, Perú y México, permitiéndonos aprovechar la profunda experiencia local y perspectivas globales. Nuestros grupos de interés incluyen inversores privados, tecnología financiera con amplia experiencia en inversiones, instituciones financieras europeas y emprendimientos empresariales que buscan soluciones sofisticadas de gestión de deuda, unidos por una visión compartida de inversión de impacto para un crecimiento financiero sostenible y desarrollo regional estratégico.',
 };
