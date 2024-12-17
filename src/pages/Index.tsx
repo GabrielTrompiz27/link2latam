@@ -22,14 +22,16 @@ const Index = () => {
   }, [location.state]);
 
   return (
-    <div className="min-h-screen">
+    <>
       <Navbar />
-      <Hero />
-      <Services />
-      <About />
-      <RegionalExpertise />
-      <Footer />
-    </div>
+      <main className="min-h-screen">
+        <Hero />
+        <Services />
+        <About />
+        <RegionalExpertise />
+        <Footer />
+      </main>
+    </>
   );
 };
 

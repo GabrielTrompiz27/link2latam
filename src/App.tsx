@@ -12,8 +12,8 @@ import InvestorOnboarding from "./pages/InvestorOnboarding";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <LanguageProvider>
-    <QueryClientProvider client={queryClient}>
+  <QueryClientProvider client={queryClient}>
+    <LanguageProvider>
       <BrowserRouter>
         <TooltipProvider>
           <Toaster />
@@ -26,8 +26,8 @@ const App = () => (
           </Routes>
         </TooltipProvider>
       </BrowserRouter>
-    </QueryClientProvider>
-  </LanguageProvider>
+    </LanguageProvider>
+  </QueryClientProvider>
 );
 
 export default App;
