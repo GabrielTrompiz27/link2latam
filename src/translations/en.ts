@@ -7,7 +7,7 @@ export const enTranslations = {
   
   // Hero
   'hero.title': 'Empowering Latin American Businesses with Tailored Financing Solutions',
-  'hero.subtitle': 'Fast, flexible, and reliable funding solutions to support business growth and international trade.',
+  'hero.subtitle': 'Fast, flexible, and reliable funding solutions, designed to fuel your business growth and improve cash flow.',
   'hero.getStarted': 'Get Started',
   'hero.learnMore': 'Learn More',
 

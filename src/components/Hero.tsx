@@ -31,20 +31,17 @@ export const Hero = () => {
           </h1>
         </div>
 
-        {/* Bottom left text and buttons */}
+        {/* Bottom left text and button */}
         <div className="max-w-2xl">
           <p className="text-xl text-white/90 mb-8 animate-fade-in">
             {t('hero.subtitle')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
+          <div className="animate-fade-in">
             <button 
               className="btn-primary inline-flex items-center"
               onClick={() => navigate('/get-started')}
             >
               {t('hero.getStarted')} <ArrowRight className="ml-2" size={20} />
-            </button>
-            <button className="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200">
-              {t('hero.learnMore')}
             </button>
           </div>
         </div>
