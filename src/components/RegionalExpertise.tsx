@@ -7,7 +7,7 @@ type RegionDisplay = {
 }
 
 const regions: RegionDisplay[] = [
-  { name: "Mexico" },
+  { name: "Mexico", flag: "/lovable-uploads/c3ec3ddd-b1f0-40bf-a418-834f1da77a0e.png" },
   { name: "Ecuador" },
   { name: "Colombia" },
   { name: "Bolivia" },
@@ -34,7 +34,7 @@ export const RegionalExpertise = () => {
                     <img 
                       src={region.flag} 
                       alt={region.name}
-                      className="w-8 h-5 object-cover rounded"
+                      className="w-12 h-8 object-cover rounded shadow-sm"
                     />
                   ) : (
                     <>
