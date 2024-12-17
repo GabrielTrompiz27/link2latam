@@ -13,7 +13,7 @@ export const enTranslations = {
 
   // Services Section
   'services.title': 'Our Services',
-  'services.subtitle': 'Comprehensive private debt solutions designed to empower businesses across LATAM',
+  'services.subtitle': 'Comprehensive private debt solutions',
   'services.invoiceFactoring.title': 'Trade Finance',
   'services.invoiceFactoring.description': 'Convert your export invoices into immediate working capital with competitive rates.',
   'services.directLending.title': 'Direct Lending',

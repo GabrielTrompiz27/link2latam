@@ -13,7 +13,7 @@ export const esTranslations = {
 
   // Services Section
   'services.title': 'Nuestros Servicios',
-  'services.subtitle': 'Soluciones integrales de deuda privada diseñadas para potenciar empresas en toda LATAM',
+  'services.subtitle': 'Soluciones integrales de deuda privada',
   'services.invoiceFactoring.title': 'Financiamiento Comercial',
   'services.invoiceFactoring.description': 'Convierte tus facturas de exportación en capital de trabajo inmediato con tasas competitivas.',
   'services.directLending.title': 'Préstamos Directos',
