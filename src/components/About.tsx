@@ -10,7 +10,6 @@ export const About = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="section-title">{t('about.title')}</h2>
-            <p className="section-subtitle">{t('about.subtitle')}</p>
           </div>
 
           <div className="space-y-12">
