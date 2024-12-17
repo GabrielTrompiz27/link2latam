@@ -14,7 +14,7 @@ export const esTranslations = {
   // Services Section
   'services.title': 'Nuestros Servicios',
   'services.subtitle': 'Soluciones integrales de deuda privada diseñadas para potenciar empresas en toda LATAM',
-  'services.invoiceFactoring.title': 'Factoraje de Facturas',
+  'services.invoiceFactoring.title': 'Financiamiento Comercial',
   'services.invoiceFactoring.description': 'Convierte tus facturas de exportación en capital de trabajo inmediato con tasas competitivas.',
   'services.directLending.title': 'Préstamos Directos',
   'services.directLending.description': 'Financiamiento flexible y confiable para apoyar tus objetivos empresariales con términos competitivos y un proceso sin complicaciones.',

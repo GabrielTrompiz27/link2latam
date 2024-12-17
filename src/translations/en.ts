@@ -14,7 +14,7 @@ export const enTranslations = {
   // Services Section
   'services.title': 'Our Services',
   'services.subtitle': 'Comprehensive private debt solutions designed to empower businesses across LATAM',
-  'services.invoiceFactoring.title': 'Invoice Factoring',
+  'services.invoiceFactoring.title': 'Trade Finance',
   'services.invoiceFactoring.description': 'Convert your export invoices into immediate working capital with competitive rates.',
   'services.directLending.title': 'Direct Lending',
   'services.directLending.description': 'Flexible and reliable financing to support your business goals with competitive terms and a seamless process.',
