@@ -7,7 +7,7 @@ export const esTranslations = {
 
   // Hero
   'hero.title': 'Potenciando las Empresas Latinoamericanas con Soluciones de Financiamiento Personalizadas',
-  'hero.subtitle': 'Soluciones de financiamiento rápidas, flexibles y confiables para apoyar el crecimiento empresarial y el comercio internacional.',
+  'hero.subtitle': 'Soluciones de financiamiento rápidas, flexibles y confiables para impulsar el crecimiento empresarial y mejorar el flujo de caja.',
   'hero.getStarted': 'Comenzar',
   'hero.learnMore': 'Más Información',
 
