@@ -109,7 +109,7 @@ export const enTranslations = {
   'about.ecosystem.description': 'Our success is built on strategic partnerships and a robust ecosystem of trusted collaborators across Europe and Latin America. We work closely with leading financial institutions, legal advisory firms, and private corporations that share our commitment to innovative debt solutions. Our network spans key financial centers in Argentina, Bolivia, Colombia, Ecuador, Peru and Mexico, allowing us to leverage deep local expertise and global insights. Our stakeholders include private investors, financial technology with extensive investment experience, european financial institutions and entrepreneurial ventures seeking sophisticated debt management solutions, united by a shared vision of impact investment for a sustainable financial growth and strategic regional development.',
 
   // Footer
-  'footer.about': 'Empowering Latin American exports through innovative finance solutions.',
+  'footer.about': 'Empowering Latin American SMEs through innovative finance solutions.',
   'footer.quickLinks': 'Quick Links',
   'footer.services': 'Services',
   'footer.invoiceFactoring': 'Invoice Factoring',

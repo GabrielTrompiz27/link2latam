@@ -39,6 +39,11 @@ export const esTranslations = {
   'exporter.whyChoose.global.title': 'Red Global',
   'exporter.whyChoose.global.description': 'Accede a nuestra extensa red de compradores internacionales y socios financieros.',
 
+  // Expertise Section
+  'expertise.title': 'Experiencia Regional',
+  'expertise.subtitle': 'Nuestra profunda comprensión de los mercados latinoamericanos nos permite proporcionar soluciones personalizadas',
+  'expertise.mapAlt': 'Mapa de América Latina destacando nuestras áreas de operación',
+
   // Investor Onboarding
   'investor.back': 'Volver',
   'investor.welcome.title': 'Bienvenido a la Plataforma de Inversión Link2Latam',
@@ -86,6 +91,7 @@ export const esTranslations = {
   'form.phoneNumber': 'Número de Teléfono',
   'form.preferredContact': 'Método de Contacto Preferido',
   'form.message': 'Notas Adicionales',
+  'form.messagePlaceholder': 'Cuéntanos sobre tus objetivos de inversión y cualquier pregunta específica que tengas',
   'form.previous': 'Anterior',
   'form.next': 'Siguiente',
   'form.submit': 'Enviar',
@@ -103,7 +109,7 @@ export const esTranslations = {
   'about.ecosystem.description': 'Nuestro éxito se basa en alianzas estratégicas y un sólido ecosistema de colaboradores de confianza en Europa y América Latina. Trabajamos en estrecha colaboración con instituciones financieras líderes, firmas de asesoría legal y corporaciones privadas que comparten nuestro compromiso con soluciones de deuda innovadoras. Nuestra red abarca los principales centros financieros de Argentina, Bolivia, Colombia, Ecuador, Perú y México, permitiéndonos aprovechar la profunda experiencia local y perspectivas globales. Nuestros grupos de interés incluyen inversores privados, tecnología financiera con amplia experiencia en inversiones, instituciones financieras europeas y emprendimientos empresariales que buscan soluciones sofisticadas de gestión de deuda, unidos por una visión compartida de inversión de impacto para un crecimiento financiero sostenible y desarrollo regional estratégico.',
 
   // Footer
-  'footer.about': 'Potenciando las exportaciones latinoamericanas a través de soluciones financieras innovadoras.',
+  'footer.about': 'Potenciando las PyMEs latinoamericanas a través de soluciones financieras innovadoras.',
   'footer.quickLinks': 'Enlaces Rápidos',
   'footer.services': 'Servicios',
   'footer.invoiceFactoring': 'Factoraje de Facturas',
