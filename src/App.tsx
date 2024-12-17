@@ -11,23 +11,25 @@ import InvestorOnboarding from "./pages/InvestorOnboarding";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <LanguageProvider>
-      <BrowserRouter>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/get-started" element={<Selection />} />
-            <Route path="/exporter" element={<ExporterOnboarding />} />
-            <Route path="/investor" element={<InvestorOnboarding />} />
-          </Routes>
-        </TooltipProvider>
-      </BrowserRouter>
-    </LanguageProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <LanguageProvider>
+        <BrowserRouter>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/get-started" element={<Selection />} />
+              <Route path="/exporter" element={<ExporterOnboarding />} />
+              <Route path="/investor" element={<InvestorOnboarding />} />
+            </Routes>
+          </TooltipProvider>
+        </BrowserRouter>
+      </LanguageProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
