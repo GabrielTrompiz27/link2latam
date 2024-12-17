@@ -1,4 +1,4 @@
-import { Banknote, Shield, Globe, Clock } from 'lucide-react';
+import { Banknote, Landmark } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Services = () => {
@@ -11,19 +11,9 @@ export const Services = () => {
       description: t('services.invoiceFactoring.description')
     },
     {
-      icon: Shield,
-      title: t('services.riskMitigation.title'),
-      description: t('services.riskMitigation.description')
-    },
-    {
-      icon: Globe,
-      title: t('services.globalReach.title'),
-      description: t('services.globalReach.description')
-    },
-    {
-      icon: Clock,
-      title: t('services.quickProcessing.title'),
-      description: t('services.quickProcessing.description')
+      icon: Landmark,
+      title: t('services.directLending.title'),
+      description: t('services.directLending.description')
     }
   ];
 
@@ -35,7 +25,7 @@ export const Services = () => {
           {t('services.subtitle')}
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto">
           {services.map((service, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               <service.icon className="w-12 h-12 text-accent mb-4" />

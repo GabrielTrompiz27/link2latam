@@ -11,6 +11,14 @@ export const esTranslations = {
   'hero.getStarted': 'Comenzar',
   'hero.learnMore': 'Más Información',
 
+  // Services Section
+  'services.title': 'Nuestros Servicios',
+  'services.subtitle': 'Soluciones integrales de financiamiento comercial diseñadas para exportadores latinoamericanos',
+  'services.invoiceFactoring.title': 'Factoraje de Facturas',
+  'services.invoiceFactoring.description': 'Convierte tus facturas de exportación en capital de trabajo inmediato con tasas competitivas.',
+  'services.directLending.title': 'Préstamos Directos',
+  'services.directLending.description': 'Acceda a soluciones de financiamiento rápidas y flexibles adaptadas a las necesidades de su empresa. Ya sea para crecimiento, operaciones o nuevas oportunidades, proporcionamos financiamiento confiable con términos competitivos y un proceso sin complicaciones.',
+
   // Selection
   'selection.title': '¿Cómo deseas proceder?',
   'selection.investor.title': 'Soy Inversionista',
@@ -48,18 +56,6 @@ export const esTranslations = {
   // Investor Consultation
   'investor.consultation.title': 'Hablemos de sus Objetivos de Inversión',
   'investor.consultation.subtitle': 'Programe una consulta personalizada con nuestros expertos en inversiones para explorar cómo Link2Latam puede ayudarlo a alcanzar sus objetivos de inversión.',
-
-  // Services Section
-  'services.title': 'Nuestros Servicios',
-  'services.subtitle': 'Soluciones integrales de financiamiento comercial diseñadas para exportadores latinoamericanos',
-  'services.invoiceFactoring.title': 'Factoraje de Facturas',
-  'services.invoiceFactoring.description': 'Convierte tus facturas de exportación en capital de trabajo inmediato con tasas competitivas.',
-  'services.riskMitigation.title': 'Mitigación de Riesgos',
-  'services.riskMitigation.description': 'Protege tu negocio con soluciones integrales de evaluación y gestión de riesgos.',
-  'services.globalReach.title': 'Alcance Global',
-  'services.globalReach.description': 'Accede a mercados internacionales con nuestra extensa red y experiencia regional.',
-  'services.quickProcessing.title': 'Procesamiento Rápido',
-  'services.quickProcessing.description': 'Aprobación rápida y procesamiento eficiente para mantener tu negocio en movimiento.',
 
   // Form Section
   'form.title': 'Personalicemos sus Opciones de Financiamiento',

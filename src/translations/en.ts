@@ -11,6 +11,14 @@ export const enTranslations = {
   'hero.getStarted': 'Get Started',
   'hero.learnMore': 'Learn More',
 
+  // Services Section
+  'services.title': 'Our Services',
+  'services.subtitle': 'Comprehensive trade finance solutions tailored for Latin American exporters',
+  'services.invoiceFactoring.title': 'Invoice Factoring',
+  'services.invoiceFactoring.description': 'Convert your export invoices into immediate working capital with competitive rates.',
+  'services.directLending.title': 'Direct Lending',
+  'services.directLending.description': 'Access fast and flexible financing solutions tailored to your business needs. Whether for growth, operations, or new opportunities, we provide reliable funding with competitive terms and a seamless process.',
+
   // Selection
   'selection.title': 'How would you like to proceed?',
   'selection.investor.title': "I'm an Investor",
@@ -59,12 +67,8 @@ export const enTranslations = {
   'services.subtitle': 'Comprehensive trade finance solutions tailored for Latin American exporters',
   'services.invoiceFactoring.title': 'Invoice Factoring',
   'services.invoiceFactoring.description': 'Convert your export invoices into immediate working capital with competitive rates.',
-  'services.riskMitigation.title': 'Risk Mitigation',
-  'services.riskMitigation.description': 'Protect your business with comprehensive risk assessment and management solutions.',
-  'services.globalReach.title': 'Global Reach',
-  'services.globalReach.description': 'Access international markets with our extensive network and regional expertise.',
-  'services.quickProcessing.title': 'Quick Processing',
-  'services.quickProcessing.description': 'Fast approval and efficient processing to keep your business moving forward.',
+  'services.directLending.title': 'Direct Lending',
+  'services.directLending.description': 'Access fast and flexible financing solutions tailored to your business needs. Whether for growth, operations, or new opportunities, we provide reliable funding with competitive terms and a seamless process.',
 
   // Footer
   'footer.about': 'Empowering Latin American exports through innovative finance solutions.',
