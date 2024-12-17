@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 export const Footer = () => {
   const { t } = useLanguage();
@@ -52,7 +53,54 @@ export const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>{t('footer.copyright')}</p>
+          <p className="flex items-center justify-center gap-4 flex-wrap">
+            <span>{t('footer.copyright')}</span>
+            <Dialog>
+              <DialogTrigger className="text-gray-300 hover:text-white underline cursor-pointer">
+                {t('footer.cookies')}
+              </DialogTrigger>
+              <DialogContent className="max-w-2xl">
+                <DialogHeader>
+                  <DialogTitle>{t('footer.cookies')}</DialogTitle>
+                </DialogHeader>
+                <div className="text-left">
+                  <p className="text-gray-600">
+                    [Your cookies policy content will go here]
+                  </p>
+                </div>
+              </DialogContent>
+            </Dialog>
+            <Dialog>
+              <DialogTrigger className="text-gray-300 hover:text-white underline cursor-pointer">
+                {t('footer.legal')}
+              </DialogTrigger>
+              <DialogContent className="max-w-2xl">
+                <DialogHeader>
+                  <DialogTitle>{t('footer.legal')}</DialogTitle>
+                </DialogHeader>
+                <div className="text-left">
+                  <p className="text-gray-600">
+                    [Your legal disclaimer content will go here]
+                  </p>
+                </div>
+              </DialogContent>
+            </Dialog>
+            <Dialog>
+              <DialogTrigger className="text-gray-300 hover:text-white underline cursor-pointer">
+                {t('footer.dataProtection')}
+              </DialogTrigger>
+              <DialogContent className="max-w-2xl">
+                <DialogHeader>
+                  <DialogTitle>{t('footer.dataProtection')}</DialogTitle>
+                </DialogHeader>
+                <div className="text-left">
+                  <p className="text-gray-600">
+                    [Your data protection statement content will go here]
+                  </p>
+                </div>
+              </DialogContent>
+            </Dialog>
+          </p>
         </div>
       </div>
     </footer>
