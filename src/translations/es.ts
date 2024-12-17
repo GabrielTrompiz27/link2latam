@@ -7,7 +7,7 @@ export const esTranslations = {
 
   // Hero
   'hero.title': 'Potenciando las PyMEs Latinoamericanas a través de Finanzas Innovadoras',
-  'hero.subtitle': 'Soluciones de financiamiento rápidas, flexibles y confiables para apoyar el crecimiento empresarial y el comercio internacional. Acceda a financiamiento adaptado a sus necesidades con procesos eficientes y sin complicaciones.',
+  'hero.subtitle': 'Soluciones de financiamiento rápidas, flexibles y confiables para apoyar el crecimiento empresarial y el comercio internacional.',
   'hero.getStarted': 'Comenzar',
   'hero.learnMore': 'Más Información',
 

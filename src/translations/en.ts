@@ -7,7 +7,7 @@ export const enTranslations = {
   
   // Hero
   'hero.title': 'Empowering Latin American SMEs Through Innovative Finance',
-  'hero.subtitle': 'Fast, flexible, and reliable funding solutions to support business growth and international trade. Access financing tailored to your needs with efficient and seamless processes.',
+  'hero.subtitle': 'Fast, flexible, and reliable funding solutions to support business growth and international trade.',
   'hero.getStarted': 'Get Started',
   'hero.learnMore': 'Learn More',
 
