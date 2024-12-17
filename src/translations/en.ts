@@ -6,7 +6,7 @@ export const enTranslations = {
   'nav.getStarted': 'Get Started',
   
   // Hero
-  'hero.title': 'Empowering Latin American Exports Through Innovative Finance',
+  'hero.title': 'Empowering Latin American SMEs Through Innovative Finance',
   'hero.subtitle': 'Fast, flexible, and reliable funding solutions for exporters. Transform your invoices into immediate working capital.',
   'hero.getStarted': 'Get Started',
   'hero.learnMore': 'Learn More',
