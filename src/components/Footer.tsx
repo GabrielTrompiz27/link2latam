@@ -28,8 +28,7 @@ export const Footer = () => {
             <h4 className="font-semibold mb-4">{t('footer.services')}</h4>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-300 hover:text-white">{t('services.invoiceFactoring.title')}</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">{t('footer.riskManagement')}</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">{t('footer.tradeFinance')}</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white">{t('services.directLending.title')}</a></li>
             </ul>
           </div>
           
