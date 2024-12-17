@@ -29,14 +29,14 @@ export const RegionalExpertise = () => {
             </p>
             <div className="grid grid-cols-2 gap-4">
               {regions.map((region, index) => (
-                <div key={index} className="flex items-center space-x-2">
+                <div key={index} className="flex items-center justify-between p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                   {region.flag ? (
                     <>
-                      <span>{region.name}</span>
+                      <span className="font-medium">{region.name}</span>
                       <img 
                         src={region.flag} 
-                        alt={region.name}
-                        className="w-12 h-8 object-cover rounded shadow-sm"
+                        alt={`${region.name} flag`}
+                        className="w-12 h-8 object-cover rounded shadow-sm ml-2"
                       />
                     </>
                   ) : (
