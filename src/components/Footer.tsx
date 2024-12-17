@@ -81,48 +81,12 @@ export const Footer = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-medium">Analytical/Performance Cookies</h3>
-                    <ul className="list-disc pl-5 text-gray-600">
-                      <li>Help us understand how users interact with our website</li>
-                      <li>Provide information about website usage, visitor numbers, and traffic sources</li>
-                      <li>Enable us to improve our website's performance and user experience</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-medium">Functionality Cookies</h3>
-                    <ul className="list-disc pl-5 text-gray-600">
-                      <li>Allow the website to remember your preferences and choices</li>
-                      <li>Enhance your browsing experience by personalizing content</li>
-                      <li>Help us provide advanced features and personalization</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-medium">Marketing/Tracking Cookies</h3>
-                    <ul className="list-disc pl-5 text-gray-600">
-                      <li>Used to deliver more relevant advertising and marketing communications</li>
-                      <li>Track your online activity to create a profile of your interests</li>
-                      <li>May be set by our advertising partners to build a profile of your interests</li>
-                    </ul>
-                  </div>
-
-                  <h2 className="text-xl font-semibold">Your Cookie Choices</h2>
-                  <p className="text-gray-600">You have the following options to manage cookies:</p>
-                  <ul className="list-disc pl-5 text-gray-600">
-                    <li>Browser Controls: Most web browsers allow you to control cookies through their settings</li>
-                    <li>Cookie Consent Tools: Use our website's cookie consent banner to manage your preferences</li>
-                    <li>Third-Party Tools: Use online tools to manage advertising and tracking cookies</li>
-                  </ul>
-
-                  <h2 className="text-xl font-semibold">How to Manage or Disable Cookies</h2>
-                  <div>
                     <h3 className="text-lg font-medium">Web Browsers</h3>
                     <ul className="list-disc pl-5 text-gray-600">
-                      <li>Chrome: Settings > Privacy and Security > Cookies and other site data</li>
-                      <li>Firefox: Options > Privacy & Security > Cookies and Site Data</li>
-                      <li>Safari: Preferences > Privacy > Cookies and website data</li>
-                      <li>Microsoft Edge: Settings > Cookies and site permissions > Cookies and site data</li>
+                      <li>Chrome: Settings {'->'} Privacy and Security {'->'} Cookies and other site data</li>
+                      <li>Firefox: Options {'->'} Privacy & Security {'->'} Cookies and Site Data</li>
+                      <li>Safari: Preferences {'->'} Privacy {'->'} Cookies and website data</li>
+                      <li>Microsoft Edge: Settings {'->'} Cookies and site permissions {'->'} Cookies and site data</li>
                     </ul>
                   </div>
 
@@ -159,10 +123,42 @@ export const Footer = () => {
                 <DialogHeader>
                   <DialogTitle>{t('footer.legal')}</DialogTitle>
                 </DialogHeader>
-                <div className="text-left">
+                <div className="text-left space-y-4 max-h-[70vh] overflow-y-auto">
+                  <h2 className="text-xl font-semibold">Terms of Use</h2>
                   <p className="text-gray-600">
-                    [Your legal disclaimer content will go here]
+                    By accessing and using this website (the "Site"), you agree to the following terms and conditions:
                   </p>
+
+                  <div className="space-y-4">
+                    <section>
+                      <h3 className="text-lg font-semibold">1. Acceptance of Terms</h3>
+                      <p className="text-gray-600">1.1 The content of this Site is for your general information and use only. It is subject to change without notice.</p>
+                      <p className="text-gray-600">1.2 By using this Site, you accept these terms in full. If you disagree with these terms, you must not use this Site.</p>
+                    </section>
+
+                    <section>
+                      <h3 className="text-lg font-semibold">2. Accuracy of Information</h3>
+                      <p className="text-gray-600">2.1 While we strive to provide accurate and up-to-date information, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information, products, services, or related graphics contained on the Site.</p>
+                      <p className="text-gray-600">2.2 Any reliance you place on such information is strictly at your own risk.</p>
+                    </section>
+
+                    <section>
+                      <h3 className="text-lg font-semibold">3. Limitation of Liability</h3>
+                      <p className="text-gray-600">3.1 In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this Site.</p>
+                      <p className="text-gray-600">3.2 Every effort is made to keep the Site up and running smoothly. However, we take no responsibility and shall not be liable for the Site being temporarily unavailable due to technical issues beyond our control.</p>
+                    </section>
+
+                    <section>
+                      <h3 className="text-lg font-semibold">Contact Information</h3>
+                      <p className="text-gray-600">
+                        For any questions or concerns regarding this Legal Disclaimer, please contact:<br />
+                        Email: info@link2latam.com
+                      </p>
+                      <p className="text-sm text-gray-500 mt-4">
+                        Last Updated: December 2024
+                      </p>
+                    </section>
+                  </div>
                 </div>
               </DialogContent>
             </Dialog>
