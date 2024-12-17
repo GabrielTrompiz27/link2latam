@@ -170,10 +170,184 @@ export const Footer = () => {
                 <DialogHeader>
                   <DialogTitle>{t('footer.dataProtection')}</DialogTitle>
                 </DialogHeader>
-                <div className="text-left">
+                <div className="text-left space-y-4 max-h-[70vh] overflow-y-auto">
+                  <h2 className="text-xl font-semibold">Introduction</h2>
                   <p className="text-gray-600">
-                    [Your data protection statement content will go here]
+                    Link2Latam is committed to protecting your personal data and respecting your privacy. This Data Protection Statement explains how we collect, use, store, and protect your personal information in compliance with data protection laws, including the General Data Protection Regulation (GDPR) and other applicable privacy regulations.
                   </p>
+
+                  <section>
+                    <h2 className="text-xl font-semibold">1. Information We Collect</h2>
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-medium">Personal Identification Information</h3>
+                      <ul className="list-disc pl-5 text-gray-600">
+                        <li>Name</li>
+                        <li>Email address</li>
+                        <li>Phone number</li>
+                        <li>Physical address</li>
+                        <li>Date of birth</li>
+                      </ul>
+
+                      <h3 className="text-lg font-medium">Technical Information</h3>
+                      <ul className="list-disc pl-5 text-gray-600">
+                        <li>IP address</li>
+                        <li>Browser type</li>
+                        <li>Device information</li>
+                        <li>Website usage data</li>
+                        <li>Cookies and tracking technologies</li>
+                      </ul>
+
+                      <h3 className="text-lg font-medium">Communication Data</h3>
+                      <ul className="list-disc pl-5 text-gray-600">
+                        <li>Correspondence with our company</li>
+                        <li>Customer support interactions</li>
+                        <li>Feedback and survey responses</li>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <section>
+                    <h2 className="text-xl font-semibold">2. How We Collect Your Data</h2>
+                    <ul className="list-disc pl-5 text-gray-600">
+                      <li>Website interactions</li>
+                      <li>Online forms</li>
+                      <li>Customer service communications</li>
+                      <li>Account registrations</li>
+                      <li>Newsletter sign-ups</li>
+                      <li>Voluntary submissions</li>
+                      <li>Automated technologies like cookies</li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h2 className="text-xl font-semibold">3. Purposes of Data Processing</h2>
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-medium">Service Provision</h3>
+                      <ul className="list-disc pl-5 text-gray-600">
+                        <li>Delivering requested services</li>
+                        <li>Processing transactions</li>
+                        <li>Managing customer accounts</li>
+                      </ul>
+
+                      <h3 className="text-lg font-medium">Communication</h3>
+                      <ul className="list-disc pl-5 text-gray-600">
+                        <li>Sending important notifications</li>
+                        <li>Providing customer support</li>
+                        <li>Marketing communications (with consent)</li>
+                      </ul>
+
+                      <h3 className="text-lg font-medium">Improvement and Analytics</h3>
+                      <ul className="list-disc pl-5 text-gray-600">
+                        <li>Website and service enhancement</li>
+                        <li>Understanding user preferences</li>
+                        <li>Conducting research and analytics</li>
+                      </ul>
+
+                      <h3 className="text-lg font-medium">Legal Compliance</h3>
+                      <ul className="list-disc pl-5 text-gray-600">
+                        <li>Fulfilling legal obligations</li>
+                        <li>Protecting against fraud</li>
+                        <li>Responding to legal requests</li>
+                      </ul>
+                    </div>
+                  </section>
+
+                  <section>
+                    <h2 className="text-xl font-semibold">4. Legal Basis for Processing</h2>
+                    <ul className="list-disc pl-5 text-gray-600">
+                      <li>Explicit consent</li>
+                      <li>Contractual necessity</li>
+                      <li>Legal obligations</li>
+                      <li>Legitimate business interests</li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h2 className="text-xl font-semibold">5. Data Sharing and Disclosure</h2>
+                    <ul className="list-disc pl-5 text-gray-600">
+                      <li>Service providers and vendors</li>
+                      <li>Legal and regulatory authorities</li>
+                      <li>Business partners (with your consent)</li>
+                      <li>Third-party service integrations</li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h2 className="text-xl font-semibold">6. Data Security</h2>
+                    <ul className="list-disc pl-5 text-gray-600">
+                      <li>Encryption technologies</li>
+                      <li>Access controls</li>
+                      <li>Regular security audits</li>
+                      <li>Secure data storage systems</li>
+                      <li>Compliance with industry standards</li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h2 className="text-xl font-semibold">7. Your Data Rights</h2>
+                    <ul className="list-disc pl-5 text-gray-600">
+                      <li>Right to access your personal data</li>
+                      <li>Right to rectification</li>
+                      <li>Right to erasure</li>
+                      <li>Right to restrict processing</li>
+                      <li>Right to data portability</li>
+                      <li>Right to object to processing</li>
+                      <li>Right to withdraw consent</li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h2 className="text-xl font-semibold">8. Data Retention</h2>
+                    <p className="text-gray-600">We retain personal data only for as long as necessary:</p>
+                    <ul className="list-disc pl-5 text-gray-600">
+                      <li>To fulfill the purposes outlined in this statement</li>
+                      <li>To comply with legal requirements</li>
+                      <li>While maintaining an active customer relationship</li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h2 className="text-xl font-semibold">9. International Data Transfers</h2>
+                    <p className="text-gray-600">We may transfer data internationally, ensuring:</p>
+                    <ul className="list-disc pl-5 text-gray-600">
+                      <li>Compliance with data protection laws</li>
+                      <li>Appropriate safeguards are in place</li>
+                      <li>Protection of your personal information</li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h2 className="text-xl font-semibold">10. Cookies and Tracking</h2>
+                    <p className="text-gray-600">
+                      Please refer to our separate Cookie Policy for detailed information about our use of cookies and tracking technologies.
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="text-xl font-semibold">11. Children's Privacy</h2>
+                    <p className="text-gray-600">
+                      We do not knowingly collect data from children under 13. If we become aware of such collection, we will take steps to delete that information.
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="text-xl font-semibold">12. Contact Information</h2>
+                    <p className="text-gray-600">
+                      For any privacy-related questions or requests:<br />
+                      Data Protection Contact<br />
+                      Email: info@link2latam.com
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="text-xl font-semibold">13. Changes to This Statement</h2>
+                    <p className="text-gray-600">
+                      We may update this statement periodically.
+                    </p>
+                    <p className="text-sm text-gray-500 mt-4">
+                      Last Updated: December 2024
+                    </p>
+                  </section>
                 </div>
               </DialogContent>
             </Dialog>
