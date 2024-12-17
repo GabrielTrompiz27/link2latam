@@ -63,9 +63,90 @@ export const Footer = () => {
                 <DialogHeader>
                   <DialogTitle>{t('footer.cookies')}</DialogTitle>
                 </DialogHeader>
-                <div className="text-left">
+                <div className="text-left space-y-4 max-h-[70vh] overflow-y-auto">
+                  <h2 className="text-xl font-semibold">What Are Cookies?</h2>
                   <p className="text-gray-600">
-                    [Your cookies policy content will go here]
+                    Cookies are small text files that are stored on your device (computer, smartphone, or other electronic device) when you visit a website. They are widely used to make websites work more efficiently and to provide information to the website owners.
+                  </p>
+
+                  <h2 className="text-xl font-semibold">Types of Cookies We Use</h2>
+                  
+                  <div>
+                    <h3 className="text-lg font-medium">Essential Cookies</h3>
+                    <ul className="list-disc pl-5 text-gray-600">
+                      <li>These cookies are necessary for the basic functioning of our website</li>
+                      <li>They enable core features such as security, network management, and accessibility</li>
+                      <li>You cannot opt out of these cookies as they are essential for the site to work correctly</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium">Analytical/Performance Cookies</h3>
+                    <ul className="list-disc pl-5 text-gray-600">
+                      <li>Help us understand how users interact with our website</li>
+                      <li>Provide information about website usage, visitor numbers, and traffic sources</li>
+                      <li>Enable us to improve our website's performance and user experience</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium">Functionality Cookies</h3>
+                    <ul className="list-disc pl-5 text-gray-600">
+                      <li>Allow the website to remember your preferences and choices</li>
+                      <li>Enhance your browsing experience by personalizing content</li>
+                      <li>Help us provide advanced features and personalization</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium">Marketing/Tracking Cookies</h3>
+                    <ul className="list-disc pl-5 text-gray-600">
+                      <li>Used to deliver more relevant advertising and marketing communications</li>
+                      <li>Track your online activity to create a profile of your interests</li>
+                      <li>May be set by our advertising partners to build a profile of your interests</li>
+                    </ul>
+                  </div>
+
+                  <h2 className="text-xl font-semibold">Your Cookie Choices</h2>
+                  <p className="text-gray-600">You have the following options to manage cookies:</p>
+                  <ul className="list-disc pl-5 text-gray-600">
+                    <li>Browser Controls: Most web browsers allow you to control cookies through their settings</li>
+                    <li>Cookie Consent Tools: Use our website's cookie consent banner to manage your preferences</li>
+                    <li>Third-Party Tools: Use online tools to manage advertising and tracking cookies</li>
+                  </ul>
+
+                  <h2 className="text-xl font-semibold">How to Manage or Disable Cookies</h2>
+                  <div>
+                    <h3 className="text-lg font-medium">Web Browsers</h3>
+                    <ul className="list-disc pl-5 text-gray-600">
+                      <li>Chrome: Settings > Privacy and Security > Cookies and other site data</li>
+                      <li>Firefox: Options > Privacy & Security > Cookies and Site Data</li>
+                      <li>Safari: Preferences > Privacy > Cookies and website data</li>
+                      <li>Microsoft Edge: Settings > Cookies and site permissions > Cookies and site data</li>
+                    </ul>
+                  </div>
+
+                  <h2 className="text-xl font-semibold">Third-Party Cookies</h2>
+                  <p className="text-gray-600">We may use third-party services that also place cookies on your device, including:</p>
+                  <ul className="list-disc pl-5 text-gray-600">
+                    <li>Google Analytics</li>
+                    <li>Advertising networks</li>
+                    <li>Social media platforms</li>
+                  </ul>
+
+                  <h2 className="text-xl font-semibold">Updates to This Policy</h2>
+                  <p className="text-gray-600">
+                    We may update this Cookie Policy from time to time. We will notify you of any changes by posting the new policy on this page.
+                  </p>
+
+                  <h2 className="text-xl font-semibold">Contact Us</h2>
+                  <p className="text-gray-600">
+                    If you have any questions about our Cookie Policy, please contact us at:<br />
+                    Email: info@link2latam.com
+                  </p>
+
+                  <p className="text-sm text-gray-500 mt-4">
+                    Last Updated: December 2024
                   </p>
                 </div>
               </DialogContent>
