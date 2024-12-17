@@ -6,7 +6,7 @@ export const esTranslations = {
   'nav.getStarted': 'Comenzar',
 
   // Hero
-  'hero.title': 'Potenciando las PyMEs Latinoamericanas a través de Finanzas Innovadoras',
+  'hero.title': 'Potenciando las Empresas Latinoamericanas con Soluciones de Financiamiento Personalizadas',
   'hero.subtitle': 'Soluciones de financiamiento rápidas, flexibles y confiables para apoyar el crecimiento empresarial y el comercio internacional.',
   'hero.getStarted': 'Comenzar',
   'hero.learnMore': 'Más Información',
