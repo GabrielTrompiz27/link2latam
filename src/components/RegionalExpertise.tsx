@@ -12,7 +12,7 @@ const regions: RegionDisplay[] = [
   { name: "Colombia" },
   { name: "Bolivia" },
   { name: "Peru", flag: "/lovable-uploads/fe57848d-868d-4153-8903-4df3414fac43.png" },
-  { name: "Argentina" }
+  { name: "Argentina", flag: "/lovable-uploads/848d6057-2af9-4a10-bca1-14a621010324.png" }
 ];
 
 export const RegionalExpertise = () => {
@@ -31,11 +31,14 @@ export const RegionalExpertise = () => {
               {regions.map((region, index) => (
                 <div key={index} className="flex items-center space-x-2">
                   {region.flag ? (
-                    <img 
-                      src={region.flag} 
-                      alt={region.name}
-                      className="w-12 h-8 object-cover rounded shadow-sm"
-                    />
+                    <>
+                      <span>{region.name}</span>
+                      <img 
+                        src={region.flag} 
+                        alt={region.name}
+                        className="w-12 h-8 object-cover rounded shadow-sm"
+                      />
+                    </>
                   ) : (
                     <>
                       <CheckCircle className="text-success" size={20} />
