@@ -17,7 +17,7 @@ export const esTranslations = {
   'services.invoiceFactoring.title': 'Factoraje de Facturas',
   'services.invoiceFactoring.description': 'Convierte tus facturas de exportación en capital de trabajo inmediato con tasas competitivas.',
   'services.directLending.title': 'Préstamos Directos',
-  'services.directLending.description': 'Acceda a soluciones de financiamiento rápidas y flexibles adaptadas a las necesidades de su empresa. Ya sea para crecimiento, operaciones o nuevas oportunidades, proporcionamos financiamiento confiable con términos competitivos y un proceso sin complicaciones.',
+  'services.directLending.description': 'Financiamiento flexible y confiable para apoyar tus objetivos empresariales con términos competitivos y un proceso sin complicaciones.',
 
   // Selection
   'selection.title': '¿Cómo deseas proceder?',
@@ -101,4 +101,14 @@ export const esTranslations = {
   'about.whoWeAre.description': 'En Link2Latam, nos especializamos en proporcionar soluciones de deuda privada personalizadas para empresas en toda América Latina. Con más de 30 años de profunda experiencia financiera en la región, ofrecemos perspectivas sin igual y orientación estratégica a empresas que buscan un sólido apoyo financiero. Nuestra ventaja distintiva radica en nuestra comprensión integral del panorama del mercado LATAM y nuestra extensa red profesional, que nos permite diseñar estrategias de deuda sofisticadas que abordan los desafíos y oportunidades únicos de cada cliente. Basándonos en décadas de experiencia navegando por los complejos ecosistemas financieros de los mercados latinoamericanos, estamos comprometidos a ofrecer soluciones financieras innovadoras, receptivas y orientadas al valor que permitan a las empresas alcanzar sus objetivos de crecimiento con confianza.',
   'about.ecosystem.title': 'Nuestro Ecosistema',
   'about.ecosystem.description': 'Nuestro éxito se basa en alianzas estratégicas y un sólido ecosistema de colaboradores de confianza en Europa y América Latina. Trabajamos en estrecha colaboración con instituciones financieras líderes, firmas de asesoría legal y corporaciones privadas que comparten nuestro compromiso con soluciones de deuda innovadoras. Nuestra red abarca los principales centros financieros de Argentina, Bolivia, Colombia, Ecuador, Perú y México, permitiéndonos aprovechar la profunda experiencia local y perspectivas globales. Nuestros grupos de interés incluyen inversores privados, tecnología financiera con amplia experiencia en inversiones, instituciones financieras europeas y emprendimientos empresariales que buscan soluciones sofisticadas de gestión de deuda, unidos por una visión compartida de inversión de impacto para un crecimiento financiero sostenible y desarrollo regional estratégico.',
+
+  // Footer
+  'footer.about': 'Potenciando las exportaciones latinoamericanas a través de soluciones financieras innovadoras.',
+  'footer.quickLinks': 'Enlaces Rápidos',
+  'footer.services': 'Servicios',
+  'footer.invoiceFactoring': 'Factoraje de Facturas',
+  'footer.riskManagement': 'Gestión de Riesgos',
+  'footer.tradeFinance': 'Financiamiento Comercial',
+  'footer.contact': 'Contacto',
+  'footer.copyright': '© 2024 Link2Latam. Todos los derechos reservados.'
 };

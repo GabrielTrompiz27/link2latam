@@ -17,7 +17,7 @@ export const enTranslations = {
   'services.invoiceFactoring.title': 'Invoice Factoring',
   'services.invoiceFactoring.description': 'Convert your export invoices into immediate working capital with competitive rates.',
   'services.directLending.title': 'Direct Lending',
-  'services.directLending.description': 'Access fast and flexible financing solutions tailored to your business needs. Whether for growth, operations, or new opportunities, we provide reliable funding with competitive terms and a seamless process.',
+  'services.directLending.description': 'Flexible and reliable financing to support your business goals with competitive terms and a seamless process.',
 
   // Selection
   'selection.title': 'How would you like to proceed?',
@@ -61,24 +61,6 @@ export const enTranslations = {
   // Investor Consultation
   'investor.consultation.title': "Let's Discuss Your Investment Goals",
   'investor.consultation.subtitle': 'Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives.',
-
-  // Services Section
-  'services.title': 'Our Services',
-  'services.subtitle': 'Comprehensive trade finance solutions tailored for Latin American exporters',
-  'services.invoiceFactoring.title': 'Invoice Factoring',
-  'services.invoiceFactoring.description': 'Convert your export invoices into immediate working capital with competitive rates.',
-  'services.directLending.title': 'Direct Lending',
-  'services.directLending.description': 'Access fast and flexible financing solutions tailored to your business needs. Whether for growth, operations, or new opportunities, we provide reliable funding with competitive terms and a seamless process.',
-
-  // Footer
-  'footer.about': 'Empowering Latin American exports through innovative finance solutions.',
-  'footer.quickLinks': 'Quick Links',
-  'footer.services': 'Services',
-  'footer.invoiceFactoring': 'Invoice Factoring',
-  'footer.riskManagement': 'Risk Management',
-  'footer.tradeFinance': 'Trade Finance',
-  'footer.contact': 'Contact',
-  'footer.copyright': '© 2024 Link2Latam. All rights reserved.',
 
   // Form Section
   'form.title': "Let's Tailor Your Financing Options",
@@ -125,4 +107,14 @@ export const enTranslations = {
   'about.whoWeAre.description': 'At Link2Latam, we specialize in providing tailored private debt solutions for businesses across Latin America. With over 30 years of deep financial expertise in the region, we offer unparalleled insights and strategic guidance to companies seeking robust financial support. Our distinctive advantage lies in our comprehensive understanding of the LATAM market landscape and our extensive professional network, which enables us to craft sophisticated debt strategies that address the unique challenges and opportunities of each client. Drawing from decades of experience navigating the complex financial ecosystems of Latin American markets, we are committed to delivering innovative, responsive, and value-driven financial solutions that empower businesses to achieve their growth objectives with confidence.',
   'about.ecosystem.title': 'Our Ecosystem',
   'about.ecosystem.description': 'Our success is built on strategic partnerships and a robust ecosystem of trusted collaborators across Europe and Latin America. We work closely with leading financial institutions, legal advisory firms, and private corporations that share our commitment to innovative debt solutions. Our network spans key financial centers in Argentina, Bolivia, Colombia, Ecuador, Peru and Mexico, allowing us to leverage deep local expertise and global insights. Our stakeholders include private investors, financial technology with extensive investment experience, european financial institutions and entrepreneurial ventures seeking sophisticated debt management solutions, united by a shared vision of impact investment for a sustainable financial growth and strategic regional development.',
+
+  // Footer
+  'footer.about': 'Empowering Latin American exports through innovative finance solutions.',
+  'footer.quickLinks': 'Quick Links',
+  'footer.services': 'Services',
+  'footer.invoiceFactoring': 'Invoice Factoring',
+  'footer.riskManagement': 'Risk Management',
+  'footer.tradeFinance': 'Trade Finance',
+  'footer.contact': 'Contact',
+  'footer.copyright': '© 2024 Link2Latam. All rights reserved.'
 };
