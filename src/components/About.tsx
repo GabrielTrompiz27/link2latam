@@ -1,67 +1,69 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Building2, Users2, Network } from 'lucide-react';
+import { Network, Eye, LayoutDashboard } from 'lucide-react';
 
 export const About = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="section-title">{t('about.title')}</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Who We Are Section */}
-            <div className="bg-white rounded-xl shadow-sm p-8 transform hover:scale-105 transition-transform duration-300">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Building2 className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-2xl font-semibold text-primary">
-                  {t('about.whoWeAre.title')}
-                </h3>
-              </div>
-              <p className="text-gray leading-relaxed">
-                {t('about.whoWeAre.description')}
-              </p>
+          <div className="space-y-12">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
+              <h3 className="text-2xl font-semibold text-primary mb-4">{t('about.whoWeAre.title')}</h3>
+              <p className="text-gray leading-relaxed">{t('about.whoWeAre.description')}</p>
             </div>
 
-            {/* Ecosystem Section */}
-            <div className="bg-white rounded-xl shadow-sm p-8 transform hover:scale-105 transition-transform duration-300">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-accent/10 rounded-lg">
-                  <Network className="w-6 h-6 text-accent" />
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              {/* Transparency Pillar */}
+              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-t-4 border-primary">
+                <div className="flex items-center justify-center mb-4">
+                  <div className="p-3 bg-primary/10 rounded-full">
+                    <Eye className="w-8 h-8 text-primary" />
+                  </div>
                 </div>
-                <h3 className="text-2xl font-semibold text-primary">
-                  {t('about.ecosystem.title')}
+                <h3 className="text-xl font-semibold text-primary text-center mb-3">
+                  {t('about.pillars.transparency.title')}
                 </h3>
+                <p className="text-gray text-center">
+                  {t('about.pillars.transparency.description')}
+                </p>
               </div>
-              <p className="text-gray leading-relaxed">
-                {t('about.ecosystem.description')}
-              </p>
-            </div>
-          </div>
 
-          {/* Stats Section */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">30+</div>
-              <div className="text-gray">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">6</div>
-              <div className="text-gray">Countries</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">100+</div>
-              <div className="text-gray">Partners</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">500M+</div>
-              <div className="text-gray">Transactions</div>
+              {/* Network Pillar */}
+              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-t-4 border-accent">
+                <div className="flex items-center justify-center mb-4">
+                  <div className="p-3 bg-accent/10 rounded-full">
+                    <Network className="w-8 h-8 text-accent" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-primary text-center mb-3">
+                  {t('about.pillars.network.title')}
+                </h3>
+                <p className="text-gray text-center">
+                  {t('about.pillars.network.description')}
+                </p>
+              </div>
+
+              {/* Platform Pillar */}
+              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-t-4 border-success">
+                <div className="flex items-center justify-center mb-4">
+                  <div className="p-3 bg-success/10 rounded-full">
+                    <LayoutDashboard className="w-8 h-8 text-success" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-primary text-center mb-3">
+                  {t('about.pillars.platform.title')}
+                </h3>
+                <p className="text-gray text-center">
+                  {t('about.pillars.platform.description')}
+                </p>
+              </div>
             </div>
           </div>
         </div>
