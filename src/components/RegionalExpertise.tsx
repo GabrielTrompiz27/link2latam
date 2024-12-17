@@ -10,7 +10,7 @@ const regions: RegionDisplay[] = [
   { name: "Mexico", flag: "/lovable-uploads/c3ec3ddd-b1f0-40bf-a418-834f1da77a0e.png" },
   { name: "Ecuador", flag: "/lovable-uploads/d01a65a1-36c7-4540-a288-a255538ce384.png" },
   { name: "Colombia", flag: "/lovable-uploads/2a7a0716-69b4-461d-a925-26518ec851a6.png" },
-  { name: "Bolivia" },
+  { name: "Bolivia", flag: "/lovable-uploads/eb1bc241-be25-43c9-aab1-41946f66970d.png" },
   { name: "Peru", flag: "/lovable-uploads/fe57848d-868d-4153-8903-4df3414fac43.png" },
   { name: "Argentina", flag: "/lovable-uploads/848d6057-2af9-4a10-bca1-14a621010324.png" }
 ];
