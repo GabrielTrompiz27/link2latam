@@ -32,8 +32,12 @@ export const enTranslations = {
   'selection.exporter.description': 'Seeking funding solutions to grow my business in Latin America.',
   'selection.back': 'Back to Home',
 
+  // Exporter Onboarding
+  'exporter.back': 'Back',
+  'exporter.welcome.title': 'Welcome to Link2Latam',
+  'exporter.welcome.subtitle': 'Transform your export business with fast, flexible funding solutions tailored to your needs.',
+
   // Investor Onboarding
-  'investor.back': 'Back',
   'investor.welcome.title': 'Welcome to Link2Latam Investment Platform',
   'investor.welcome.subtitle': 'Access exclusive investment opportunities in Latin American.',
   'investor.whyChoose.title': 'Why Invest with Link2Latam?',
