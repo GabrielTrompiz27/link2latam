@@ -4,20 +4,50 @@ export const enTranslations = {
   'nav.about': 'About',
   'nav.expertise': 'Expertise',
   'nav.getStarted': 'Get Started',
+  
+  // Hero
+  'hero.title': 'Empowering Latin American Businesses with Tailored Financing Solutions',
+  'hero.subtitle': 'Fast, flexible, and reliable funding solutions, designed to fuel business growth and improve cash flow.',
+  'hero.getStarted': 'Get Started',
+  'hero.learnMore': 'Learn More',
 
-  // Exporter Onboarding
-  'exporter.welcome.title': 'Welcome to Link2Latam',
-  'exporter.welcome.subtitle': 'Transform your export business with fast, flexible funding solutions tailored to your needs.',
-  'exporter.whyChoose.title': 'Why Choose Link2Latam?',
-  'exporter.whyChoose.fast.title': 'Fast Funding',
-  'exporter.whyChoose.fast.description': 'Get your export invoices funded quickly through our streamlined process.',
-  'exporter.whyChoose.expert.title': 'Expert Support',
-  'exporter.whyChoose.expert.description': 'Our team of trade finance experts is here to guide you every step of the way.',
-  'exporter.whyChoose.global.title': 'Global Network',
-  'exporter.whyChoose.global.description': 'Access our extensive network of international buyers and funding partners.',
+  // Services Section
+  'services.title': 'Our Services',
+  'services.subtitle': 'Comprehensive private debt solutions',
+  'services.invoiceFactoring.title': 'Trade Finance',
+  'services.invoiceFactoring.description': 'Convert your export invoices into immediate working capital with competitive rates.',
+  'services.directLending.title': 'Direct Lending',
+  'services.directLending.description': 'Flexible and reliable financing to support your business goals with competitive terms and a seamless process.',
+
+  // Selection
+  'selection.title': 'How would you like to proceed?',
+  'selection.investor.title': "I'm an Investor",
+  'selection.investor.description': 'Looking to provide funding and expand my investment portfolio in Latin America.',
+  'selection.exporter.title': "I'm an Exporter",
+  'selection.exporter.description': 'Seeking funding solutions to grow my business in Latin America.',
+  'selection.back': 'Back to Home',
+
+  // Investor Onboarding
+  'investor.back': 'Back',
+  'investor.welcome.title': 'Welcome to Link2Latam Investment Platform',
+  'investor.welcome.subtitle': 'Access exclusive investment opportunities in Latin American.',
+  'investor.whyChoose.title': 'Why Invest with Link2Latam?',
+  'investor.whyChoose.returns.title': 'Competitive Returns',
+  'investor.whyChoose.returns.description': 'Earn attractive returns through carefully vetted private debt opportunities.',
+  'investor.whyChoose.risk.title': 'Risk Management',
+  'investor.whyChoose.risk.description': 'Benefit from our robust due diligence process and diversified investment options.',
+  'investor.whyChoose.market.title': 'Market Access',
+  'investor.whyChoose.market.description': 'Gain direct access to investment opportunities in Latin America through our extensive network and partnerships.',
+  'investor.whyChoose.cycles.title': 'Short-Term Investment Cycles',
+  'investor.whyChoose.cycles.description': 'Enjoy the flexibility of short-term investments with interest payments typically made within 60 to 90 days.',
+
+  // Investor Consultation
+  'investor.consultation.title': "Let's Discuss Your Investment Goals",
+  'investor.consultation.subtitle': 'Schedule a one-on-one consultation with our investment experts to explore how Link2Latam can help you achieve your investment objectives.',
+
+  // Form Section
   'form.title': "Let's Tailor Your Financing Options",
-  'form.subtitle': 'Please fill out the form below to help us understand your business and financing needs. Based on your responses, we\'ll provide custom financing solutions.',
-
+  'form.subtitle': "Please fill out the form below to help us understand your business and financing needs. Based on your responses, we'll provide custom financing solutions.",
   'form.companyName': 'Company Name',
   'form.country': 'Country of Operation',
   'form.specifyCountry': 'Specify Country',
