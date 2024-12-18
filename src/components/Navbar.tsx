@@ -33,7 +33,7 @@ export const Navbar = () => {
             <img 
               src="/lovable-uploads/fb379e9c-aab6-4665-a2ef-98c97333f65a.png" 
               alt="Link2Latam Logo" 
-              className="h-8 w-auto"
+              className="h-12 w-auto" // Increased from h-8 to h-12
             />
             Link2Latam
           </button>
