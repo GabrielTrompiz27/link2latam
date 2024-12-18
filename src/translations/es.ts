@@ -39,13 +39,7 @@ export const esTranslations = {
   'exporter.whyChoose.global.title': 'Red Global',
   'exporter.whyChoose.global.description': 'Accede a nuestra extensa red de compradores internacionales y socios financieros.',
 
-  // Expertise Section
-  'expertise.title': 'Experiencia Regional',
-  'expertise.subtitle': 'Nuestra profunda comprensión de los mercados latinoamericanos nos permite brindar soluciones personalizadas',
-  'expertise.mapAlt': 'Mapa de América Latina destacando nuestras áreas de operación',
-
   // Investor Onboarding
-  'investor.back': 'Volver',
   'investor.welcome.title': 'Bienvenido a la Plataforma de Inversión Link2Latam',
   'investor.welcome.subtitle': 'Acceda a oportunidades exclusivas de inversión en financiamiento de exportaciones latinoamericanas con retornos competitivos.',
   'investor.whyChoose.title': '¿Por qué invertir con Link2Latam?',
@@ -57,10 +51,6 @@ export const esTranslations = {
   'investor.whyChoose.market.description': 'Obtenga acceso directo a oportunidades de inversión en América Latina a través de nuestra extensa red y alianzas.',
   'investor.whyChoose.cycles.title': 'Ciclos de Inversión a Corto Plazo',
   'investor.whyChoose.cycles.description': 'Disfrute de la flexibilidad de inversiones a corto plazo con pagos de intereses típicamente realizados dentro de 60 a 90 días.',
-
-  // Investor Consultation
-  'investor.consultation.title': 'Hablemos de sus Objetivos de Inversión',
-  'investor.consultation.subtitle': 'Programe una consulta personalizada con nuestros expertos en inversiones para explorar cómo Link2Latam puede ayudarlo a alcanzar sus objetivos de inversión.',
 
   // Form Section
   'form.title': 'Personalicemos sus Opciones de Financiamiento',
@@ -99,14 +89,6 @@ export const esTranslations = {
   'form.successMessage': 'Su formulario ha sido enviado exitosamente.',
   'form.error': 'Error',
   'form.errorMessage': 'Error al enviar el formulario. Por favor, inténtelo de nuevo.',
-
-  // About Section
-  'about.title': 'Acerca de',
-  'about.subtitle': 'Soluciones de financiamiento rápidas, flexibles y confiables.',
-  'about.whoWeAre.title': '¿Quiénes somos?',
-  'about.whoWeAre.description': 'En Link2Latam, nos especializamos en soluciones de deuda privada personalizadas para empresas en toda América Latina. Combinando una profunda experiencia en el mercado con perspectivas financieras estratégicas, ayudamos a las empresas a superar desafíos y aprovechar oportunidades.\n\nNuestra ventaja distintiva radica en nuestra comprensión integral del panorama del mercado LATAM y nuestra extensa red profesional, lo que nos permite diseñar estrategias de deuda personalizadas que abordan las necesidades únicas de cada cliente. Con amplia experiencia navegando por las complejidades de la región, estamos comprometidos a ofrecer soluciones financieras innovadoras, receptivas y orientadas al valor que permiten a las empresas alcanzar sus objetivos de crecimiento con confianza.',
-  'about.ecosystem.title': 'Nuestro Ecosistema',
-  'about.ecosystem.description': 'Nuestro éxito se basa en alianzas estratégicas y un sólido ecosistema de colaboradores de confianza en Europa y América Latina. Trabajamos en estrecha colaboración con instituciones financieras líderes, firmas de asesoría legal y corporaciones privadas que comparten nuestro compromiso de ofrecer soluciones de deuda innovadoras.\n\nJuntos, estamos unidos por una visión compartida de inversiones con impacto, fomentando el crecimiento financiero sostenible e impulsando oportunidades estratégicas en toda la región.',
 
   // Footer
   'footer.about': 'Potenciando las PyMEs latinoamericanas a través de soluciones financieras innovadoras.',
