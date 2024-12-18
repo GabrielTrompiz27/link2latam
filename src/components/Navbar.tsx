@@ -31,7 +31,7 @@ export const Navbar = () => {
             className="flex items-center gap-2 text-2xl font-bold text-white hover:text-white/90 transition-colors"
           >
             <img 
-              src="/lovable-uploads/60af19bb-495f-4a47-bc87-ad4e66209c6d.png" 
+              src="/lovable-uploads/fb379e9c-aab6-4665-a2ef-98c97333f65a.png" 
               alt="Link2Latam Logo" 
               className="h-8 w-auto"
             />
