@@ -28,7 +28,7 @@ export const esTranslations = {
   'selection.title': '¿Cómo deseas proceder?',
   'selection.investor.title': 'Soy Inversionista',
   'selection.investor.description': 'Busco proporcionar financiamiento y expandir mi portafolio de inversiones en América Latina.',
-  'selection.exporter.title': 'Soy Exportador',
+  'selection.exporter.title': 'Soy una Empresa',
   'selection.exporter.description': 'Busco soluciones de financiamiento para hacer crecer mi negocio de exportación en América Latina.',
   'selection.back': 'Volver al Inicio',
 

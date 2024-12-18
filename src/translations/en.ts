@@ -28,7 +28,7 @@ export const enTranslations = {
   'selection.title': 'How would you like to proceed?',
   'selection.investor.title': "I'm an Investor",
   'selection.investor.description': 'Looking to provide funding and expand my investment portfolio in Latin America.',
-  'selection.exporter.title': "I'm an Exporter",
+  'selection.exporter.title': "I'm a Business",
   'selection.exporter.description': 'Seeking funding solutions to grow my business in Latin America.',
   'selection.back': 'Back to Home',
 
