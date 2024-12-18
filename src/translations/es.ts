@@ -37,12 +37,12 @@ export const esTranslations = {
   'exporter.welcome.title': 'Bienvenido a Link2Latam',
   'exporter.welcome.subtitle': 'Transforma tu negocio de exportación con soluciones de financiamiento rápidas y flexibles adaptadas a tus necesidades.',
   'exporter.whyChoose.title': '¿Por qué elegir Link2Latam?',
-  'exporter.whyChoose.fast.title': 'Financiamiento Rápido',
-  'exporter.whyChoose.fast.description': 'Obtén financiamiento para tus facturas de exportación rápidamente a través de nuestro proceso simplificado.',
-  'exporter.whyChoose.expert.title': 'Soporte Experto',
-  'exporter.whyChoose.expert.description': 'Nuestro equipo de expertos en financiamiento comercial está aquí para guiarte en cada paso.',
-  'exporter.whyChoose.global.title': 'Red Global',
-  'exporter.whyChoose.global.description': 'Accede a nuestra extensa red de compradores internacionales y socios financieros.',
+  'exporter.whyChoose.fast.title': 'Financiamiento Rápido y Flexible',
+  'exporter.whyChoose.fast.description': 'Accede a soluciones de financiamiento personalizadas con aprobaciones rápidas y procesos eficientes para satisfacer las necesidades de crecimiento y liquidez de tu negocio.',
+  'exporter.whyChoose.expert.title': 'Orientación Experta',
+  'exporter.whyChoose.expert.description': 'Nuestro experimentado equipo brinda soporte personalizado, asegurando una ejecución perfecta y perspectivas estratégicas en cada paso de tu proceso de financiamiento.',
+  'exporter.whyChoose.global.title': 'Red Extensa',
+  'exporter.whyChoose.global.description': 'Aprovecha nuestra red global de socios y expertos financieros de confianza para desbloquear oportunidades e impulsar un crecimiento sostenible.',
 
   // Investor Onboarding
   'investor.welcome.title': 'Bienvenido a la Plataforma de Inversión Link2Latam',
@@ -56,6 +56,10 @@ export const esTranslations = {
   'investor.whyChoose.market.description': 'Obtenga acceso directo a oportunidades de inversión en América Latina a través de nuestra extensa red y alianzas.',
   'investor.whyChoose.cycles.title': 'Ciclos de Inversión a Corto Plazo',
   'investor.whyChoose.cycles.description': 'Disfrute de la flexibilidad de inversiones a corto plazo con pagos de intereses típicamente realizados dentro de 60 a 90 días.',
+
+  // Investor Consultation
+  'investor.consultation.title': 'Hablemos de sus Objetivos de Inversión',
+  'investor.consultation.subtitle': 'Programe una consulta uno a uno con nuestros expertos en inversiones para explorar cómo Link2Latam puede ayudarle a alcanzar sus objetivos de inversión.',
 
   // Form Section
   'form.title': 'Personalicemos sus Opciones de Financiamiento',

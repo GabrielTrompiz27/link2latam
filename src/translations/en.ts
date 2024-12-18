@@ -36,6 +36,13 @@ export const enTranslations = {
   'exporter.back': 'Back',
   'exporter.welcome.title': 'Welcome to Link2Latam',
   'exporter.welcome.subtitle': 'Transform your export business with fast, flexible funding solutions tailored to your needs.',
+  'exporter.whyChoose.title': 'Why Choose Link2Latam?',
+  'exporter.whyChoose.fast.title': 'Fast and Flexible Funding',
+  'exporter.whyChoose.fast.description': 'Access tailored financing solutions with quick approvals and efficient processes to meet your business\'s growth and liquidity needs.',
+  'exporter.whyChoose.expert.title': 'Expert Guidance',
+  'exporter.whyChoose.expert.description': 'Our experienced team provides personalized support, ensuring seamless execution and strategic insights at every step of your financing journey.',
+  'exporter.whyChoose.global.title': 'Extensive Network',
+  'exporter.whyChoose.global.description': 'Leverage our global network of trusted partners and financial experts to unlock opportunities and drive sustainable growth.',
 
   // Investor Onboarding
   'investor.welcome.title': 'Welcome to Link2Latam Investment Platform',
