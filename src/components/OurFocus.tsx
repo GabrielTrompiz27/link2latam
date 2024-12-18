@@ -22,7 +22,7 @@ export const OurFocus = () => {
         <h2 className="section-title text-center">Our Focus</h2>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg text-gray-600 mb-8">
-            All our financing solutions are centered around asset-backed lending, ensuring security, transparency, and sustainable outcomes. By leveraging tangible assets such as accounts receivable, real assets including real estate, and equity holdings such as company shares, we provide businesses with the capital they need while mitigating risk for all stakeholders.
+            All our financing solutions are centered around asset-backed lending, ensuring security, transparency, and sustainable outcomes. By leveraging real assets such as accounts receivable, real estate, and equity holdings, we provide businesses with the capital they need while mitigating risk for all stakeholders.
           </p>
           
           <h3 className="text-xl font-semibold mb-6 text-primary">This approach allows us to:</h3>
