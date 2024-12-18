@@ -11,6 +11,11 @@ export const esTranslations = {
   'hero.getStarted': 'Comenzar',
   'hero.learnMore': 'Más Información',
 
+  // Expertise Section
+  'expertise.title': 'Experiencia Regional',
+  'expertise.subtitle': 'Nuestra profunda comprensión de los mercados latinoamericanos nos permite brindar soluciones personalizadas',
+  'expertise.mapAlt': 'Mapa de América Latina destacando nuestras áreas de operación',
+
   // Services Section
   'services.title': 'Nuestros Servicios',
   'services.subtitle': 'Soluciones integrales de deuda privada',

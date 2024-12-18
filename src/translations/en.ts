@@ -11,6 +11,11 @@ export const enTranslations = {
   'hero.getStarted': 'Get Started',
   'hero.learnMore': 'Learn More',
 
+  // Expertise Section
+  'expertise.title': 'Regional Expertise',
+  'expertise.subtitle': 'Our deep understanding of Latin American markets enables us to provide tailored solutions',
+  'expertise.mapAlt': 'Map of Latin America highlighting our areas of operation',
+
   // Services Section
   'services.title': 'Our Services',
   'services.subtitle': 'Comprehensive private debt solutions',
