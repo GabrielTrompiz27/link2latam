@@ -14,7 +14,7 @@ export const Hero = () => {
         style={{
           backgroundImage: "url('/lovable-uploads/341c313f-fa86-4246-8173-8a64a6e5c50a.png')",
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center 40%', // Adjusted to move the boat more to the center
           backgroundRepeat: 'no-repeat'
         }}
       >
