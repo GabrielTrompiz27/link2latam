@@ -27,27 +27,10 @@ export const enTranslations = {
   'selection.exporter.description': 'Seeking funding solutions to grow my business in Latin America.',
   'selection.back': 'Back to Home',
 
-  // Exporter Onboarding
-  'exporter.back': 'Back',
-  'exporter.welcome.title': 'Welcome to Link2Latam',
-  'exporter.welcome.subtitle': 'Transform your export business with fast, flexible funding solutions tailored to your needs.',
-  'exporter.whyChoose.title': 'Why Choose Link2Latam?',
-  'exporter.whyChoose.fast.title': 'Fast Funding',
-  'exporter.whyChoose.fast.description': 'Get your export invoices funded quickly through our streamlined process.',
-  'exporter.whyChoose.expert.title': 'Expert Support',
-  'exporter.whyChoose.expert.description': 'Our team of trade finance experts is here to guide you every step of the way.',
-  'exporter.whyChoose.global.title': 'Global Network',
-  'exporter.whyChoose.global.description': 'Access our extensive network of international buyers and funding partners.',
-
-  // Expertise Section
-  'expertise.title': 'Regional Expertise',
-  'expertise.subtitle': 'Our deep understanding of Latin American markets enables us to provide tailored solutions',
-  'expertise.mapAlt': 'Map of Latin America highlighting our areas of operation',
-
   // Investor Onboarding
   'investor.back': 'Back',
   'investor.welcome.title': 'Welcome to Link2Latam Investment Platform',
-  'investor.welcome.subtitle': 'Access exclusive investment opportunities in Latin American export financing with competitive returns.',
+  'investor.welcome.subtitle': 'Access exclusive investment opportunities in Latin American.',
   'investor.whyChoose.title': 'Why Invest with Link2Latam?',
   'investor.whyChoose.returns.title': 'Competitive Returns',
   'investor.whyChoose.returns.description': 'Earn attractive returns through carefully vetted export financing opportunities.',
