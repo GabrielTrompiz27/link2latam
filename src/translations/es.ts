@@ -50,7 +50,7 @@ export const esTranslations = {
   'investor.welcome.subtitle': 'Acceda a oportunidades exclusivas de inversión en financiamiento de exportaciones latinoamericanas con retornos competitivos.',
   'investor.whyChoose.title': '¿Por qué invertir con Link2Latam?',
   'investor.whyChoose.returns.title': 'Retornos Competitivos',
-  'investor.whyChoose.returns.description': 'Obtenga retornos atractivos a través de oportunidades de financiamiento de exportación cuidadosamente evaluadas.',
+  'investor.whyChoose.returns.description': 'Obtenga retornos atractivos a través de oportunidades de deuda privada cuidadosamente evaluadas.',
   'investor.whyChoose.risk.title': 'Gestión de Riesgos',
   'investor.whyChoose.risk.description': 'Benefíciese de nuestro sólido proceso de debida diligencia y opciones de inversión diversificadas.',
   'investor.whyChoose.market.title': 'Acceso al Mercado',
