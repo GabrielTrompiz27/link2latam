@@ -38,6 +38,8 @@ export const esTranslations = {
   'exporter.whyChoose.expert.description': 'Nuestro equipo de expertos en financiamiento comercial está aquí para guiarte en cada paso.',
   'exporter.whyChoose.global.title': 'Red Global',
   'exporter.whyChoose.global.description': 'Accede a nuestra extensa red de compradores internacionales y socios financieros.',
+  'form.title': 'Personalicemos tus Opciones de Financiamiento',
+  'form.subtitle': 'Por favor completa el formulario a continuación para ayudarnos a entender tu negocio y necesidades de financiamiento. Según tus respuestas, te proporcionaremos soluciones de financiamiento personalizadas.',
 
   // Expertise Section
   'expertise.title': 'Experiencia Regional',
