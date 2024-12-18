@@ -33,7 +33,7 @@ export const enTranslations = {
   'investor.welcome.subtitle': 'Access exclusive investment opportunities in Latin American.',
   'investor.whyChoose.title': 'Why Invest with Link2Latam?',
   'investor.whyChoose.returns.title': 'Competitive Returns',
-  'investor.whyChoose.returns.description': 'Earn attractive returns through carefully vetted export financing opportunities.',
+  'investor.whyChoose.returns.description': 'Earn attractive returns through carefully vetted private debt opportunities.',
   'investor.whyChoose.risk.title': 'Risk Management',
   'investor.whyChoose.risk.description': 'Benefit from our robust due diligence process and diversified investment options.',
   'investor.whyChoose.market.title': 'Market Access',
