@@ -24,7 +24,7 @@ export const Navbar = () => {
 
   return (
     <nav className="fixed w-full bg-primary z-50 shadow-sm">
-      <div className="container mx-auto px-4">
+      <div className="max-w-[1400px] mx-auto px-2">
         <div className="flex justify-between items-center h-20">
           {/* Left side - Logo and company name */}
           <div className="flex-shrink-0">
@@ -42,7 +42,7 @@ export const Navbar = () => {
           </div>
           
           {/* Desktop Menu - Right aligned */}
-          <div className="hidden md:flex items-center space-x-8 ml-auto">
+          <div className="hidden md:flex items-center gap-6">
             <button onClick={() => scrollToSection('services')} className="text-white/80 hover:text-white transition-colors">
               {t('nav.services')}
             </button>
