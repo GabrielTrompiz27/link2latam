@@ -109,7 +109,7 @@ export const ContactInfoStep = ({ form }: { form: any }) => {
         name="additionalNotes"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>{t('form.additionalNotes')}</FormLabel>
+            <FormLabel>Additional Notes</FormLabel>
             <FormControl>
               <Textarea 
                 placeholder={t('form.additionalNotes')}
