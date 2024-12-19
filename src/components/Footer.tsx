@@ -12,7 +12,7 @@ export const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">Link2Latam</h3>
             <p className="text-gray-300">
-              {t('footer.about')}
+              Empowering Latin American Businesses with Tailored Financing Solutions
             </p>
           </div>
           
