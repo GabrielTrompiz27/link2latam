@@ -26,20 +26,23 @@ export const Navbar = () => {
     <nav className="fixed w-full bg-primary z-50 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
-          <button 
-            onClick={() => navigate('/')} 
-            className="flex items-center gap-2 text-2xl font-bold text-white hover:text-white/90 transition-colors"
-          >
-            <img 
-              src="/lovable-uploads/fb379e9c-aab6-4665-a2ef-98c97333f65a.png" 
-              alt="Link2Latam Logo" 
-              className="h-12 w-auto" // Increased from h-8 to h-12
-            />
-            Link2Latam
-          </button>
+          {/* Left side - Logo and company name */}
+          <div className="flex-shrink-0">
+            <button 
+              onClick={() => navigate('/')} 
+              className="flex items-center gap-2 text-2xl font-bold text-white hover:text-white/90 transition-colors"
+            >
+              <img 
+                src="/lovable-uploads/fb379e9c-aab6-4665-a2ef-98c97333f65a.png" 
+                alt="Link2Latam Logo" 
+                className="h-12 w-auto"
+              />
+              Link2Latam
+            </button>
+          </div>
           
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Menu - Right aligned */}
+          <div className="hidden md:flex items-center space-x-8 ml-auto">
             <button onClick={() => scrollToSection('services')} className="text-white/80 hover:text-white transition-colors">
               {t('nav.services')}
             </button>
