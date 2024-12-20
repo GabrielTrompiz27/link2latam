@@ -84,6 +84,10 @@ export const esTranslations = {
   'investor.whyChoose.market.description': 'Obtenga acceso directo a oportunidades de inversión en América Latina a través de nuestra extensa red y alianzas.',
   'investor.whyChoose.cycles.title': 'Ciclos de Inversión a Corto Plazo',
   'investor.whyChoose.cycles.description': 'Disfrute de la flexibilidad de inversiones a corto plazo con pagos de intereses típicamente realizados dentro de 60 a 90 días.',
+  
+  // Consultation Section
+  'investor.consultation.title': 'Consulta de Inversión',
+  'investor.consultation.subtitle': 'Complete el formulario a continuación y nuestro equipo se pondrá en contacto con usted para discutir oportunidades de inversión.',
 
   // Form Section
   'form.title': 'Personalicemos sus Opciones de Financiamiento',
