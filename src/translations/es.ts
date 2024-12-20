@@ -38,7 +38,15 @@ export const esTranslations = {
   'expertise.title': 'Nuestra Experiencia Regional',
   'expertise.subtitle': 'Conocemos el mercado latinoamericano',
   'expertise.mapAlt': 'Mapa de América Latina',
-  
+
+  // About Section
+  'about.title': 'Acerca de',
+  'about.subtitle': 'Soluciones de financiamiento rápidas, flexibles y confiables.',
+  'about.whoWeAre.title': 'Quiénes Somos',
+  'about.whoWeAre.description': 'En Link2Latam, nos especializamos en soluciones de deuda privada personalizadas para empresas en toda América Latina. Combinando una profunda experiencia en el mercado con perspectivas financieras estratégicas, ayudamos a las empresas a superar desafíos y aprovechar oportunidades.\n\nNuestra ventaja distintiva radica en nuestra comprensión integral del panorama del mercado LATAM y nuestra extensa red profesional, lo que nos permite diseñar estrategias de deuda personalizadas que abordan las necesidades únicas de cada cliente. Con amplia experiencia navegando por las complejidades de la región, estamos comprometidos a ofrecer soluciones financieras innovadoras, receptivas y orientadas al valor que permiten a las empresas alcanzar sus objetivos de crecimiento con confianza.',
+  'about.ecosystem.title': 'Nuestro Ecosistema',
+  'about.ecosystem.description': 'Nuestro éxito se basa en asociaciones estratégicas y un ecosistema robusto de colaboradores de confianza en Europa y América Latina. Trabajamos en estrecha colaboración con instituciones financieras líderes, firmas de asesoría legal y corporaciones privadas que comparten nuestro compromiso de ofrecer soluciones de deuda innovadoras.\n\nJuntos, estamos unidos por una visión compartida de inversiones con impacto, fomentando el crecimiento financiero sostenible e impulsando oportunidades estratégicas en toda la región.',
+
   // Data Protection
   'dataProtection.intro.title': 'Introducción a la Protección de Datos',
   'dataProtection.intro.description': 'Tu privacidad es importante para nosotros. Esta política explica cómo recopilamos, usamos y protegemos tus datos.',
