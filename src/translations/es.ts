@@ -94,6 +94,17 @@ export const esTranslations = {
   'about.ecosystem.title': 'Nuestro Ecosistema',
   'about.ecosystem.description': 'Nuestro éxito se basa en asociaciones estratégicas y un ecosistema robusto de colaboradores de confianza en Europa y América Latina. Trabajamos en estrecha colaboración con instituciones financieras líderes, firmas de asesoría legal y corporaciones privadas que comparten nuestro compromiso de ofrecer soluciones de deuda innovadoras.\n\nJuntos, estamos unidos por una visión compartida de inversiones con impacto, fomentando el crecimiento financiero sostenible e impulsando oportunidades estratégicas en toda la región.',
 
+  // Exporter Section
+  'exporter.welcome.title': 'Bienvenido a Link2Latam',
+  'exporter.welcome.subtitle': 'Transforma tu negocio de exportación con soluciones de financiamiento rápidas y flexibles adaptadas a tus necesidades.',
+  'exporter.whyChoose.title': '¿Por qué elegir Link2Latam?',
+  'exporter.whyChoose.fast.title': 'Financiamiento Rápido y Flexible',
+  'exporter.whyChoose.fast.description': 'Accede a soluciones de financiamiento personalizadas con aprobaciones rápidas y procesos eficientes para satisfacer las necesidades de crecimiento y liquidez de tu negocio.',
+  'exporter.whyChoose.expert.title': 'Asesoramiento Experto',
+  'exporter.whyChoose.expert.description': 'Nuestro equipo experimentado brinda soporte personalizado, asegurando una ejecución perfecta y perspectivas estratégicas en cada paso de tu proceso de financiamiento.',
+  'exporter.whyChoose.global.title': 'Red Extensa',
+  'exporter.whyChoose.global.description': 'Aprovecha nuestra red global de socios y expertos financieros de confianza para desbloquear oportunidades e impulsar un crecimiento sostenible.',
+
   // Investor Section
   'investor.welcome.title': 'Bienvenido a la Plataforma de Inversión Link2Latam',
   'investor.welcome.subtitle': 'Accede a oportunidades exclusivas de inversión en América Latina.',
