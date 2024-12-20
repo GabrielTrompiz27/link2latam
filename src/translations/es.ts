@@ -14,8 +14,8 @@ export const esTranslations = {
   'nav.getStarted': 'Comenzar',
   
   // Hero Section
-  'hero.title': 'Financiamiento a tu medida',
-  'hero.subtitle': 'Impulsando el crecimiento de las empresas en América Latina',
+  'hero.mainTitle': 'Potenciando Empresas Latinoamericanas con Soluciones de Financiamiento a Medida',
+  'hero.subtitle': 'Soluciones de financiamiento rápidas, flexibles y confiables, diseñadas para impulsar el crecimiento empresarial y mejorar el flujo de caja.',
   'hero.getStarted': 'Comenzar',
   
   // Focus Section

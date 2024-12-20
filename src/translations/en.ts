@@ -6,7 +6,7 @@ export const enTranslations = {
   'nav.getStarted': 'Get Started',
   
   // Hero
-  'hero.title': 'Empowering Latin American Businesses with Tailored Financing Solutions',
+  'hero.mainTitle': 'Empowering Latin American Businesses with Tailored Financing Solutions',
   'hero.subtitle': 'Fast, flexible, and reliable funding solutions, designed to fuel business growth and improve cash flow.',
   'hero.getStarted': 'Get Started',
   'hero.learnMore': 'Learn More',
