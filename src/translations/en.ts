@@ -32,22 +32,41 @@ export const enTranslations = {
   'selection.exporter.description': 'Seeking funding solutions to grow my business in Latin America.',
   'selection.back': 'Back to Home',
 
-  // Exporter Section
-  'exporter.welcome.title': 'Welcome to Link2Latam',
-  'exporter.welcome.subtitle': 'Transform your export business with fast, flexible funding solutions tailored to your needs.',
-  'exporter.whyChoose.title': 'Why Choose Link2Latam?',
-  'exporter.whyChoose.fast.title': 'Fast and Flexible Funding',
-  'exporter.whyChoose.fast.description': 'Access tailored financing solutions with quick approvals and efficient processes to meet your business\'s growth and liquidity needs.',
-  'exporter.whyChoose.expert.title': 'Expert Guidance',
-  'exporter.whyChoose.expert.description': 'Our experienced team provides personalized support, ensuring seamless execution and strategic insights at every step of your financing journey.',
-  'exporter.whyChoose.global.title': 'Extensive Network',
-  'exporter.whyChoose.global.description': 'Leverage our global network of trusted partners and financial experts to unlock opportunities and drive sustainable growth.',
+  // Investor Section
+  'investor.welcome.title': 'Welcome to Link2Latam Investment Platform',
+  'investor.welcome.subtitle': 'Discover unique investment opportunities in Latin American trade finance and private debt.',
+  'investor.whyChoose.title': 'Why Invest with Link2Latam?',
+  'investor.whyChoose.returns.title': 'Attractive Returns',
+  'investor.whyChoose.returns.description': 'Access competitive risk-adjusted returns through our carefully curated investment opportunities.',
+  'investor.whyChoose.cycles.title': 'Short Investment Cycles',
+  'investor.whyChoose.cycles.description': 'Benefit from short-term investment cycles, typically ranging from 30 to 180 days.',
+  'investor.whyChoose.risk.title': 'Risk Mitigation',
+  'investor.whyChoose.risk.description': 'Our thorough due diligence process and asset-backed structure helps protect your investment.',
+  'investor.whyChoose.market.title': 'Market Access',
+  'investor.whyChoose.market.description': 'Gain direct access to Latin American trade finance opportunities through our established network.',
+
+  // Consultation Form
+  'investor.consultation.title': 'Schedule a Consultation',
+  'investor.consultation.subtitle': 'Learn more about our investment opportunities and how we can help you achieve your investment goals.',
+  
+  // Form Fields
+  'form.fullName': 'Full Name',
+  'form.email': 'Email Address',
+  'form.phoneNumber': 'Phone Number',
+  'form.preferredContact': 'Preferred Contact Method',
+  'form.message': 'Message (Optional)',
+  'form.messagePlaceholder': 'Tell us about your investment goals and any specific questions you have.',
+  'form.submit': 'Submit',
+  'form.success': 'Success!',
+  'form.successMessage': 'Thank you for your interest. We will contact you shortly.',
+  'form.error': 'Error',
+  'form.errorMessage': 'There was an error submitting your form. Please try again.',
 
   // About Section
   'about.title': 'About',
   'about.subtitle': 'Fast, flexible, and reliable funding solutions.',
   'about.whoWeAre.title': 'Who We Are',
-  'about.whoWeAre.description': 'At Link2Latam, we specialize in tailored private debt solutions for businesses across Latin America. Combining deep market expertise with strategic financial insights, we help companies overcome challenges and seize opportunities.\n\nOur distinctive advantage lies in our comprehensive understanding of the LATAM market landscape and our extensive professional network, enabling us to craft customized debt strategies that address each client’s unique needs. With extensive experience navigating the region\'s complexities, we are committed to delivering innovative, responsive, and value-driven financial solutions that empower businesses to achieve their growth objectives with confidence.',
+  'about.whoWeAre.description': 'At Link2Latam, we specialize in tailored private debt solutions for businesses across Latin America. Combining deep market expertise with strategic financial insights, we help companies overcome challenges and seize opportunities.\n\nOur distinctive advantage lies in our comprehensive understanding of the LATAM market landscape and our extensive professional network, enabling us to craft customized debt strategies that address each client's unique needs. With extensive experience navigating the region\'s complexities, we are committed to delivering innovative, responsive, and value-driven financial solutions that empower businesses to achieve their growth objectives with confidence.',
   'about.ecosystem.title': 'Our Ecosystem',
   'about.ecosystem.description': 'Our success is built on strategic partnerships and a robust ecosystem of trusted collaborators across Europe and Latin America. We work closely with leading financial institutions, legal advisory firms, and private corporations that share our commitment to delivering innovative debt solutions.\n\nTogether, we are united by a shared vision of impact-driven investments, fostering sustainable financial growth and driving strategic opportunities across the region.',
 
