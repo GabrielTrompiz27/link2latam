@@ -66,9 +66,9 @@ export const enTranslations = {
   'about.title': 'About',
   'about.subtitle': 'Fast, flexible, and reliable funding solutions.',
   'about.whoWeAre.title': 'Who We Are',
-  'about.whoWeAre.description': 'At Link2Latam, we specialize in tailored private debt solutions for businesses across Latin America. Combining deep market expertise with strategic financial insights, we help companies overcome challenges and seize opportunities.\n\nOur distinctive advantage lies in our comprehensive understanding of the LATAM market landscape and our extensive professional network, enabling us to craft customized debt strategies that address each client's unique needs. With extensive experience navigating the region\'s complexities, we are committed to delivering innovative, responsive, and value-driven financial solutions that empower businesses to achieve their growth objectives with confidence.',
+  'about.whoWeAre.description': "At Link2Latam, we specialize in tailored private debt solutions for businesses across Latin America. Combining deep market expertise with strategic financial insights, we help companies overcome challenges and seize opportunities.\n\nOur distinctive advantage lies in our comprehensive understanding of the LATAM market landscape and our extensive professional network, enabling us to craft customized debt strategies that address each client's unique needs. With extensive experience navigating the region's complexities, we are committed to delivering innovative, responsive, and value-driven financial solutions that empower businesses to achieve their growth objectives with confidence.",
   'about.ecosystem.title': 'Our Ecosystem',
-  'about.ecosystem.description': 'Our success is built on strategic partnerships and a robust ecosystem of trusted collaborators across Europe and Latin America. We work closely with leading financial institutions, legal advisory firms, and private corporations that share our commitment to delivering innovative debt solutions.\n\nTogether, we are united by a shared vision of impact-driven investments, fostering sustainable financial growth and driving strategic opportunities across the region.',
+  'about.ecosystem.description': "Our success is built on strategic partnerships and a robust ecosystem of trusted collaborators across Europe and Latin America. We work closely with leading financial institutions, legal advisory firms, and private corporations that share our commitment to delivering innovative debt solutions.\n\nTogether, we are united by a shared vision of impact-driven investments, fostering sustainable financial growth and driving strategic opportunities across the region.",
 
   // Footer
   'footer.about': 'Empowering Latin American SMEs through innovative finance solutions.',
@@ -141,5 +141,5 @@ export const enTranslations = {
   'focus.approach': 'This approach allows us to:',
   'focus.benefits.target': 'Deliver flexible and tailored funding solutions aligned with business objectives.',
   'focus.benefits.shield': 'Ensure reduced risk exposure for investors and companies alike.',
-  'focus.benefits.lightbulb': 'Unlock value from existing assets to drive sustainable growth and expansion.',
+  'focus.benefits.lightbulb': 'Unlock value from existing assets to drive sustainable growth and expansion.'
 };
