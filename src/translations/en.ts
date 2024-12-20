@@ -45,6 +45,57 @@ export const enTranslations = {
   'investor.whyChoose.market.title': 'Market Access',
   'investor.whyChoose.market.description': 'Gain direct access to Latin American trade finance opportunities through our established network.',
 
+  // Exporter/Business Section
+  'exporter.welcome.title': 'Welcome to Link2Latam Business Solutions',
+  'exporter.welcome.subtitle': 'Access flexible financing solutions tailored for Latin American businesses',
+  'exporter.whyChoose.title': 'Why Choose Link2Latam?',
+  'exporter.whyChoose.financing.title': 'Flexible Financing',
+  'exporter.whyChoose.financing.description': 'Access working capital solutions that adapt to your business needs and cash flow cycles.',
+  'exporter.whyChoose.speed.title': 'Quick Process',
+  'exporter.whyChoose.speed.description': 'Get funding decisions within days, not months, with our streamlined approval process.',
+  'exporter.whyChoose.expertise.title': 'Regional Expertise',
+  'exporter.whyChoose.expertise.description': 'Benefit from our deep understanding of Latin American markets and business practices.',
+  'exporter.whyChoose.support.title': 'Dedicated Support',
+  'exporter.whyChoose.support.description': 'Work with our experienced team that provides personalized guidance throughout the process.',
+  
+  // Questionnaire Section
+  'exporter.questionnaire.title': 'Tell Us About Your Business',
+  'exporter.questionnaire.subtitle': 'Help us understand your financing needs better',
+  'exporter.questionnaire.companyInfo': 'Company Information',
+  'exporter.questionnaire.financing': 'Financing Details',
+  'exporter.questionnaire.contact': 'Contact Information',
+  'exporter.questionnaire.access': 'Access to Credit',
+  
+  // Company Info Step
+  'exporter.companyInfo.title': 'Company Details',
+  'exporter.companyInfo.name': 'Company Name',
+  'exporter.companyInfo.type': 'Company Type',
+  'exporter.companyInfo.industry': 'Industry',
+  'exporter.companyInfo.employees': 'Number of Employees',
+  'exporter.companyInfo.revenue': 'Annual Revenue',
+  'exporter.companyInfo.country': 'Country of Operation',
+  
+  // Financing Details Step
+  'exporter.financing.title': 'Financing Requirements',
+  'exporter.financing.amount': 'Required Amount',
+  'exporter.financing.purpose': 'Purpose of Financing',
+  'exporter.financing.timeline': 'Expected Timeline',
+  'exporter.financing.collateral': 'Available Collateral',
+  
+  // Contact Info Step
+  'exporter.contact.title': 'Contact Details',
+  'exporter.contact.name': 'Full Name',
+  'exporter.contact.position': 'Position in Company',
+  'exporter.contact.email': 'Business Email',
+  'exporter.contact.phone': 'Phone Number',
+  'exporter.contact.preferred': 'Preferred Contact Method',
+  
+  // Access to Credit Step
+  'exporter.access.title': 'Current Financial Status',
+  'exporter.access.existing': 'Existing Credit Lines',
+  'exporter.access.banks': 'Banking Relationships',
+  'exporter.access.challenges': 'Current Challenges',
+
   // Consultation Form
   'investor.consultation.title': 'Schedule a Consultation',
   'investor.consultation.subtitle': 'Learn more about our investment opportunities and how we can help you achieve your investment goals.',
