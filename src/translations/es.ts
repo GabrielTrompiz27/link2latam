@@ -1,11 +1,16 @@
 export const esTranslations = {
   // General
-  'footer.copyright': '© 2023 Link2Latam. Todos los derechos reservados.',
+  'footer.about': 'Empoderando a las PyMEs latinoamericanas a través de soluciones financieras innovadoras.',
   'footer.quickLinks': 'Enlaces Rápidos',
   'footer.services': 'Servicios',
+  'footer.invoiceFactoring': 'Factoraje de Facturas',
+  'footer.riskManagement': 'Gestión de Riesgos',
+  'footer.tradeFinance': 'Financiamiento Comercial',
   'footer.contact': 'Contacto',
+  'footer.copyright': '© 2024 Link2Latam. Todos los derechos reservados.',
+  'footer.cookies': 'Política de Cookies',
+  'footer.legal': 'Aviso Legal',
   'footer.dataProtection': 'Protección de Datos',
-  'footer.cookies': 'Cookies',
   
   // Navigation
   'nav.services': 'Servicios',
@@ -117,19 +122,7 @@ export const esTranslations = {
   'form.successMessage': 'Su formulario ha sido enviado exitosamente.',
   'form.error': 'Error',
   'form.errorMessage': 'Error al enviar el formulario. Por favor intente nuevamente.',
-
-  // Footer
-  'footer.about': 'Empoderando a las PyMEs latinoamericanas a través de soluciones financieras innovadoras.',
-  'footer.quickLinks': 'Enlaces Rápidos',
-  'footer.services': 'Servicios',
-  'footer.invoiceFactoring': 'Factoraje de Facturas',
-  'footer.riskManagement': 'Gestión de Riesgos',
-  'footer.tradeFinance': 'Financiamiento Comercial',
-  'footer.contact': 'Contacto',
-  'footer.copyright': '© 2024 Link2Latam. Todos los derechos reservados.',
-  'footer.cookies': 'Política de Cookies',
-  'footer.legal': 'Aviso Legal',
-  'footer.dataProtection': 'Protección de Datos',
+  'form.additionalNotes': 'Notas Adicionales',
 
   // Legal Sections
   'legal.terms.title': 'Términos de Uso',
