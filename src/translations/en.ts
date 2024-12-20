@@ -171,4 +171,12 @@ export const enTranslations = {
   'dataProtection.contact.title': 'Contact Us',
   'dataProtection.contact.description': 'For any privacy-related questions, please contact us at: Email: info@link2latam.com',
   'dataProtection.lastUpdated': 'Last Updated: December 2024',
+
+  // Focus Section
+  'focus.title': 'Our Focus',
+  'focus.description': 'All our financing solutions are centered around asset-backed lending, ensuring security, transparency, and sustainable outcomes. By leveraging real assets such as accounts receivable, real estate, and equity holdings, we provide businesses with the capital they need while mitigating risk for all stakeholders.',
+  'focus.approach': 'This approach allows us to:',
+  'focus.benefits.target': 'Deliver flexible and tailored funding solutions aligned with business objectives.',
+  'focus.benefits.shield': 'Ensure reduced risk exposure for investors and companies alike.',
+  'focus.benefits.lightbulb': 'Unlock value from existing assets to drive sustainable growth and expansion.',
 };

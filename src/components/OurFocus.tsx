@@ -1,31 +1,34 @@
 import { Shield, Lightbulb, Target } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const OurFocus = () => {
+  const { t } = useLanguage();
+  
   const benefits = [
     {
       icon: Target,
-      text: 'Deliver flexible and tailored funding solutions aligned with business objectives.'
+      text: t('focus.benefits.target')
     },
     {
       icon: Shield,
-      text: 'Ensure reduced risk exposure for investors and companies alike.'
+      text: t('focus.benefits.shield')
     },
     {
       icon: Lightbulb,
-      text: 'Unlock value from existing assets to drive sustainable growth and expansion.'
+      text: t('focus.benefits.lightbulb')
     }
   ];
 
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-center">Our Focus</h2>
+        <h2 className="section-title text-center">{t('focus.title')}</h2>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg text-gray-600 mb-8">
-            All our financing solutions are centered around asset-backed lending, ensuring security, transparency, and sustainable outcomes. By leveraging real assets such as accounts receivable, real estate, and equity holdings, we provide businesses with the capital they need while mitigating risk for all stakeholders.
+            {t('focus.description')}
           </p>
           
-          <h3 className="text-xl font-semibold mb-6 text-primary">This approach allows us to:</h3>
+          <h3 className="text-xl font-semibold mb-6 text-primary">{t('focus.approach')}</h3>
           
           <div className="space-y-6">
             {benefits.map((benefit, index) => (
