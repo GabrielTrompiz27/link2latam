@@ -18,6 +18,14 @@ export const esTranslations = {
   'hero.subtitle': 'Soluciones de financiamiento rápidas, flexibles y confiables, diseñadas para impulsar el crecimiento empresarial y mejorar el flujo de caja.',
   'hero.getStarted': 'Comenzar',
   
+  // Selection Page
+  'selection.title': '¿Cómo deseas proceder?',
+  'selection.investor.title': 'Soy Inversionista',
+  'selection.investor.description': 'Busco proporcionar financiamiento y expandir mi portafolio de inversiones en América Latina.',
+  'selection.exporter.title': 'Soy una Empresa',
+  'selection.exporter.description': 'Busco soluciones de financiamiento para hacer crecer mi negocio en América Latina.',
+  'selection.back': 'Volver al Inicio',
+
   // Focus Section
   'focus.title': 'Nuestro Enfoque',
   'focus.description': 'Todas nuestras soluciones de financiamiento se centran en préstamos respaldados por activos, garantizando seguridad, transparencia y resultados sostenibles. Al aprovechar activos reales como cuentas por cobrar, bienes raíces y participaciones accionarias, proporcionamos a las empresas el capital que necesitan mientras mitigamos el riesgo para todas las partes interesadas.',
