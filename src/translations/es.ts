@@ -7,7 +7,7 @@ export const esTranslations = {
   'footer.riskManagement': 'Gestión de Riesgos',
   'footer.tradeFinance': 'Financiamiento Comercial',
   'footer.contact': 'Contacto',
-  'footer.copyright': '© 2024 Link2Latam. Todos los derechos reservados.',
+  'footer.copyright': '© 2025 Link2Latam. Todos los derechos reservados.',
   'footer.cookies': 'Política de Cookies',
   'footer.legal': 'Aviso Legal',
   'footer.dataProtection': 'Protección de Datos',

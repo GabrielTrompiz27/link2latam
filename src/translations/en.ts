@@ -115,7 +115,7 @@ export const enTranslations = {
   'footer.riskManagement': 'Risk Management',
   'footer.tradeFinance': 'Trade Finance',
   'footer.contact': 'Contact',
-  'footer.copyright': '© 2024 Link2Latam. All rights reserved.',
+  'footer.copyright': '© 2025 Link2Latam. All rights reserved.',
   'footer.cookies': 'Cookies Policy',
   'footer.legal': 'Legal Disclaimer',
   'footer.dataProtection': 'Data Protection',
